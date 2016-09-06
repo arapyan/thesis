@@ -37,9 +37,30 @@ The outer tracker is occupied by a silicon strip tracker allowing two-dimensiona
 
 \section{Electromagnetic calorimeter}
 
+The goal of the CMS electromagnetic calorimeter (ECAL)\cite{ecal,CMS:2002xia} is to measure the energy of electrons and photons. ECAL is a homogeneous and hermetic calorimeter made of $61200$ lead tungstate (PbWO$_4$) crystals in the central barrel region (EB) and $14648$ crystals in the endcap region (EE). A homogeneous calorimeter was chosen to achieve the best energy resolution as one of the driving criteria was the precise measurement of the decay of the Higgs boson to two photons. Incident photons and electrons initiate an electromagnetic shower in the $PBWO_4$ crystals. The particles in the shower produce blue-green scintillation light as they excite the crystals and the scintillation light is measured by the photodetectors to determine the energy deposited in the crystals.   
 
+Lead tungstate high density ($8.3$ g/cm$^3$) crystals were chosen to satisfy the challenging operational requirements at the LHC. The scintillation decay time of these crystals is of the same order as the LHC bunch crossing with $80\%$ of the light is emitted in $25$ ns. A short radiation length of $X_{0}=0.89$ cm and a small Moliere radius of $2.2$ cm allows to have a fine granular and a compact calorimeter while still containing the electromagnetic showers in longitudinal and transverse directions. The crystals are radiation hard but there is a transparency loss under exposure to an ionizing radiation with a dynamical recovery when there are no collisions. The transparency loss is corrected with a dedicated laser monitoring system. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\columnwidth]{figures_chapter3/cms_ecal}
+\caption{The layout of the CMS electromagnetic calorimeter. Barrel and endcap detectors are shown. The pre-shower detector sits in front of the endcap ecal.}
+\label{fig:ecal}
+\end{figure}
+
+Figure\ref{fig:ecal} shows the layout of the ECAL. The $61200$ crystals in EB are arranged in a $170\times360$ $\eta-\phi$ grid with a coverage up to $|\eta|=1.479$ in presudorapidity. The crystal front face cross section is approximately $0.0174\times0.0174$ in $\eta-\phi$ ($22-22$ mm$^2$) and $26-26$ mm$^2$ at the rear face. The increase in cross sectional area of the rear face is consistent with the small Moliere radius allowing to contain the transverse development of the electromagnetic shower within few crystals with respect to the central crystal. Each crystal has a length of $230$ mm corresponding to $25.8$ radiation lengths allowing to contain the longitudinal shower development with negligible levels of leakage. The crystals make an angle of $3$ degrees with respect to the particle trajectories incident from the interaction vertex to avoid cracks alignment with the trajectories. Two avalanche photodiodes (APDs) with an active are of $5\times5$ mm$^2$ are connected to the back of the crystals to convert the scintillation light to photoelectrons.   
+
+The $14648$ crystals in EE are arranged in an $x-y$ grid with a front face cross section of $28.62\times28.62$ mm$^2$ and a rear face cross section of $30\times30$ mm$^2$. The length of the crystals is $220$ mm corresponding to $24.7$ radiation lengths. Vacuum phototriodes (VPTs) with an active area of approximately  $280$ mm$^2$ allowing large surface coverage are used as photodetectors. An anode of very fine copper mesh allows to operate these devices in the $3.8$ Tesla magnetic field with only slight lose in gain. The EE extends the ECAL coverage from $|\eta|=1.479$ to $|\eta|=3.0$. A sampling preshower detector sits in front of the EE allowing the identification of neutral pions from $|\eta|=1.7$ to $|\eta|=2.6$. Two alternating layers of passive led and active silicon layers form a sampling calorimeter with approximately $3$ radiation lengths of the absorber material.  
+
+The energy resolution of the ECAL can be parameterized as
+\begin{equation} \label{eq:ecal_resol}
+\frac{\sigma}{E} = \frac{S}{\sqrt{E}} \oplus  \frac{N}{E} \oplus C,
+\end{equation}
+where $E$ is the energy of the incident particle, $S$ is the stochastic term, $N$ is the noise term, and $C$ is the constant term. The longitudinal shower leakage is assumed to be negligible in (\ref{eq:ecal_resol}). Event-to-event fluctuations in the lateral shower containment and the photo-statistics of $2.1\%$ contribute to the stochastic term. The noise term is mostly due to the electronic and digitization noise while the constant term comes from intercalibration errors and a non-uniform light collection. Typical values found at an electron test beam are $S=0.029~\GeV^{\frac{1}{2}}$, $N=0.12~\GeV$, and $C=0.003$.    
 
 \section{Hadronic calorimeter}
+
+HCAL my friend.
 
 \subsection{LS1 Upgrades}
 
