@@ -358,7 +358,7 @@ information).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%LHC chapter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 @article{1748-0221-3-08-S08001,
-  key = {lhc},
+  key = {},
   author={L. Evans and P. Bryant},
   title={{LHC} {Machine}},
   journal={JINST},
@@ -380,16 +380,24 @@ information).
       note          = "General Photo",
 }
 
-@book{Myers:226776,
-      author        = "Myers, Stephen",
-      title         = "{The LEP Collider, from design to approval and
-                       commissioning}",
+@book{lep1,
+      title         = "{LEP design report: Vol.1. The LEP Injector Chain}",
+      author         = "{By the LEP Injector Study Group}",
       publisher     = "CERN",
       address       = "Geneva",
-      series        = "John Adams' Lecture",
-      year          = "1991",
-      url           = "http://cds.cern.ch/record/226776",
-      note          = "Delivered at CERN, 26 Nov 1990",
+      year          = "1983",
+      url           = "https://cds.cern.ch/record/98881",
+      note          = "",
+}
+
+@book{lep2,
+      title         = "{LEP design report: Vol.2. The LEP Main Ring}",
+      author         = "{By the LEP Injector Study Group}",
+      publisher     = "CERN",
+      address       = "Geneva",
+      year          = "1984",
+      url           = "https://cds.cern.ch/record/102083",
+      note          = "",
 }
 
 @article{Blewett:1971zzb,
@@ -424,19 +432,12 @@ information).
 }
 
 @article{MSTW,
-
 author="A. D. Martin, W. J. Stirling, R. S. Thorne and G. Watt",
-
 title="Parton distributions for the {LHC}",
-
 journal="Eur. Phys. J. C",
-
 volume="63",
-
 year="2009",
-
 pages="189"
-
 }
 
 @article{Aad:2008zzm,
@@ -487,21 +488,9 @@ pages="189"
       SLACcitation   = "%%CITATION = JINST,3,S08002;%%"
 }
 
-@techreport{CMS-PAS-LUM-15-001,
-      title         = "{CMS Luminosity Measurement for the 2015 Data Taking
-                       Period}",
-      institution   = "CERN",
-      collaboration = "CMS Collaboration",
-      address       = "Geneva",
-      number        = "CMS-PAS-LUM-15-001",
-      year          = "2016",
-      reportNumber  = "CMS-PAS-LUM-15-001",
-      url           = "http://cds.cern.ch/record/2138682",
-}
-
 @techreport{CMS-PAS-LUM-13-001,
-      title         = "{CMS Luminosity Based on Pixel Cluster Counting - Summer
-                       2013 Update}",
+      author = "CMS Collaboration",
+      title         = "{CMS Luminosity Based on Pixel Cluster Counting - Summer 2013 Update}",
       institution   = "CERN",
       collaboration = "CMS Collaboration",
       address       = "Geneva",
@@ -511,21 +500,22 @@ pages="189"
       url           = "http://cds.cern.ch/record/1598864",
 }
 
-@techreport{CMS-PAS-LUM-12-001,
-      title         = "{CMS Luminosity Based on Pixel Cluster Counting - Summer
-                       2012 Update}",
+@techreport{CMS-PAS-LUM-15-001,
+      author = "CMS Collaboration",
+      title         = "{CMS Luminosity Measurement for the 2015 Data Taking Period}",
       institution   = "CERN",
       collaboration = "CMS Collaboration",
       address       = "Geneva",
-      number        = "CMS-PAS-LUM-12-001",
-      year          = "2012",
-      reportNumber  = "CMS-PAS-LUM-12-001",
-      url           = "http://cds.cern.ch/record/1482193",
+      number        = "CMS-PAS-LUM-15-001",
+      year          = "2016",
+      reportNumber  = "CMS-PAS-LUM-15-001",
+      url           = "http://cds.cern.ch/record/2138682",
 }
+
 
 @misc{lumi_plot,
   title = {CMS Luminosity - Public Results},
-  key = "notsure",
+  key = "",
   howpublished = {\url{https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults}},
   note = {Accessed: 2016-08-29}
 }
@@ -534,9 +524,7 @@ pages="189"
 
 
 @book{Karimäki:368412,
-      author        = "Karimäki, V and Mannelli, M and Siegrist, P and Breuker,
-                       H and Caner, A and Castaldi, R and Freudenreich, K and
-                       Hall, G and Horisberger, R and Huhtinen, M and Cattai, A",
+      author        = "Karimki, V and others",
       title         = "{The CMS tracker system project: Technical Design Report}",
       publisher     = "CERN",
       collaboration = "CMS Collaboration",
@@ -547,8 +535,8 @@ pages="189"
 }
 
 @book{addendum,
-      title         = "{The CMS tracker: addendum to the Technical Design
-                       Report}",
+      author = "CMS Collaboration",
+      title         = "{The CMS tracker: addendum to the Technical Design Report}",
       publisher     = "CERN",
       collaboration = "CMS Collaboration",
       address       = "Geneva",
@@ -558,6 +546,7 @@ pages="189"
 }
 
 @book{ecal,
+      author = "CMS Collaboration",
       title         = "{The CMS electromagnetic calorimeter project: Technical
                        Design Report}",
       publisher     = "CERN",
@@ -568,9 +557,11 @@ pages="189"
       url           = "https://cds.cern.ch/record/349375",
 }
 
-@article{CMS:2002xia,
+@techreport{CMS:2002xia,
+      author = "CMS Collaboration",
       title          = "{Addendum to the CMS ECAL technical design report:
                         Changes to the CMS ECAL electronics}",
+      institution   = "CERN",
       collaboration  = "CMS",
       year           = "2002",
       reportNumber   = "CERN-LHCC-2002-027",
@@ -578,7 +569,8 @@ pages="189"
 }
 
 @book{hcal,
-      title         = "{The CMS hadron calorimeter project: Technical Design
+     author = "CMS Collaboration",
+      title       = "{The CMS hadron calorimeter project: Technical Design
                        Report}",
       publisher     = "CERN",
       collaboration = "CMS Collaboration",
@@ -590,10 +582,10 @@ pages="189"
 }
 
 @article{Cushman2000289,
-title = "Custom \{HPD\} readout for the \{CMS\} \{HCAL\} ",
-journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment ",
+title = "{Custom HPD readout for the CMS HCAL}",
+journal = "Nuclear Instruments and Methods",
 volume = "442",
-number = "1‚Äì3",
+number = "",
 pages = "289 - 294",
 year = "2000",
 note = "",
@@ -605,6 +597,7 @@ abstract = "Over 10 000 channels from the \{CMS\} tile/fiber hadronic calorimete
 }
 
 @book{cms_muon,
+      author        = "CMS Collaboration",
       title         = "{The CMS muon project: Technical Design Report}",
       publisher     = "CERN",
       collaboration = "CMS Collaboration",
@@ -628,22 +621,6 @@ abstract = "Over 10 000 channels from the \{CMS\} tile/fiber hadronic calorimete
       primaryClass   = "physics.ins-det",
       reportNumber   = "CMS-MUO-10-004, CERN-PH-EP-2012-173",
       SLACcitation   = "%%CITATION = ARXIV:1206.4071;%%"
-}
-
-@techreport{Tapper:1556311,
-      author        = "Tapper, A and Acosta, Darin",
-      editor        = "Tapper, A",
-      title         = "{CMS Technical Design Report for the Level-1 Trigger
-                       Upgrade}",
-      collaboration = "CMS collaboration",
-      number        = "CERN-LHCC-2013-011. CMS-TDR-12",
-      month         = "Jun",
-      year          = "2013",
-      reportNumber  = "CERN-LHCC-2013-011",
-      url           = "https://cds.cern.ch/record/1556311",
-      note          = "Additional contacts: Jeffrey Spalding, Fermilab,
-                       Jeffrey.Spalding@cern.ch Didier Contardo, Universite Claude
-                       Bernard-Lyon I, didier.claude.contardo@cern.ch",
 }
 
 @article{Adam:2005zf,
@@ -673,17 +650,33 @@ abstract = "Over 10 000 channels from the \{CMS\} tile/fiber hadronic calorimete
       SLACcitation   = "%%CITATION = ARXIV:1609.02366;%%"
 }
 
-@article{Varela:2002zca,
-      author         = "Varela, Joao",
-      title          = "{CMS L1 Trigger Control System}",
-      year           = "2002",
-      reportNumber   = "CMS-NOTE-2002-033, CERN-CMS-NOTE-2002-033",
-      SLACcitation   = "%%CITATION = CMS-NOTE-2002-033;%%"
+@techreport{Varela:687458,
+      author        = "Varela, Joao",
+      title         = "{CMS L1 Trigger Control System}",
+      institution   = "CERN",
+      address       = "Geneva",
+      number        = "CMS-NOTE-2002-033",
+      month         = "Sep",
+      year          = "2002",
+      reportNumber  = "CMS-NOTE-2002-033",
+      url           = "http://cds.cern.ch/record/687458",
 }
 
+@book{Bayatyan:706847,
+      author        = "Bayatyan and others", 
+       title         = "{CMS TriDAS project: Technical Design Report, Volume 1: The Trigger Systems}",
+      publisher     = "CERN",
+      collaboration = "CMS Collaboration",
+      address       = "Geneva",
+      series        = "Technical Design Report CMS",
+      year          = "2000",
+      url           = "https://cds.cern.ch/record/706847",
+}
+
+
 @book{Cittolin:578006,
-      author        = "Cittolin, Sergio and Rácz, Attila and Sphicas, Paris",
-      title         = "{CMS The TriDAS Project: Technical Design Report, Volume
+      author        = "Cittolin, Sergio and others",
+      title         = "{CMS TriDAS Project: Technical Design Report, Volume
                        2: Data Acquisition and High-Level Trigger. CMS trigger and
                        data-acquisition project}",
       publisher     = "CERN",
@@ -694,8 +687,10 @@ abstract = "Over 10 000 channels from the \{CMS\} tile/fiber hadronic calorimete
       url           = "https://cds.cern.ch/record/578006",
 }
 
-@article{CMS-DP-2012-022,
-      title         = "{Data Parking and Data Scouting \\ at the CMS Experiment}",
+@techreport{CMS-DP-2012-022,
+      author        = "CMS Collaboration",
+      title         = "{Data Parking and Data Scouting at the CMS Experiment}",
+      institution   = "CERN",
       collaboration = "CMS Collaboration",
       month         = "Sep",
       year          = "2012",
@@ -703,36 +698,22 @@ abstract = "Over 10 000 channels from the \{CMS\} tile/fiber hadronic calorimete
       url           = "https://cds.cern.ch/record/1480607",
 }
 
-@techreport{Collaboration:1355706,
-      author        = "CMS Collaboration",
-      title         = "{Technical proposal for the upgrade of the CMS detector
-                       through 2020}",
-      number        = "CERN-LHCC-2011-006. LHCC-P-004",
-      month         = "Jun",
-      year          = "2011",
-      reportNumber  = "CERN-LHCC-2011-006",
-      url           = "https://cds.cern.ch/record/1355706",
-}
-
 @techreport{Mans:1481837,
-      author        = "Mans, J and Anderson, J and Dahmes, B and de Barbaro, P
-                       and Freeman, J and Grassi, T and Hazen, E and Mans, J and
-                       Ruchti, R and Schimdt, I and Shaw, T and Tully, C and
-                       Whitmore, J and Yetkin, T",
+      author        = "CMS Collaboration",
       title         = "{CMS Technical Design Report for the Phase 1 Upgrade of
                        the Hadron Calorimeter}",
+      institution   = "CERN",
       number        = "CERN-LHCC-2012-015. CMS-TDR-10",
       month         = "Sep",
       year          = "2012",
       reportNumber  = "CERN-LHCC-2012-015",
       url           = "https://cds.cern.ch/record/1481837",
-      note          = "Additional contact persons: Jeffrey Spalding, Fermilab,
-                       spalding@cern.ch, Didier Contardo, Universite Claude
-                       Bernard-Lyon I, contardo@cern.ch",
 }
 
-@article{CMS-DP-2014-013,
+@techreport{CMS-DP-2014-013,
+      author        = "CMS Collaboration",
       title         = "{SiPM Property Measurement from HO}",
+      institution   = "CERN",
       collaboration = "CMS Collaboration",
       month         = "Apr",
       year          = "2014",
