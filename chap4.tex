@@ -6,15 +6,40 @@
 %% prompt when you run the file main.tex through LaTeX.
 \chapter{Event Reconstruction}
 
-\section{Primary Vertex Reconstruction and Selection}
+\section{Track reconstruction}
+
+The goal of the track reconstruction is to estimate the position and momentum parameters of charged particles from the reconstructed hits in the inner tracking detector. Reconstructing tracks at the LHC nominal instantaneous luminosities is computationally challenging due to high occupancy environment. About $1000$ charged particles transverse the inner tracking detectors. Charged particles from prior or later bunch crossings can also be present due to finite detector time resolution.  The track reconstruction starts by clustering of zero-suppressed signals in the pixel and strip detectors into hits with an estimate of the cluster positions and the corresponding uncertainties. The CMS track reconstruction algorithm is referred to as combinational track finder (CTF)~\cite{Adam:934067,Chatrchyan:2014fea}. The CTF is an adaptation of the combinatorial Kalman filter~\cite{BILLOIR1989390,BILLOIR1990219,MANKEL1997169}, which is an extension of the Kalman filter~\cite{FRUHWIRTH1987444} to combine the pattern recognition and track fitting in the same framework. 
+
+The CTF is performed six times to determine the collection of the tracks in an event. The aim of this iterative tracking is to first find the tracks that are easiest to find (high $p_{T}$ and near the interaction region) with subsequent iterations searching for the more challenging tracks (low $p_{T}$ and displaced from the interaction region). Hits associated with tracks are removed after each iteration thereby reducing the computational complexity. Each iteration has four steps:
+
+\begin{description}
+\item[$\bullet$ Seed generation]  Initial track candidates are found using only two or three hits in the inner part of the tracker. One has to note that the seeds are not constructed from the outermost regions of the tracker where the track density is small. The high granularity of the pixel detector ensures that the channel occupancy is lower than the channel occupancy of the outer strip layers. In addition, significant fraction of charged pions undergo inelastic interaction in the track detectors while many electrons loose significant energy due to bremsstrahlung radiation as they transverse the tracker. There are five parameters needed to define the helical trajectory of the charged particles in the approximately uniform magnetic field. Two or three hits along with constraining the origin of the charged particle near the beam spot is sufficient to extract these parameters.
+\item[$\bullet$ Track finding]  The Kalman filter algorithm is used to provide a coarse estimate of the track parameters starting from the seeds.  track candidate is built by adding hits from successive detector layers. A fast analytical propagator is used to find the hit layers. The track parameters are updated each time a new hit is found.
+\item[$\bullet$ Track fitting] The full information needed for the trajectory is only available once all the hits of the trajectory are identified. Therefore, the trajectory is once again re-fitted using a Kalman filter and smoother. A fourth-order Runge-Kutta method is used to extrapolate the trajectory between the successive hits. Material and inhomogeneous magnetic field effects are included.
+\item[$\bullet$ Track selection] Quality requirements are applied to reject fake tracks not originating from a charged particle. 
+\end{description}
+
+The track reconstruction is effectively fully efficient for isolated muons with $2.5\%$ resolution in $p_{T}$ for $p_{T}$ of about $100~\GeV$~\cite{Chatrchyan:2014fea}. The longitudinal (with respect to the $z$ axis) and transverse impact parameter resolutions are $30$ $\mu$m and $10$ $\mu$m respectively. The efficiency for charged particles of $p_{T}$ greater than $0.9~\GeV$ in simulated $t\bar{t}$ events is $94\%$ ($85\%$) in the pseudorapidity region of $|\eta|<0.9$ ($0.9<|\eta|<2.4$). The main cause of the inefficiency is due to the hadrons undergoing nuclear interactions in the tracker material.   
+
+\section{Primary vertex reconstruction}
+
+The goal of the primary vertex reconstruction is to measure t
+
+Deterministic annealing for clustering, compression, classification, regression, and related optimization problems~\cite{726788}.
+
+Adaptive vertex fitting reference~\cite{0954-3899-34-12-N01}.
 
 \section{Electron Reconstruction and Identification}
 
+Let's do a test for the Gaussian-Sum filter~\cite{Adam:815410}.
+
 \section{Muon Reconstruction and Identification}
 
-\section{Tau Reconstruction and Identification}
-
 \section{Jet Reconstruction and Identification}
+
+\section{Particle Flow}
+
+\section{Tau Reconstruction and Identification}
 
 \section{Missing Energy Reconstruction and calibration}
     
