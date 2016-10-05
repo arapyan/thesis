@@ -13,7 +13,7 @@ The goal of the track reconstruction is to estimate the position and momentum pa
 The CTF is performed six times to determine the collection of the tracks in an event. The aim of this iterative tracking is to first find the tracks that are easiest to find (high $p_{T}$ and near the interaction region) with subsequent iterations searching for the more challenging tracks (low $p_{T}$ and displaced from the interaction region). Hits associated with tracks are removed after each iteration thereby reducing the computational complexity. Each iteration has four steps:
 
 \begin{description}
-\item[$\bullet$ Seed generation]  Initial track candidates are found using only two or three hits in the inner part of the tracker. One has to note that the seeds are not constructed from the outermost regions of the tracker where the track density is small. The high granularity of the pixel detector ensures that the channel occupancy is lower than the channel occupancy of the outer strip layers. In addition, significant fraction of charged pions undergo inelastic interaction in the track detectors while many electrons loose significant energy due to bremsstrahlung radiation as they transverse the tracker. There are five parameters needed to define the helical trajectory of the charged particles in the approximately uniform magnetic field. Two or three hits along with constraining the origin of the charged particle near the beam spot is sufficient to extract these parameters.
+\item[$\bullet$ Seed generation]  Initial track candidates are found using only two or three hits in the inner part of the tracker. One has to note that the seeds are not constructed from the outermost regions of the tracker where the track density is small. The high granularity of the pixel detector ensures that the channel occupancy is lower than the channel occupancy of the outer strip layers. In addition, significant fraction of charged pions undergo inelastic interaction in the track detectors while many electrons loose significant energy due to bremsstrahlung radiation as they transverse the tracker. There are five parameters needed to define the helical trajectory of the charged particles in the approximately uniform magnetic field. Two or three hits along with constraining the origin of the charged particle near the beam spot (the three dimensional profile of the luminous region of the collisions) is sufficient to extract these parameters.
 \item[$\bullet$ Track finding]  The Kalman filter algorithm is used to provide a coarse estimate of the track parameters starting from the seeds.  track candidate is built by adding hits from successive detector layers. A fast analytical propagator is used to find the hit layers. The track parameters are updated each time a new hit is found.
 \item[$\bullet$ Track fitting] The full information needed for the trajectory is only available once all the hits of the trajectory are identified. Therefore, the trajectory is once again re-fitted using a Kalman filter and smoother. A fourth-order Runge-Kutta method is used to extrapolate the trajectory between the successive hits. Material and inhomogeneous magnetic field effects are included.
 \item[$\bullet$ Track selection] Quality requirements are applied to reject fake tracks not originating from a charged particle. 
@@ -23,17 +23,75 @@ The track reconstruction is effectively fully efficient for isolated muons with 
 
 \section{Primary vertex reconstruction}
 
-The goal of the primary vertex reconstruction is to measure t
+The goal of primary vertex reconstruction is to measure the position of each proton-proton interaction vertex in each event. The vertex reconstruction starts from the collection of the reconstructed tracks consistent with being produced near the beam spot. Additional quality requirements on the number of tracker layers associated to the track and the quality of the CTF fit are required. There is no requirement on the $p_{T}$ of the tracks ensuring high vertex reconstruction efficiency.
 
-Deterministic annealing for clustering, compression, classification, regression, and related optimization problems~\cite{726788}.
+A clustering algorithm based on the $z$ coordinates of closest approach of the tracks to the beam spot is used to resolve the vertices. The tradeoff is to be able to resolve the nearby vertices against the accidental splitting of a single vertex into more than one cluster of tracks.  A deterministic annealing (DA) algorithm~\cite{726788} is used for the clustering where the most probable vertex positions are found through a minimization of "free energy" $F$ at "temperature" $T$~\cite{Chatrchyan:2014fea}, 
+\begin{equation} \label{eq:minimize}
+F = -T \sum_{i}^{N_{T}} \ln \sum_{j}^{N_{V}} p_{ij} \rho_{j} \exp  \left[-\frac{1}{T}\frac{(z_{i}^{T}-z_{j}^{V})^2}{{\sigma_{i}^{z}}^2} \right],
+\end{equation}
+where $z_{i}^{T}$ and $\sigma_{i}^{z}$ are the $z$ coordinates of the points of the closest approach of the tracks to the $z$ and the corresponding uncertainties, $z_{j}^{V}$ are the vertex positions with vertex weights $\rho_{j}$, and $p_{ij}$ is the probability of assigning the track $i$ to the vertex $j$. The assignment of the probabilities is such that at very low temperatures every track is compatible with a single vertex while at very high temperatures all the tracks become compatible with a single vertex. The algorithm starts at a high temperature that gradually decreases ($F$ is minimized at each step) until a pre-defined minimum temperature is reached. Thereafter the temperature is further decreased to $T=1$ for the final assignment without further splitting. 
 
-Adaptive vertex fitting reference~\cite{0954-3899-34-12-N01}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter4/vertex_efficiency}
+\includegraphics[width=0.49\columnwidth]{figures_chapter4/vertex_resolution}
+\caption{Vertex reconstruction efficiency (left panel) as a function of the number of tracks in the vertex measured in minimum-bias data and in simulation. Vertex resolution (right panel) in the $z$ coordinate as a function of the number of tracks measured in minimum bias events (red) and jet-enriched events (black)~\cite{Chatrchyan:2014fea}.}
+\label{fig:vertex}
+\end{figure}
+
+The candidate vertices determined by the DA clustering that contain at least two tracks are fitted using an adaptive vertex fitter~\cite{0954-3899-34-12-N01} to determine all the vertex parameters including the $x$, $y$, and $z$ positions. Figure~\ref{fig:vertex} shows the vertex reconstruction efficiency (left) and vertex resolution in $z$ coordinate as a function of the number of tracks used to fit the vertex. The reconstruction efficiency is close to $100\%$ when there are more than two tracks used to reconstruct the vertex. The vertex resolution also depends on the number of tracks as well as the $p_{T}$ of the tracks. The vertex resolutions are shown for minimum bias data events (red), where loose triggers select inelastic pp collisions with as little bias as possible, and jet enriched data events, where the events are required to have a reconstructed jet with transverse energy $E_{T}$ greater than $20~\GeV$ (black). The tracks in the jet enriched events have higher $p_{T}$ resulting in better vertex resolution. A resolution of approximately $10$ $\mu$m is achieved for high $p_{T}$ vertices with at least $50$ tracks.   
+
+The vertex with the largest sum of the $p_{T}^2$ is defined to be the true hard-scattered pp vertex and is denoted as the primary vertex. The other vertices in the event are assumed to originate from the additional pileup interactions in the bunch crossing. Beam induced backgrounds can be rejected by applying compatibility requirements on the primary vertex with the nominal interaction point (the origin of the CMS coordinate system). The distance of the primary vertex in the $z$ direction (transverse direction) to the nominal interaction point is required to be less than $24$ cm ($2$ cm). The number of degrees of freedom of the primary vertex fit is also required to be greater than $3$.
+
+\section{Muon Reconstruction and Identification}
+
+Muon tracks are reconstructed not only in the CMS inner tracker but also independently in the muon system~\cite{Chatrchyan:2012xi}. The latter tracks are called standalone muon tracks. The standalone muon tracks are reconstructed from the hits in the muon chambers in a combined track fit using a Kalman filter. The "global muon" reconstruction refers to the combination and matching of the standalone muon tracks with the inner tracker tracks. A global muon track is fitted from these tracks again using a Kalman filter technique. The expected energy loss in the solenoid and support structures is taken into account in the fit. The global fit improves the momentum resolution for muons with $p_{T}$ greater than $200~\GeV$ compared to the inner tracker only resolution as demonstrated in Figure~\ref{fig:muon_resolution}.   
+
+Another independent algorithm starts from the inner tracker and proceeds outward in the radial direction matching the hits in the muons chambers. These "tracker muon" reconstruction is more efficient for low momentum muons ($p < 5~\GeV$) compared to the global muon reconstruction as it only requires one muon segment hit in the muon chambers. The tracker muon reconstruction considers all the inner tracker tracks with $p_{T}$ greater than $0.5~\GeV$ as possible muon candidates. The average expected energy loses and multiple Coulomb scattering in the detector material are taken into account for the extrapolation to the muon system. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_efficiency}
+\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_resolution}
+\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_efficiency}
+\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_resolution}
+\caption{Distribution of $\chi^2$ per degree of freedom, transverse impact parameter $d_{xy}$,  number of hits in the inner tracker, and number of muon station for data at $\sqrt{s}=13~\TeV$ taken during $2015$ data taking period. Simulated $W \rightarrow \mu \nu$ signal process normalized to the number of observed data evens is shown for comparison. The events satisfy all other selection requirements (including the isolation requirement to be defined later) are satisfied except that on the shown variable.}
+\label{fig:muon_id}
+\end{figure}
+
+Muon candidates selected in the results are required to be either a tracker or a global muon. Approximately $99\%$ of the muons in the fiducial volume (the geometrical acceptance) of the muon system are identified as either a tracker or a global muon. Muon candidates identified as both a global and a tracker muon are merged into a single candidate.  Additional quality requirements are imposed to reduce miss-identified muon candidates and so called non-prompt muons. Non-prompt muons originate from in-flight decays of light hadrons and semi-leptonic decays of the heavy flavor quarks. The miss-identified muon candidates originate from the punch-through of hadronic showers to the muon system. The contribution is generally small for the global muons due to the minimum number number of muon segment hits requirement. 
+
+Figure~\ref{fig:muon_id} shows the distributions of few of the muon variables used for reduction of the non-prompt and miss-identified muons. The  $\chi^2$ per degree of freedom of the global track fit is required to be less than $10$. At least one segment in the muon stations must be included in the global fit to reduce the punch-through hadrons. The muons are required to have track segments in at least two muon stations. At least one hit in the pixel tracker and at least five tracking layers are required. Background originating from cosmic-ray muons transversing the CMS detector in coincidence with a pp collision is reduced by the impact parameter requirement. Figure~\ref{fig:muon_id} (up right) shows the transverse impact parameter distribution $d_{xy}$. The candidates with large $d_{xy}$ originate mainly from the cosmic-ray muons.  The excess of events with respect to the $W \rightarrow \mu\nu$ simulation is due to the in-flight decays of long lived particles in the QCD multi-jet background. 
 
 \section{Electron Reconstruction and Identification}
 
-Let's do a test for the Gaussian-Sum filter~\cite{Adam:815410}.
+Electrons are reconstructed by looking for a track in the inner tracking that is matched to energy deposits in the ECAL. Electron reconstruction is complicated due to bremsstrahlung radiation as electrons transverse the inner tracker detector. These bremsstrahlung photons can subsequently undergo a pair-conversion before reaching the ECAL. As a result the electron energy reaching the ECAL significantly spread in the azimuthal direction $\phi$ due to bending of the trajectories in the CMS magnetic field. Approximately $35\%$ of electrons radiate moe than $70\%$ of their initial energy before reaching the ECAL~\cite{Chatrchyan:2014fea,Baffioni:2006cd}. As a result a dedicated clustering algorithms are used to collect the bremsstrahlung energy taking the spreading in the $\phi$ direction into account~\cite{Meschi:2001lfa}.  The spread in the $\eta$ direction is mostly negligible except for very low $p_{T}$ (less than $5~\GeV$).    
 
-\section{Muon Reconstruction and Identification}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_efficiency}
+\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_resolution}
+\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_efficiency}
+\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_resolution}
+\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_efficiency}
+\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_resolution}
+\caption{Distribution of shower shape $\sigma_{\eta \eta}$, H/E, and $\Delta \eta$ for data at $\sqrt{s}=13~\TeV$ taken during $2015$ data taking period for the barrel (left) and endcap (right). Simulated $W \rightarrow e \nu$ signal process normalized to the number of observed data evens is shown for comparison. The events satisfy all other selection requirements (including the isolation requirement to be defined later) are satisfied except that on the shown variable.}
+\label{fig:ele_id}
+\end{figure}
+
+In the ECAL barrel region the energy is collected in a small $\eta$ window and an extended window in $\phi$.  An array of $5\times1$ crystals in $\eta-\phi$ are formed around a seed crystal with transverse energy $E_{T}>1~\GeV$. The arrays are extended in both $\phi$ directions centered at the seed crystals up to $\Delta \phi$ of radius of $0.3$. The arrays withe $E_{T}>0.1~\GeV$ are grouped to form a supercluster. In the ECAL endcap the supercluster is seeded by a $5\times5$ cluster in $\eta-\phi$ that is centered at the seed crystal. The supercluster energy corresponds to the sum of the energies of its clusters. 
+
+Inner tracker seeds compatible with a reconstructed supercluster are searched in the pixel tracker (also in TEC to improve the efficiency). Electrons that suffer small amount of bremsstrahlung radiation loss can be identified by extrapolating a standard reconstructed track to the ECAL and passing close to an ECAL cluster. A poor $\chi^2$ or few associated hits in the reconstructed tracks may come from an electron that suffered a significant bremsstrahlung energy loss. A modified version of the Kalman filter is used to perform the final fit of the parameters as the Kalman filter is optimal for Gaussian uncertainties whereas the bremsstrahlung energy loss is modeled by Bethe-Heitler.  A gaussian approximation to the Bethe-Heitler model is crude and therefore a Gaussian-Sum filter (GSF)~\cite{Adam:815410} method is employed that approximates the Bethe-Heitler energy loss by a sum of Gaussian functions. Electron momentum is derived from a weighted mean of the inner tracker measurements and the supercluster energy. 
+
+There are few sources of electron backgrounds. An overlapping charged and neutral pions inside a hadronic jet or a charged pion showering early in the ECAL can be miss-identified as an electrons. Figure~\ref{fig:ele_id} shows the distributions of few of the electron identification variables used for reduction of these background processes:
+ 
+\begin{description}
+\item[$\bullet$]  $\sigma_{\eta\eta}$ is the energy weighted $\eta$ width of the cluster. As can be seen it is small for genuine electrons.  
+\item[$\bullet$]  H/E is the ratio of the energy deposited in the HCAL to the electromagnetic energy near the seed cluster. .
+\item[$\bullet$] $\Delta \eta$ and $\Delta \phi$ are the separations between the supercluster and track directions evaluated at the primary vertex in the $\eta$ and $\phi$ directions respectively.  
+\end{description}
+
+The conversion of a photon into an electron-positron pair is another source of background. Electron candidates with missing hits in the innermost layers of the inner tracker indicate a photon conversion. An identification of a vertex with a pair of tracks with no hits in the tracker layers between the vertex and the interaction point is also used to further suppress this background.
 
 \section{Jet Reconstruction and Identification}
 
@@ -42,6 +100,3 @@ Let's do a test for the Gaussian-Sum filter~\cite{Adam:815410}.
 \section{Tau Reconstruction and Identification}
 
 \section{Missing Energy Reconstruction and calibration}
-    
-\section{The Luminosity measurement }
-
