@@ -43,7 +43,7 @@ The candidate vertices determined by the DA clustering that contain at least two
 
 The vertex with the largest sum of the $p_{T}^2$ is defined to be the true hard-scattered pp vertex and is denoted as the primary vertex. The other vertices in the event are assumed to originate from the additional pileup interactions in the bunch crossing. Beam induced backgrounds can be rejected by applying compatibility requirements on the primary vertex with the nominal interaction point (the origin of the CMS coordinate system). The distance of the primary vertex in the $z$ direction (transverse direction) to the nominal interaction point is required to be less than $24$ cm ($2$ cm). The number of degrees of freedom of the primary vertex fit is also required to be greater than $3$.
 
-\section{Muon Reconstruction}
+\section{Muon Reconstruction and Identification}
 
 Muon tracks are reconstructed not only in the CMS inner tracker but also independently in the muon system~\cite{Chatrchyan:2012xi}. The latter tracks are called standalone muon tracks. The standalone muon tracks are reconstructed from the hits in the muon chambers in a combined track fit using a Kalman filter. The "global muon" reconstruction refers to the combination and matching of the standalone muon tracks with the inner tracker tracks. A global muon track is fitted from these tracks again using a Kalman filter technique. The expected energy loss in the solenoid and support structures is taken into account in the fit. The global fit improves the momentum resolution for muons with $p_{T}$ greater than $200~\GeV$ compared to the inner tracker only resolution as demonstrated in Figure~\ref{fig:muon_resolution}.   
 
@@ -51,11 +51,9 @@ Another independent algorithm starts from the inner tracker and proceeds outward
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_efficiency}
-\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_resolution}
-\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_efficiency}
-\includegraphics[width=0.35\columnwidth]{figures_chapter4/vertex_resolution}
-\caption{Distribution of $\chi^2$ per degree of freedom, transverse impact parameter $d_{xy}$,  number of hits in the inner tracker, and number of muon station for data at $\sqrt{s}=13~\TeV$ taken during $2015$ data taking period. Simulated $W \rightarrow \mu \nu$ signal process normalized to the number of observed data evens is shown for comparison. The events satisfy all other selection requirements (including the isolation requirement to be discussed in chapter $4$) are satisfied except that on the shown variable.}
+\includegraphics[width=0.49\columnwidth]{figures_chapter4/chi2_muon}
+\includegraphics[width=0.49\columnwidth]{figures_chapter4/dxy_muon}
+\caption{Distribution of $\chi^2$ per degree of freedom and transverse impact parameter $d_{xy}$ for data at $\sqrt{s}=13~\TeV$ taken during $2015$ data taking period. Simulated $W \rightarrow \mu \nu$ signal process normalized to the number of observed data evens is shown for comparison. The events satisfy all other selection requirements (including the isolation requirement to be discussed in chapter $4$) are satisfied except that on the shown variable.}
 \label{fig:muon_id}
 \end{figure}
 
@@ -63,18 +61,18 @@ Muon candidates selected in the results are required to be either a tracker or a
 
 Figure~\ref{fig:muon_id} shows the distributions of few of the muon variables used for reduction of the non-prompt and miss-identified muons. The  $\chi^2$ per degree of freedom of the global track fit is required to be less than $10$. At least one segment in the muon stations must be included in the global fit to reduce the punch-through hadrons. The muons are required to have track segments in at least two muon stations. At least one hit in the pixel tracker and at least five tracking layers are required. Background originating from cosmic-ray muons transversing the CMS detector in coincidence with a pp collision is reduced by the impact parameter requirement. Figure~\ref{fig:muon_id} (up right) shows the transverse impact parameter distribution $d_{xy}$. The candidates with large $d_{xy}$ originate mainly from the cosmic-ray muons.  The excess of events with respect to the $W \rightarrow \mu\nu$ simulation is due to the in-flight decays of long lived particles in the QCD multi-jet background. 
 
-\section{Electron Reconstruction}
+\section{Electron Reconstruction and Identification}
 
 Electrons are reconstructed by looking for a track in the inner tracking that is matched to energy deposits in the ECAL. Electron reconstruction is complicated due to bremsstrahlung radiation as electrons transverse the inner tracker detector. These bremsstrahlung photons can subsequently undergo a pair-conversion before reaching the ECAL. As a result the electron energy reaching the ECAL significantly spread in the azimuthal direction $\phi$ due to bending of the trajectories in the CMS magnetic field. Approximately $35\%$ of electrons radiate moe than $70\%$ of their initial energy before reaching the ECAL~\cite{Chatrchyan:2014fea,Baffioni:2006cd}. As a result a dedicated clustering algorithms are used to collect the bremsstrahlung energy taking the spreading in the $\phi$ direction into account~\cite{Meschi:2001lfa}.  The spread in the $\eta$ direction is mostly negligible except for very low $p_{T}$ (less than $5~\GeV$).    
 
-\begin{figure}[h]
+\begin{figure}
 \centering
-\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_efficiency}
-\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_resolution}
-\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_efficiency}
-\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_resolution}
-\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_efficiency}
-\includegraphics[width=0.32\columnwidth]{figures_chapter4/vertex_resolution}
+\includegraphics[width=0.45\columnwidth]{figures_chapter4/sigieie_barrel}
+\includegraphics[width=0.45\columnwidth]{figures_chapter4/sigieie_endcap}
+\includegraphics[width=0.45\columnwidth]{figures_chapter4/hovere_barrel}
+\includegraphics[width=0.45\columnwidth]{figures_chapter4/hovere_endcap}
+\includegraphics[width=0.45\columnwidth]{figures_chapter4/deta_barrel}
+\includegraphics[width=0.45\columnwidth]{figures_chapter4/deta_endcap}
 \caption{Distribution of shower shape $\sigma_{\eta \eta}$, H/E, and $\Delta \eta$ for data at $\sqrt{s}=13~\TeV$ taken during $2015$ data taking period for the barrel (left) and endcap (right). Simulated $W \rightarrow e \nu$ signal process normalized to the number of observed data evens is shown for comparison. The events satisfy all other selection requirements (including the isolation requirement to be discussed in chapter $4$) are satisfied except that on the shown variable.}
 \label{fig:ele_id}
 \end{figure}
@@ -120,13 +118,34 @@ Jet energy needs to be calibrated to obtain more accurate estimate of the origin
 
 Figure~\ref{fig:jet_unc} shows the summary of jet energy scale uncertainty as a function of jet $p_{T}$ and $\eta$ at $\sqrt{s}=8~\TeV$ data taking period. Jets selected for majority of the physics results are required to have a transverse momentum greater than $30~\GeV$ (the $p_{T}$ requirement is lower for jets originating from b quarks) with $|\eta|<4.7$.  The uncertainties on the jet energy scale are below $3\%$ across the phase space considered by most analyses and below $1\%$ in the barrel region when excluding the uncertainties due to jet flavor differences at different stages of the corrections.
 
+\subsection{Pileup Jet Identification}
+
+Particles originating from pileup interactions can cluster into jets. The $p_{T}$ density due to pileup particles is roughly $0.7~\GeV$ per unit are in $\eta-\phi$ plane per reconstructed primary vertex. The pileup jets have low $p_{T}$ but it is possible for these low $p_{T}$ jets to overlap and a form a single jet with relatively large $p_{T}$. The number of overlapping jets grows roughly quadratically with the number of pileup interactions and jet area~\cite{CMS-PAS-JME-13-005}.  
+The goal of the pileup jet identification algorithm is to mitigate the background events due to the pileup jets. Two characteristic signatures of the pileup jets are exploited. The charged particles in pileup jets generally do not point to the primary vertex of the event. In addition jets originating from pileup tend to be more diffuse in shape compared to the jets from the hard scattering. A Boosted Decision Tree (BDT) discriminator implemented in TMVA~\cite{Hšcker:1019880} is used. It takes as an input the compatibility of the tracks inside the jet with the primary vertex of the event, variables exploiting the jet shape, and the number of charged and neutral constituents of the jet. The most discriminating track related variable ($\beta^{*}$) and jet shape variable ($<\Delta R^2>$) are defined as:
+
+\begin{eqnarray} \label{eq:pujetid}
+\beta^{*} = \frac{\sum_{i \notin \mathrm{PV}} p_{Ti}}{\sum_{i} p_{Ti}}, \\
+<\Delta R^{2}> = \frac{\sum_{i \in \mathrm{jet}} \Delta R^{2} p_{Ti}^2 }{\sum_{i \in jet} p_{Ti}^2},
+\end{eqnarray}
+where the charged particle is defined to be coming from the primary vertex if $\Delta z<0.2$ cm in the $\beta^{*}$ definition and $\Delta R$ is the distance of the particle to the jet axis in the $<\Delta R^{2}>$ definition. The distributions of these variables for "real" and pileup jets are shown in Figure~\ref{pu_jet}. The $<\Delta R^{2}>$ distributions are shown for jet $|\eta|>3.0$ where there is a degradation of separation due to the coarse granularity of the HF calorimeter. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter4/bstar}
+\includegraphics[width=0.49\columnwidth]{figures_chapter4/dr2}
+\caption{Distributions of the $\beta^{*}$ (left) and $<\Delta R^{2}>$ (right) variables in simulation for jets matched to MC truth jet within a radius of $\Delta R<0.25$ (blue) and for jets with no match (red). Jets are required to have a $p_{T}$ greater than $25~\GeV$ and $|\eta|<2.5$ (left), and $|\eta|>3.0$ (right).}
+\label{fig:pu_jet}
+\end{figure}
+
+The BDT discriminator is almost fully efficient for jets with $p_{T}>30\GeV$ in the inner tracker geometric acceptance ($|\eta|<2.4$) with a pileup jet rejection rate of approximately $87\%$. The efficiency degrades outside of the inner tracker volume. The efficiency is about $90\%$ for "real" jets with a pileup jet rejection rate of about $40\%$ for jets with $3.0<|\eta|<5.0$.
+
 \subsection{b-jet identification}
 
-
+The identification of jets originating from bottom quark hadronization (b-jet is important to reduce the overwhelming background from processes involving jets originating from gluons, light flavored quarks, and charm quarks (c-jets).  b-jets are important signatures to study the top quark decays, the Higgs boson, and in searches for new physics. The main idea is to exploit the long lifetimes of the bottom and charm quarks and their relatively large mass. As a result one can look for secondary vertices and/or tracks with large impact parameters.  For example the CMS inner tracking system allows to achieve an impact parameter resolution of about $15$ ($30$) $\mu$m for a track with $p_{T}$ of $100$ ($5$)~$\GeV$ while typical impact parameter values for tracks from the b-jets are at a level of a few $100$ $\mu$m~\cite{Chatrchyan:2012jua}. The so called Combined Secondary Vertex (CSV) algorithm is used to identify the b-jets in chapter $4$. A likelihood discriminant is formed combining information about track impact parameters and secondary vertices. This means that the b-jets can only be identified within the inner tracker geometrical acceptance ($|\eta|<2.4$). A b-jet identification efficiency of about $75\%$ is achieved with a light-flavor jet miss-identification rate of about $1\%$. 
 
 \section{Particle Flow}
 
-CMS uses so called particle flow (PF) approach to calorimetry~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001,CMS-PAS-PFT-10-002}.  The basic idea of the PF approach is to combine the information from all the sub-detectors in order to reconstruct all the particles in the event using the best measurements possible. This is especially useful for jet energy measurements as roughly $62\%$ of the jet energy is carried by charged particles (mainly hadrons), around $27\%$ by photons, about $10\%$ by long lived neutral hadrons, and around $1.5\%$ by neutrinos~\cite{Thomson200925}. Thus, one can exploit the superior momentum (energy) resolution of the inner tracker (ECAL) to obtain the most accurate measurements for the charged hadrons (photons) inside the jet. In addition, the high granularity ECAL makes it possible to separate the photons from the charged particle energy deposits. 
+CMS uses so called particle flow (PF) approach to calorimetry~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001,CMS-PAS-PFT-10-002}.  The basic idea of the PF approach is to combine the information from all the sub-detectors in order to reconstruct all the particles in the event using the best measurements possible. This is especially useful for jet energy measurements as roughly $62\%$ of the jet energy is carried by charged particles (mainly hadrons), around $27\%$ by photons, about $10\%$ by long lived neutral hadrons, and around $1.5\%$ by neutrinos~\cite{Thomson200925}. Thus, one can exploit the superior momentum (energy) resolution of the inner tracker (ECAL) to obtain the most accurate measurements for the charged hadrons (photons) inside the jet and within the inner tracker (ECAL) geometric acceptance. In addition, the high granularity ECAL makes it possible to separate the photons from the charged particle energy deposits. 
 
  The basic elements of the PF algorithm are tracks in the inner tracker, muon segments in the muon system, and energy clusters from the calorimeters. The calorimeter clustering allows to separate the neutral particles from the energy deposits of charged hadrons as well as to reconstruct and identify the electrons and the corresponding Bremsstrahlung photons. The clustering starts from the cluster seed defined as a local energy maxima. The clusters are then grown from the seeds by including neighboring cells with an energy in excess of a defined threshold in the cluster. The threshold is defined to be two standard deviation of the electronic noise of the ECAL ($80~\MeV$ in the barrel and  approximately $300~\MeV$ in the endcap) and $800~\MeV$ in the HCAL. A linking algorithm is required as a given particle will result in several PF elements. This is achieved by defining a distance measure between each pair of PF elements. For example, the ECAL clusters of the bremsstrahlung photons emitted by an electron are linked by extrapolating the tangents of the track at each intersection point of the track and the inner tracking detector layer to the ECAL to form a PF block. It has to be noted that due to high granularity of the CMS detector the linked blocks typically contain only $1-3$ elements. 
  
@@ -181,7 +200,18 @@ $\tau_{h}$ candidates are formed by combining the clustered strips with the char
 
 An additional requirement is imposed on the separation of the charged hadrons and strips. All the charged hadrons and strips are required to be within a narrow cone for $\Delta_R = 3.0 /p _{T}~[\GeV]$ around the jet axis to take into account the collimated decay products of energetic taus. When $\Delta_R$ is smaller than $0.05$ or exceeds $0.10$, a cone size of $0.05$ or $0.10$ is used respectively. Figure~\ref{tau_mass} shows the distribution of the mass of $\tau_{h}$ for $Z/\gamma^{*} \rightarrow \tau\tau$ events at $\sqrt{s}=8~\TeV$ data taking period. The individual decay modes are highlighted by splitting the $Z/\gamma^{*} \rightarrow \tau\tau$ events according to the reconstructed $\tau_{h}$ decay mode. As one can see the $m_{\tau_h}$ distribution peaks around the intermediate meson resonance masses of $\rho(770)$ and $a_{1}(1260)$. The narrow peak near the charged pion mass is due to the single charged particle decay mode. 
 
-Jets originating from quarks and gluons remain a large background to the $\tau_{h}$ reconstruction. It is also possible for an electron or muon to be miss-identified as a $\tau_{h}$. The mitigation of these backgrounds is discussed in chapter $4$.
+Jets originating from quarks and gluons remain a large background to the $\tau_{h}$ reconstruction. It is also possible for an electron or muon to be miss-identified as a $\tau_{h}$. The mitigation of these backgrounds is discussed in chapter $4$../
  
-\section{Missing Energy Reconstruction}
+\section{Missing Transverse Energy}
+
+Neutrinos and hypothetical neutral weakly interacting particles produce a momentum imbalance in the plane perpendicular to the beam direction. The missing transverse momentum $\vec{E}_{T}^{miss}$ is defined as the negative vectorial sum of all the visible particle transverse momenta in the event. The magnitude $E_{T}^{miss}$ is referred to as the missing transverse energy. The precise measurement of $E_{T}^{miss}$ is crucial for $W$ boson cross section measurements and plays a key role in the Higgs boson searches decaying to $\tau\tau$ final states. Precise calibration of all the reconstructed physics objects in the event is important for the $\vec{E}_{T}^{miss}$ performance. Therefore, the PF candidates are used to reconstruct the $\vec{E}_{T}^{miss}$:
+
+\begin{eqnarray} \label{eq:jet_find}
+\vec{E}_{T}^{miss} = - \sum_{i \in{\mathrm{PF candidates}}} \vec{p}_{Ti},
+\end{eqnarray}
+
+denoted as PF $\vec{E}_{T}^{miss}$. 
+
+The  $\vec{E}_{T}^{miss}$ response and resolution can be degraded due to minimum energy thresholds and non-linear response in the calorimeters, and $p_{T}$ thresholds and inefficiencies in the inner tracker. By correcting the jet energy scale as described above one can reduce the biases in the response of $\vec{E}_{T}^{miss}$ introduced by these effects\cite{Khachatryan:2014gga}. In addition the $\vec{E}_{T}^{miss}$ is sensitive to the additional pileup interactions in the event. While contribution of genuine $\vec{E}_{T}^{miss}$ from pileup interactions is small due to small probability to produce neutrinos in the inelastic $pp$ collisions, the nonlinearity and minimum thresholds of the calorimeters cause $\vec{E}_{T}^{miss}$ to point on average in the direction of the vectorial $\vec{p}_{T}$ sum of the neutral particles. Techniques to mitigate the impact of the pileup interactions on $\vec{E}_{T}^{miss}$ response and resolution are discussed in chapter $4$.
+
 
