@@ -26,16 +26,112 @@ The measurement of the Higgs boson decays to $b\bar{b}$ and $\tau^{+}\tau^{-}$ i
 
 \subsection{Quantum Chromodynamics}
 
-The gauge group of the strong interactions of the colored quarks and gluons is $SU(3)$. The gauge invariant and reonormalizable Langrangian of the quantum chromodynamics (QCD) is given by:
+The gauge group of the strong interactions of the colored quarks and gluons is $SU(3)$. The most general gauge invariant and renormalizable Langrangian of the quantum chromodynamics (QCD) is given by:
 
- \begin{equation} \label{eq:lumi}
-L = \sum_{q} \bar{\psi}_{q,a} (i \gamma^{\mu}\delta_{\mu}\delta_{ab}-g_{s}\gamma^{\mu}t^{C}_{ab}A^{C}_{\mu}-m_{q}\delta_{ab})\psi_{q,b}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-\theta\frac{g_{s}^2}{72\pi^2}\epsilon_{\mu\nu\sigma\rho}F^{\mu\nu}F^{\rho\sigma},
+ \begin{equation} \label{eq:qcd_lang}
+\mathcal{L} =  \bar{\psi}_{f,\alpha} (i \gamma^{\mu}\partial_{\mu}\delta_{\alpha\beta}-g_{s}\gamma^{\mu}t^{a}_{\alpha\beta}A^{a}_{\mu}-m_{f}\delta_{\alpha\beta})\psi_{f,\beta}-\frac{1}{4}F_{\mu\nu}^{b}F^{b,\mu\nu}-\theta\frac{g_{s}^2}{72\pi^2}\epsilon_{\mu\nu\rho\sigma}F^{c,\mu\nu}F^{c,\rho\sigma},
 \end{equation}
-where repeated indices are summed over.
+where repeated indices are summed over. The $\psi_{f,\alpha}$ are the quark-field Dirac spinors of flavor $f$, color $\alpha$, and mass $m_{f}$. There are $6$ quark flavors, the up (u), charm (c), and top (t) each carrying an electric charge of $+2e/3$, and the down (d), strange (s), and bottom (b) each carrying an electric charge of $-e/3$. Each quark flavor comes in three "colors" transforming according to the fundamental representation of the $SU(3)$ color group. The $A_{\mu}^{a}$ denotes the massless gluon field vector potentials transforming according to the adjoint representation of the $SU(3)$ color group with $a$ running from $1$ to $N_{c}^2-1=8$ (8 gluons).  The $t_{\alpha\beta}^{a}$ are the eight generators of the color group represented by $3 \times 3$ Hermitian traceless matrices. The $g_{s}$ (or $\alpha_{s} = \frac{g_{s}}{4\pi}$) is the strong interaction coupling constant, the $\gamma^{\mu}$ are the Dirac matrices, and the gauge field tensor is given by:
+ \begin{eqnarray} \label{eq:qcd_field}
+F_{\mu\nu}^{a} = \partial_{\mu}A_{\nu}^a-\partial_{\nu}A_{\mu}^a-g_{s}f_{abc}A_{\mu}^{b}A_{\nu}^{c},  \\
+\mathrm{[}t^a,t^b\mathrm{]}=if_{abc}t^{c},
+\end{eqnarray}
+where $f_{abc}$ are the structure constants of the $SU(3)$. The non-Abelian structure of the $SU(3)$ group means that the Feynman rules of QCD involve 3-gluon and 4-gluon vertices in addition to the quark-antiquark-gluon vertex. The last term in the Langrangian in Eq.~(\ref{eq:qcd_lang}) can induce an electric dipole moment for the neutron introducing a CP violation. However the experimental limits on the electric dipole moment constrain the $\theta$ parameter to be smaller than $10^{-10}$~\cite{Agashe:2014kda}. This is known as the strong CP problem with a possible resolution given by the Peccei-Quinn theory predicting the existence of a hypothetical particle Axion~\cite{PhysRevLett.38.1440}. There are $7$ fundamental parameters in QCD Langrangian (not counting the $\theta$ parameter): the $6$ quark masses and the strong coupling $g_{s}$ constant.
 
+Predictions utilizing perturbative QCD (pQCD) calculations are expressed in terms of the renormalized coupling $g_{s} (\mu_R)$ as a function of a non-physical renormalization scale $\mu_R$. The renormalization group equation to three-loop order is given by:
+\begin{eqnarray} \label{eq:qcd_rge}
+\mu\frac{d}{d\mu}g_s{\mu_R} = - (\beta_{0} \frac{g_{s}^{3}(\mu_R)}{16\pi^2} +  \beta_{1} \frac{g_{s}^{5}(\mu_R)}{128\pi^4} + \beta_{2} \frac{g_{s}^{7}(\mu_R)}{8192\pi^6}),
+\end{eqnarray}
+where the loop coefficients $\beta_{i}$ are:
+\begin{eqnarray} \label{eq:qcd_beta}
+\beta_{0}=11-\frac{2}{3}n_{f}, \\
+\beta_{1}=51-\frac{19}{3}n_{f}, \\
+\beta_{2}=2857-\frac{5033}{9}n_{f}-\frac{325}{27}n_{f}^2,
+\end{eqnarray}
+and $n_{f}$ is the number of quark flavors with masses below the energies of interest. The minus sign in Eq.~(\ref{eq:qcd_rge}) is the source of the asymptotic freedom and as can be seen in Eq.~(\ref{eq:qcd_beta}) the theory is asymptotically free as long as there are less than $16$ quark flavors below the energy scale of interest. Setting the renormalization scale near the momentum transfer $Q$ of a given process gives the effective strength of the strong coupling. Thus the strong coupling becomes weak for larger $Q$ and $\alpha_{s} \approx 0.1$ for momentum transfers near $100~\GeV$. Free quarks and gluons have not been observed experimentally. The asymptotic freedom implies that the strong coupling increases at low energies (large distances) and only color-singlet combinations of quarks, massless gluons, and anti-quarks, referred as hadrons, can be observed.  
+ 
 \subsection{Electroweak Model}
 
+The gauge group of the electroweak interactions is $SU(2) \times U(1)$ with the corresponding gauge bosons $\vec{W}_{\mu}$ and $B_{\mu}$ respectively. The $SU(2)$ part of the gauge group is chiral acting only on the left-handed components of the quark and lepton fields. The left handed fermion fields transform as doublets under $SU(2)$ given by:
+\begin{eqnarray} \label{eq:doublet}
+\Psi  = \left(\begin{array}{c} \nu_{f}\\ \ell_{f} \end{array} \right)\mathrm{,}  \quad \left(\begin{array}{c} \nu_{\mu}\\ \mu \end{array} \right)\mathrm{,}   \quad \left(\begin{array}{c} \nu_{\tau}\\ \tau \end{array} \right),
+\end{eqnarray}   
+for each lepton generation and by:
+\begin{eqnarray} \label{eq:doublet_quark}
+\Psi  = \left(\begin{array}{c} u \\ d^{'} \end{array} \right)\mathrm{,}  \quad \left(\begin{array}{c} c\\ s^{'} \end{array} \right)\mathrm{,}   \quad \left(\begin{array}{c} t\\ b^{'} \end{array} \right),
+\end{eqnarray}   
+for the three quark flavors. The $d^{'}$, $s^{'}$, and $b^{'}$ are given by:
+\begin{eqnarray} \label{eq:doublet_quark}
+d^{'} = V_{ud}d + V_{us}s + V_{ub}b, \\
+s^{'} = V_{cd}d + V_{cs}s + V_{cb}b, \\
+b^{'} = V_{td}d + V_{ts}s + V_{tb}b, 
+\end{eqnarray}   
+where $V$ is the unitary Cabibbo-Kobayashi-Maskawa (CKM) mixing matrix~\cite{Cabibbo:1963yz,Kobayashi:1973fv}. The right handed fermion fields are $SU(2)$ singlets. The most general gauge invariant and renormalizable Langrangian for the fermion fields $\psi_{i}$ is given by:
+
+\begin{equation} \label{eq:ewk_ym}
+\mathcal{L} = \sum_{i} \bar{\psi}_{i} \gamma^{\mu}(i \partial_{\mu}-\frac{g^{'}}{2}YB_{\mu}) \psi_{i}  - \bar{\Psi}_{i}\gamma^{\mu}\frac{g}{2}\vec{\sigma}\cdot\vec{W}_{\mu}\Psi_{i} - \frac{1}{4}\vec{W}_{\mu\nu}\cdot\vec{W}^{\mu\nu} - \frac{1}{4} B_{\mu\nu} B^{\mu\nu},
+\end{equation}
+where $g^{'}$ and $g$ are the gauge coupling constants of the $U(1)$ and $SU(2)$ respectively. Thus the $\frac{Y}{2}$, where $Y$ is the weak hypercharge, and the $\frac{1}{2}\vec{\sigma}$, where $\sigma_{i}$ are the Pauli matrices, are the generators of the $U(1)$ and $SU(2)$ respectively. The gauge field tensors are given by:
+\begin{eqnarray} \label{eq:ewk_field}
+B_{\mu\nu} = \partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}  \\
+\vec{W}_{\mu\nu} =  \partial_{\mu}\vec{W}_{\nu}-\partial_{\nu}\vec{W}_{\mu} + g \vec{W}^{\mu} \times \vec{W}^{\nu}.
+\end{eqnarray}
+The hypercharge is normalized such that the electric charge $Q=\frac{1}{2}\sigma^3+\frac{Y}{2}$. The vector fields corresponding to particles with spin $1$ and definite mass are the charged $W^{\pm}_{\mu}$ bosons, the neutral $Z_{\mu}$ boson and the photon $A_{\mu}$ given in terms of the gauge fields as: 
+\begin{eqnarray} \label{eq:bosons}
+A_{\mu} = B_{\mu} \cos \theta + W_{\mu}^{3} \sin \theta \\
+Z_{\mu} = -B_{\mu} \sin \theta + W_{\mu}^{3} \sin \theta \\
+W_{\mu}^{\pm} = W^{1}_{\mu} \mp i W_{\mu}^{2},
+\end{eqnarray}
+where $\theta$ is the weak angle related to the gauge coupling constants by:
+\begin{eqnarray} \label{eq:bosons}
+\sin \theta = \frac{g^{'}}{\sqrt{g^2+g^{'2}}} \\
+\cos \theta = \frac{g}{\sqrt{g^2+g^{'2}}}.
+\end{eqnarray}
+However this theory of the electroweak interactions given in Eq.~(\ref{eq:ewk_ym}) is not satisfactory. It contains four massless bosons whereas only the photon is massless in nature. Attempting to add mass terms for the vector boson fields in the Langrangian of the form $-M_{Z}^2Z_{\mu}Z^{\mu}$ breaks the gauge invariance. Furthermore introducing explicit mass terms for the spin-1 boson fields makes the theory non-renormalizable. There are also no mass terms in the Langrangian for the fermion fields.  The Dirac fermion mass terms link the left and right-handed components of the fields:
+\begin{eqnarray} \label{eq:fermion}
+m\bar{\psi}\psi = m(\bar{\psi}_L\psi_R+\bar{\psi}_R\psi_L).
+\end{eqnarray}
+This breaks the symmetry as the left and right-handed components transform differently under the $SU(2)$ and $U(1)$. Spontaneous symmetry breaking mechanism leaving the underlying gauge symmetry intact was the solution to the conundrum on how the gauge bosons can acquire mass. 
+
 \subsection{The SM Higgs mechanism}
+
+Spontaneous symmetry breaking occurs when the ground state (vacuum) does not exhibit the symmetry of the theory. A key aspect is that the vacuum is degenerate and it can not be predicted in advance which state will be chosen. Taking a precedence from the superconductivity phenomenon it was reasoned that the gauge symmetry can be broken through spontaneous symmetry breaking~\cite{Nambu:1960tm,Anderson:1963pc}. The main difficulty was the appearance of the massless spin-$0$ Nambu-Goldstone bosons after the spontaneous symmetry breaking (the Goldstone theorem~\cite{Goldstone:1962es}) as no such particles are observed. Englert, Brout, Higgs, Guralnik, Hagen, and Kibble showed that the theorem does not apply to the gauge theories ~\cite{Englert:1964et,Higgs:1964ia,Higgs:1964pj,Guralnik:1964eu,Higgs:1966ev,Kibble:1967sv}.  Taking these ideas Weinberg and Salam completed the electroweak unification started by Glashow~\cite{Glashow:1961tr,Weinberg:1967tq,Salam:1968rm}. They also added the possibility to generate the fermion masses through the same spontaneous symmetry breaking. Finally it was proved by t'Hooft and Veltman that this model is renormalizable~\cite{tHooft:1972fi}. 
+
+The $SU(2)$ symmetry is broken by introducing a scalar field (Higgs) in the spinor representation of the $SU(2)$ 
+\begin{eqnarray} \label{eq:lang_higgs}
+\Phi  = \frac{1}{\sqrt{2}}\left(\begin{array}{c} \sqrt{2}\phi^{+}\\ \phi_{0}+ia^{0} \end{array} \right),
+\end{eqnarray}   
+with four real degrees of freedom in the complex doublet and weak hypercharge of $Y=1$. The most general renormalizable Langrangian of the scalar field consistent with $SU(2) \times U(1)$ is given by
+
+\begin{equation} \label{eq:ewk_higgs}
+\mathcal{L_{\Phi}} = (D_{\mu}\Phi)^{\dagger} (D^{\mu}\Phi) - \mu^2 \Phi^{\dagger}\Phi - \lambda (\Phi^{\dagger}\Phi)^2,
+\end{equation}
+with $\lambda>0$. The covariant derivative, given by
+\begin{equation} \label{eq:higgs_cov}
+D_{\mu}\Phi = (\partial_{\mu}+\frac{1}{2}ig\vec{\sigma}\cdot\vec{W}_{\mu}+\frac{1}{2}g^{'}YB_{\mu})\Phi,
+\end{equation}
+is responsible for the Higgs field couplings to the $\vec{W}_{\mu}$ and $B_{\mu}$ gauge fields. There is a tree-approximation non-zero vacuum expectation value (VEV) for $\mu^2<0$ given by
+
+\begin{eqnarray} \label{eq:vev}
+<\phi>  =  \left(\begin{array}{c} 0\\ \frac{1}{\sqrt{2}}\nu \end{array} \right),
+\end{eqnarray}    
+with VEV $\nu^2= -\frac{\mu^2}{\lambda}$. A $SU(2)\times U(1)$ gauge transformation was performed in Eq.~(\ref{eq:vev}) to a unitary gauge in which $\phi^{+}=0$, and $a^{0}=0$ with $<\phi^{0}>0$. Defining $\phi^{0}=H+\nu$ in the Langrangian in Eq.~(\ref{eq:ewk_ym}) induces the spontaneous breaking of the SM gauge symmetry $SU(2)\times U(1)$ into $U(1)_{em}$ group. The generator of the $U(1)_{em}$ gauge group is the electric charge $Q=\frac{1}{2}\sigma^3+\frac{Y}{2}$. Thus the photon field $A_{\mu}$ remains massless and the Higgs Langrangian is given by
+
+ \begin{eqnarray} \label{eq:ewk_higgs2}
+\mathcal{L_{\Phi}} = \frac{1}{2} \partial_{\mu}H\partial^{\mu}H - \frac{1}{2} m_{H} H^2 -\frac{1}{2}m_{W}^2W_{\mu}^{+}W^{-\mu} - \frac{1}{2}m_{Z}^2Z_{\mu}Z^{\mu} \\
++ \frac{m_{H}^2}{2\nu} H^3 + \frac{m_{H}^2}{8\nu^2} H^4 + \frac{m_{Z}^2}{\nu} Z_{\mu}Z^{\mu}H + \frac{2m_{W}^2}{\nu} W^{+}_{\mu}W^{-\mu} H \\
++ \frac{m_{Z}^2}{2\nu^2} Z_{\mu}Z^{\mu} H^2 +\frac{m_{W}^2}{\nu^2} W^{+}_{\mu}W^{-\mu} H^2,
+\end{eqnarray}
+where the Langrangian is expressed in terms of the $W_{\mu}^{\pm}$ and $Z_\mu$ fields given in Eq.~(\ref{eq:bosons}) and
+ \begin{eqnarray} \label{eq:masses}
+m_{H}  = \sqrt{-2\mu^2} \\
+m_{W} = \frac{1}{2}g\nu = \cos\theta m_{Z} \\
+m_{Z} = \frac{1}{2} \sqrt{g^2+g^{'2}}\nu \\
+m_{A} = 0.
+\end{eqnarray}
+Thus the spin-$1$ gauge bosons $W_{\mu}^{\pm}$ and $Z_\mu$ have acquired mass. The Higgs boson field H is also massive. The three scalar fields in Eq.~(\ref{eq:lang_higgs}) are "eaten" by the $W_{\mu}^{\pm}$ and $Z_\mu$ fields and the fourth remains as the neutral Higgs field. One can see that the Higgs boson couplings to the spin-$1$ vector bosons are proportional to the mass squared of the bosons. The Higgs boson tri-linear and quartic couplings are proportional to the $m_{H}^2$.
+
+To complete the theory   
 
 \section{Extended Higgs Sector and MSSM}
     
