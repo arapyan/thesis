@@ -6,6 +6,8 @@
 %% prompt when you run the file main.tex through LaTeX.
 \chapter{Event Reconstruction}
 
+The $W^{\pm}$ and $Z$ boson cross section measurements and $H \rightarrow \tau\tau$ searches rely on the precise reconstruction of the decay products. The presence of neutrinos in the leptonic $W$ decays and also in  $\tau$ decays requires an accurate reconstruction of all the detector deposits to infer the presence of the neutrinos from the momentum imbalance in the transverse plane. In addition, reconstruction of jets is important to capture the different production modes of the Higgs boson. The additional pileup interactions in the events present a challenging environment for a precise reconstruction of the events. This chapter summarizes the event reconstruction emphasizing the components relevant for the results that follow.
+
 \section{Track reconstruction}
 
 The goal of the track reconstruction is to estimate the position and momentum parameters of charged particles from the reconstructed hits in the inner tracking detector. Reconstructing tracks at the LHC nominal instantaneous luminosities is a computationally challenging task due to a high occupancy environment. About $1000$ charged particles transverse the inner tracking detectors at each bunch crossing. Charged particles from prior or later bunch crossings can also be present due to finite detector time resolution.  The track reconstruction starts by clustering of zero-suppressed signals in the pixel and strip detectors into hits. Each hit provides an estimate of the cluster position and the corresponding uncertainty. The CMS track reconstruction algorithm is referred to as combinational track finder (CTF)~\cite{Adam:934067,Chatrchyan:2014fea}. The CTF is an adaptation of the combinatorial Kalman filter~\cite{BILLOIR1989390,BILLOIR1990219,MANKEL1997169}, which is an extension of the Kalman filter~\cite{FRUHWIRTH1987444}, combining pattern recognition and track fitting in the same framework. 
@@ -95,12 +97,10 @@ The conversion of a photon into an electron-positron pair is another source of b
 \section{Jet Reconstruction}
 
 Quarks and gluons produced at the LHC fragment and hadronize nearly immediately to a collimated spray of hadrons known as jets. Jets may originate from a $2 \rightarrow 2$ scattering of the partons inside the colliding protons, decay of q heavy object, such as a top quark or a Higgs boson, and emission of gluons off some other partons in the event. Measuring the jet energy and direction provides information of the original parton. A detailed review of jet finding algorithms, a set of rules for grouping the hadrons into jets, at hadron colliders can be found in~\cite{Salam:2009jx}. So called sequential recombination jet algorithms are used at CMS as implemented in the FastJet package~\cite{Cacciari:2011ma}.  The usual approach of these algorithms is to introduce two distance measures $d_{ij}$ and $d_{iB}$ defined as:
-
 \begin{eqnarray} \label{eq:jet_find}
 d_{ij} = min(p_{ti}^{2p},p_{tj}^{2p})\frac{\Delta_{ij}^2}{R^2}, \\
 d_{iB} = p_{ti}^{2p},
 \end{eqnarray}
-
 where $\Delta_{ij}^2 = (y_{i}-y_{j})^2 + (\phi_{i} -\phi_{j})^2$ and $k_{ti}$, $y_{i}$, and $\phi_{i}$ are the transverse momentum, rapidity, and azimuth of object $i$ in the event. $R$ is the distance parameter and $p$ is the power of the energy scale. From the above definitions it is seen that $d_{ij}$ and $d_{iB}$ are invariant under a boost along the beam direction. The algorithm proceeds to identify the smallest distance measures in the events. If $d_{ij}$ is the smallest for a given pair of objects, then the two objects are combined into a single object by adding the momenta of the $i$ and $j$ objects. If $d_{iB}$ is the smallest distance then the object $i$ is denoted as a jet and removed from further consideration in the algorithm. The algorithm continues until there are no objects remaining in the event. The anti-$k_{t}$ algorithm~\cite{Cacciari:2008gp} with $p=-1$ is used for the results shown here. A distance parameter of $R=0.5$ or $R=0.4$ is used. The anti-${k_{t}}$ algorithm grows outward from hard "seeds" resulting in a cone-like jets in $\eta-\phi$. The resulting jet boundaries are resilient with respect to soft radiation while the algorithm is infra-red and collinear safe.  
 
 
@@ -122,9 +122,6 @@ Figure~\ref{fig:jet_unc} shows the summary of jet energy scale uncertainties as 
 
 Particles originating from pileup interactions can cluster into jets. The $p_{T}$ density due to pileup particles is roughly $0.7~\GeV$ per unit area in $\eta-\phi$ plane for one reconstructed primary vertex. While the pileup jets have low $p_{T}$ it is possible for these low $p_{T}$ jets to overlap and a form a single jet with relatively large $p_{T}$. The number of overlapping jets grows roughly quadratically with the number of pileup interactions and jet area~\cite{CMS-PAS-JME-13-005}.  
 The goal of the pileup jet identification algorithm is to mitigate the background events due to the pileup jets. The charged particles in pileup jets generally do not point to the primary vertex of the event. In addition jets originating from pileup tend to be more diffuse in shape compared to the jets from the hard scattering. These two characteristic signatures of the pileup jets are exploited. A Boosted Decision Tree (BDT) discriminator implemented in TMVA~\cite{Hšcker:1019880} is used. It takes as an input the compatibility of the tracks inside the jet with the primary vertex of the event, variables exploiting the jet shape, and the number of charged and neutral constituents of the jet. The most discriminating track related variable ($\beta^{*}$) and jet shape variable ($<\Delta R^2>$) are defined as:
-
-\newpage
-
 \begin{eqnarray} \label{eq:pujetid}
 \beta^{*} = \frac{\sum_{i \notin \mathrm{PV}} p_{Ti}}{\sum_{i} p_{Ti}}, \\
 <\Delta R^{2}> = \frac{\sum_{i \in \mathrm{jet}} \Delta R^{2} p_{Ti}^2 }{\sum_{i \in jet} p_{Ti}^2},
@@ -141,7 +138,7 @@ where the charged particle is defined to be coming from the primary vertex if $\
 
 The BDT discriminator is almost fully efficient for jets with $p_{T}>30\GeV$ in the inner tracker geometric acceptance ($|\eta|<2.4$) region with a pileup jet rejection rate of approximately $87\%$. The efficiency degrades outside of the inner tracker volume. It is about $90\%$ for "real" jets with a pileup jet rejection rate of about $40\%$ for jets with $3.0<|\eta|<5.0$.
 
-\subsection{b-jet identification}
+\subsection{b-jet Identification}
 
 The identification of jets originating from bottom quark hadronization (b-jet) is crucial to reduce the overwhelming background from processes involving jets originating from gluons, light flavored quarks, and charm quarks (c-jets).  b-jets are important signatures to study the top quark decays, the Higgs boson, and in searches for new physics. The main idea is to exploit the long lifetimes of the bottom and charm quarks and their relatively large mass. As a result one can look for secondary vertices and/or tracks with large impact parameters.  For example, the CMS inner tracking system allows to achieve an impact parameter resolution of about $15$ ($30$) $\mu$m for a track with $p_{T}$ of $100$ ($5$)~$\GeV$ while typical impact parameter values for tracks from the b-jets are at a level of a few $100$ $\mu$m~\cite{Chatrchyan:2012jua}. The so called Combined Secondary Vertex (CSV) algorithm is used to identify the b-jets. A likelihood discriminant is formed combining information about track impact parameters and secondary vertices. This means that the b-jets can only be identified within the inner tracker geometrical acceptance ($|\eta|<2.4$). A b-jet identification efficiency of about $75\%$ is achieved with a light-flavor jet miss-identification rate of about $1\%$. 
 
@@ -207,11 +204,9 @@ Jets originating from quarks and gluons remain a large background to the $\tau_{
 \section{Missing Transverse Energy}
 
 Neutrinos and hypothetical neutral weakly interacting particles produce a momentum imbalance in the plane perpendicular to the beam direction. The missing transverse momentum $\vec{E}_{T}^{miss}$ is defined as the negative vectorial sum of all the visible particle transverse momenta in the event. The magnitude $E_{T}^{miss}$ is referred to as the missing transverse energy. A precise measurement of $E_{T}^{miss}$ is crucial for $W$ boson cross section measurements and plays a key role in the Higgs boson searches decaying to $\tau\tau$ final states. Precise calibration of all the reconstructed physics objects in the event is important for the $\vec{E}_{T}^{miss}$ performance. Therefore, the PF candidates are used to reconstruct the $\vec{E}_{T}^{miss}$:
-
-\begin{eqnarray} \label{eq:jet_find}
+\begin{eqnarray} \label{eq:met}
 \vec{E}_{T}^{miss} = - \sum_{i \in{\mathrm{PF candidates}}} \vec{p}_{Ti},
 \end{eqnarray}
-
 denoted as PF $\vec{E}_{T}^{miss}$. 
 
 The  $\vec{E}_{T}^{miss}$ response and resolution can be degraded due to minimum energy thresholds and non-linear response in the calorimeters, and $p_{T}$ thresholds and inefficiencies in the inner tracker. By correcting the jet energy scale as described above one can reduce the biases in the response of $\vec{E}_{T}^{miss}$ introduced by these effects\cite{Khachatryan:2014gga}. In addition, the $\vec{E}_{T}^{miss}$ is sensitive to the additional pileup interactions in the event. While contribution of genuine $\vec{E}_{T}^{miss}$ from pileup interactions is small due to small probability to produce neutrinos in the inelastic $pp$ collisions, the nonlinearity and minimum thresholds of the calorimeters cause the $\vec{E}_{T}^{miss}$ to point on average in the direction of the vectorial $\vec{p}_{T}$ sum of the neutral particles. Techniques to mitigate the impact of the pileup interactions on the $\vec{E}_{T}^{miss}$ response and resolution are discussed in chapter $4$.
