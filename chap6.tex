@@ -13,12 +13,8 @@
 \providecommand{\phaseone}{Phase-I}
 \providecommand{\phasetwo}{Phase-II}
 
-\chapter{The Future}
+\chapter{Higgs pair-production}
 
-\section{HL-LHC and Higgs pair-production}
-
-\subsection{Introduction}
-\label{sec:intro}
 The detailed studies of the properties of the observed Higgs
 boson~\cite{AtlasPaperCombination, CMSPaperCombination,
   CMSPaperCombination2} by the ATLAS and CMS Collaborations are central components of the CERN LHC physics program. In the standard model (SM) all properties of the Higgs boson are predicted for a given mass of the Higgs boson. The present measurements of the Higgs bosons couplings to fermions and bosons and of the tensor structure of the Higgs boson interaction with electroweak gauge bosons show no
@@ -45,7 +41,7 @@ by a factor of two if the Higgs boson self coupling is zero.
   \end{center}
 \end{figure}
 
-The gluon fusion production cross section for the Higgs boson pair production at a center of mass energy of $14$~TeV has been calculated to next-to-next-to-leading-order to be $40.7$~fb~\cite{Dawson:1998py,Grigo:2014jma}. Other production modes potentially add another $10\%$ to the total production cross section, but have not been included in this study. A large amount of integrated luminosity is required in order for these processes to be observed and measured. The signal events that are expected to be produced per experiment at HL-LHC with $3000$~$\mathrm{fb}^{-1}$ integrated luminosity are approximately $320$, $9000$, and $1500$ events for $bb\gamma\gamma$, $bb\tau\tau$, and the leptonic decays of $bbWW$ final states, respectively.
+The gluon fusion production cross section for the Higgs boson pair production at a center of mass energy of $14$~TeV has been calculated to next-to-next-to-leading-order to be $40.7$~fb~\cite{Dawson:1998py,Grigo:2014jma}. Other production modes potentially add another $10\%$ to the total production cross section, but have not been included in this study. A large amount of integrated luminosity is required in order for these processes to be observed and measured. The signal events that are expected to be produced per experiment at HL-LHC with $3000$~$\mathrm{fb}^{-1}$ integrated luminosity are approximately $320$, $9000$, and $1500$ events for $bb\gamma\gamma$ and $bb\tau\tau$ respectively.
 
 The increased instantaneous luminosity required to reach this target is expected to be accompanied by a significant increase in the number of overlapping inelastic collisions (pileup). The HL-LHC is expected to operate with an average of $140$ simultaneous pileup events. This presents a serious challenge to the experiments in their ability to deal with this increased level of activity and energy flow, and to preserve the detector performance under this environment. 
 
@@ -54,8 +50,7 @@ As part of a comprehensive strategy to address these issues, CMS has released a 
 At present, the \phasetwo detector simulation includes the upgraded outer tracker, muon systems, and calorimetry. The pixel detector upgrade, however, is still not finalized so the simulation contains the \phaseone pixel detector in the barrel and an extended version of the current pixel detector in the forward detector to provide tracking at higher $\eta$. The primary and secondary vertex reconstruction and identification performance will certainly be better
 than what is assumed in these studies and should be viewed as a conservative estimate.
 
-
-\subsection{Experimental setup and signal simulation}
+\section{Experimental setup and simulation}
 \label{sec:exp_cond}
 It is crucial that the \phasetwo detector can cope with the challenging environment of HL-LHC, as pileup mitigation, b-tagging, tau-tagging, photon identification efficiencies, and mass 
 resolutions are fundamental to perform measurements on Higgs boson pair production. Triggers are assumed to be $100\%$ efficient in these studies. The \textsc{Delphes} fast simulation framework~\cite{deFavereau:2013fsa} is used 
@@ -64,7 +59,7 @@ for $bbWW$ results to model the \phasetwo detector. The parameterized performanc
 Only the dominant gluon fusion inclusive production mode is produced in the signal generation. The samples are generated with \textsc{madgraph5.2}~\cite{Alwall:2011uj}, at leading order (LO), using the results from~\cite{Frederix2014142}, interfaced with  \textsc{pythia6.4}~\cite{PYTHIA} for parton showering and fragmentation. The generator is also interfaced with TAUOLA~\cite{tauola} for the simulation of the tau lepton decays. The pileup events are simulated in the Delphes samples by randomly placing minimum-bias interactions along the beam axis according to a longitudinal spread taken from the full simulation samples.
 
 
-\subsection{$bb\gamma\gamma$ final state}
+\section{$bb\gamma\gamma$ final state}
 
 \subsection{Object selection and performance}
 \label{sec:objects}
@@ -274,11 +269,11 @@ integrated luminosity (left) and the relative contribution of the non-resonant b
 \end{figure}
 
 
-\subsection{$bb\tau\tau$ final state}
+\section{$bb\tau\tau$ final state}
 
 \subsection{Object selection and performance}
 The signal events of interest contain two high $p_{T}$ taus and two high $p_{T}$ jets originating from b quarks. Di-tau final states $\tau_{\mu}\tau_{h}$, and $\tau_{h}\tau_{h}$, where $h$ denotes hadronic tau decays, and $\mu$ denotes tau decays to muons, are considered.
-The jets are reconstructed using the anti-kt algorithm with the resolution parameter equal to $0.4$. The jets are corrected for pileup effects using the FastJet technique~\cite{CMS-PAS-JME-10-003,CMS-PAS-BTV-13-001,CMS-DP-2013-011}. Jet pileup identification is developed in Delphes using the track related and jet shape variables~\cite{CMS-PAS-JME-10-003}. The efficiency of the jet pileup identification is $0.95$ with a pileup jet rate of $0.20$. The $\ETmiss$ resolution is critical for the di-tau mass reconstruction. Without pileup mitigation the resolution is on average $50$~GeV with $140$ pileup interactions. With pileup identification the  $\ETmiss$ resolution in Delphes is reduced to about $25$~GeV. 
+The jets are reconstructed using the anti-kt algorithm with the resolution parameter equal to $0.4$. A cut based jet pileup identification is developed in Delphes using the track related and jet shape variables described in section 3.5.2. The efficiency of the jet pileup identification is $0.95$ with a pileup jet rate of $0.20$. The $\vec{E}_{T}^{miss}$ resolution is critical for the di-tau mass reconstruction. Without pileup mitigation the resolution is on average $50$~GeV with $140$ pileup interactions. With pileup identification the  $\vec{E}_{T}^{miss}$ resolution in Delphes is reduced to about $25$~GeV. 
 The efficiency of selecting jets originating from b quarks and tau hadronic decays are parameterized in Delphes. To further reduce background events with light jets mimicking hadronic
 tau decays it is required that jets originating from hadronic tau decays contain an isolated track. With the upgraded \phasetwo detector and this selection, a tau identification efficiency of about $55\%$ is possible while keeping miss-tag rates for light-jets to be less than $0.5\%$. The working point used for b-tagging has an average efficiency of $0.68$ with $0.1$ and $0.01$ mistag rates from c-quarks and light quarks respectively.  Similarly, muon efficiencies and resolutions are parameterized in Delphes and efficiencies of about $95\%$ are assumed.
 
@@ -424,13 +419,11 @@ by requiring $50$~GeV cut on the $p_T$ of the muon and hadronic tau.
 Thus, in both final states the effect of the trigger performance on the sensitivity of this analysis is significant. The overall sensitivity is
 reduced by 40\%, the equivalent of  using only half of 3000~fb$^{-1}$.
 
-\subsection{Combination of $bb\gamma\gamma$ and $bb\tau\tau$ results}
+\section{Combination of $bb\gamma\gamma$ and $bb\tau\tau$ results}
 A combination of the  $bb\gamma\gamma$ and $bb\tau\tau$ results is performed by performing a simultaneous fit to the generated pseudo-data. A test statistic based on the profile likelihood ratio is used. Systematic uncertainties are incorporated through nuisance parameters and are treated according to frequentist paradigm. A detailed description of the methodology is given in Refs.~\cite{CMS-NOTE-2011-005,Chatrchyan201226}. The expected uncertainty in the signal yield is approximately $54\%$. The expected significance for di-Higgs boson production is $1.9$ standard deviations.  
 
-\subsection{Summary}
+\section{Summary}
 \label{sec:conclusion}
-Studies  of the Higgs boson pair production and decays into $bb\gamma\gamma$, $bb\tau\tau$, and $bbWW$, where the $W$ bosons decay leptonically, final states are presented. The studies are performed assuming the operational conditions of the HL-LHC, with an integrated luminosity of 3000~$\mathrm{fb}^{-1}$, and the upgraded CMS experiment. Combining the studies of $bb\gamma\gamma$ and $bb\tau\tau$ final states, the expected significance for Higgs boson pair production is 1.9 standard deviation. The resulting expected uncertainty in the signal yield is $54\%$. We emphasized the benefits of the CMS \phasetwo upgrades to meet the challenges presented by high luminosity environment. 
-
-This summary describes the first detailed studies of Higgs boson pair production with the CMS \phasetwo detector at the HL-LHC. Further improvements of the sensitivity are possible by using more sophisticated reconstruction and analysis techniques. Additional di-Higgs boson production and decay modes remain unexplored. Among these the bbbb final state promises the largest potential for improvement.
+Studies  of the Higgs boson pair production and decays into $bb\gamma\gamma$ and $bb\tau\tau$ final states are presented. The studies are performed assuming the operational conditions of the HL-LHC, with an integrated luminosity of 3000~$\mathrm{fb}^{-1}$, and the upgraded CMS experiment. Combining the studies of $bb\gamma\gamma$ and $bb\tau\tau$ final states, the expected significance for Higgs boson pair production is 1.9 standard deviation. The resulting expected uncertainty in the signal yield is $54\%$. We emphasized the benefits of the CMS \phasetwo upgrades to meet the challenges presented by high luminosity environment. Further improvements of the sensitivity are possible by using more sophisticated reconstruction and analysis techniques. Additional di-Higgs boson production and decay modes remain unexplored. Among these the bbbb final state promises the largest potential for improvement.
 
 %\section{Higgs CP in e+e- colliders}
