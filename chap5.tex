@@ -16,6 +16,8 @@ The electron and muon final states are used to observe the $W$ and $Z$ bosons. T
 
 Section 5.1.2 describes the data samples and simulations used in the results. Section 5.1.3 describes the selection of the candidate $W$ and $Z$ events. Section 5.1.4 describes the geometrical and kinematic acceptance and associated theory uncertainties. Section 5.1.5 describes the measurements of the lepton reconstruction, selection, and trigger efficiencies. Section 5.1.6 describes the $W$ and $Z$ boson signal extraction methods. Section 5.1.7 describes the measured inclusive total and fiducial cross section measurements and ratios.  
 
+
+
 \subsection{Data and Simulated Samples}
 
 
@@ -30,16 +32,58 @@ Section 5.1.2 describes the data samples and simulations used in the results. Se
 
 \begin{figure}[h]
 \centering
-        \includegraphics[width=.45\textwidth]{figures_chapter5/fitmetp_enu}
-        \includegraphics[width=.45\textwidth]{figures_chapter5/fitmetm_enu}\\
-        \includegraphics[width=.45\textwidth]{figures_chapter5/fitmetp_munu}
-        \includegraphics[width=.45\textwidth]{figures_chapter5/fitmetm_munu}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/passetapt_mu}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/failetapt_mu}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/passetapt_ele}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/failetapt_ele}
+\caption{Examples of the fits to the dilepton mass distributions ito determine the lepton reconstruction and identification efficiencies . The "passing" (left) and "failing" (right) probe categories of the simultaneous fits are shown for the $Z\rightarrow \mu\mu$ (top) and $Z\rightarrow ee$ (bottom) data events taken during the $2015$ LHC data taking period. The fits for the electron probes with $p_{T}$ in the range of $25$ to $40~\GeV$ and $-0.5<\eta<0.0$, and muon probes with $p_{T}$ greater than $40~\GeV$ and $-0.9<\eta<0.0$ are shown. The dashed red curves denote the fitted background contributions while the solid blue lines denote the sum of the fitted signal and background contributions.}
+\label{fig:tgp}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/muon_idiso}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/muon_trigger}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/ele_idiso}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/ele_trigger}
+\caption{Single muon (top) and electron (bottom) efficiencies in data (red circle) and simulation (blue square) for the reconstruction, identification, and isolation (left) and trigger (trigger) as a function of the corresponding lepton pseudorapidities. The shown data events are taken during the $2015$ LHC data taking period. Scale factors are derived to correct the simulated samples used in the results.}
+\label{fig:scale}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49\columnwidth]{figures_chapter5/wz/zmmlog}
+\includegraphics[width=.49\columnwidth]{figures_chapter5/wz/zeelog}
+\caption{The dilepton mass distributions for $Z$ boson candidate events in the muon (left) and electron (right) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$ data taking period. The points with error bars represent the observed data events.
+\label{fig:z13}}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wenu}
+        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wmunu}
        \caption{The missing transverse energy distributions for
          $W^+$  (left) and $W^-$  (right) boson candidate events in the electron (top)
-       and muon (bottom) final states. The dotted orange lines shows
-       the distribution of the $W$ boson signal. 
+       and muon (bottom) final states in proton-proton collisions at $\sqrt{s}=8~\TeV$ data taking period. The dotted orange lines shows the distribution of the $W$ boson signal. The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
        %The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
-       \label{fig:W}}
+       \label{fig:W8}}
+\end{figure}
+
+
+
+\begin{figure}[h]
+\centering
+        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetp_enu}
+        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetm_enu}\\
+        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetp_munu}
+        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetm_munu}
+       \caption{The missing transverse energy distributions for
+         $W^+$  (left) and $W^-$  (right) boson candidate events in the electron (top)
+       and muon (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$ data taking period. The dotted orange lines shows the distribution of the $W$ boson signal. 
+       %The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
+       \label{fig:W13}}
 \end{figure}
 
 \subsection{Results and Summary}
@@ -90,6 +134,132 @@ Total [\%] & $5.6$ & $5.4$ & $5.3$ & $2.3$ & $5.5$ & $2.3$ & $2.2$ & $1.9$ \\
 \caption[.]{ \label{tab:syst_mu}
 Systematic uncertainties in percent for the muon channel. ``NA'' means that the source either does not apply or is negligible.}
 \end{table} 
+
+
+
+\begin{table*}[tbhp]
+\centering
+\begin {tabular} {lllr}
+\multicolumn{2}{c}{Channel} & \multicolumn{1}{c}{$\sigma \times \mathcal{B}$
+[pb] (total)} & \multicolumn{1}{c}{NNLO [pb]} \\
+\hline
+% $\PW$ plus
+      & $e^{+}\nu$ & $11330 \pm 90 \mathrm{(stat)}\pm 340 \mathrm{(syst)} \pm 310 \mathrm{(lumi)}$ &
+      \\
+$W^{+}$ & $\mu^+\nu$ & $11290 \pm 60 \mathrm{(stat)}\pm 320 \mathrm{(syst)} \pm 300 \mathrm{(lumi)}$
+& $11330^{+320}_{-270}$\\
+      & $\ell^+\nu$ & $11310  \pm 50 \mathrm{(stat)}\pm 230 \mathrm{(syst)} \pm 300 \mathrm{(lumi)}$
+      & \\\hline
+% $\PW$ minus
+      & $e^{-}\nu$ & $8640 \pm 80 \mathrm{(stat)}\pm 240 \mathrm{(syst)} \pm 230 \mathrm{(lumi)}$ &
+      \\
+$W^{-}$ & $\mu^-\nu$ & $8470 \pm 60 \mathrm{(stat)}\pm 210 \mathrm{(syst)} \pm 230 \mathrm{(lumi)}$ &
+$8370^{+240}_{-210}$\\
+      & $\ell^-\nu$ & $8540 \pm 50\mathrm{(stat)}\pm 160 \mathrm{(syst)} \pm 230 \mathrm{(lumi)}$ &
+      \\\hline
+% $\PW$
+      & $e\nu$ & $19970 \pm 120 \mathrm{(stat)}\pm 570 \mathrm{(syst)} \pm 540 \mathrm{(lumi)}$ &
+      \\
+$W$  & $\mu\nu$ & $19760 \pm 80 \mathrm{(stat)}\pm 460 \mathrm{(syst)} \pm 530 \mathrm{(lumi)}$ &
+$19700^{+560}_{-470}$ \\
+      & $\ell\nu$ & $19840  \pm 70 \mathrm{(stat)}\pm 360 \mathrm{(syst)} \pm 540 \mathrm{(lumi)}$ &
+      \\\hline
+% Z
+    & $e^+e^-$ & $1910  \pm 10 \mathrm{(stat)}\pm 60 \mathrm{(syst)} \pm 50 \mathrm{(lumi)}$ & \\
+$Z$& $\mu^+\mu^-$ & $1890\pm 10 \mathrm{(stat)}\pm 50 \mathrm{(syst)} \pm 50 \mathrm{(lumi)}$
+& $1870^{+50}_{-40}$\\
+    & $\ell^+\ell^-$& $1900 \pm 10 \mathrm{(stat)}\pm 40 \mathrm{(syst)} \pm 50 \mathrm{(lumi)}$ & \\\hline
+\multicolumn{2}{c}{Quantity} & \multicolumn{1}{c}{Ratio (total)} &
+\multicolumn{1}{c}{NNLO} \\ \hline
+% W+/W-
+& $e$ & $1.313 \pm 0.016 \mathrm{(stat)}\pm 0.028 \mathrm{(syst)}$ & \\
+$R_{W^+/W^-}$ & $\mu$ & $1.334 \pm 0.011 \mathrm{(stat)}\pm 0.031 \mathrm{(syst)}$ & $1.354^{+0.011}_{-0.012}$ \\
+  & $\ell$ & $1.323 \pm 0.010 \mathrm{(stat)}\pm 0.021 \mathrm{(syst)}$ & \\
+\hline
+% W+/Z
+             & $e$   & $5.94 \pm 0.07 \mathrm{(stat)}\pm 0.16 \mathrm{(syst)}$ &
+             \\
+$R_{W^{+}/Z}$   & $\mu$ & $5.98 \pm 0.05 \mathrm{(stat)}\pm 0.14 \mathrm{(syst)}$ & $6.06^{+0.04}_{-0.05}$ \\
+             & $\ell$ & $5.96 \pm 0.04 \mathrm{(stat)}\pm 0.10 \mathrm{(syst)}$ &  \\
+\hline
+% W-/Z
+             & $e$   & $4.52 \pm 0.06 \mathrm{(stat)}\pm 0.12 \mathrm{(syst)}$ &
+             \\
+$R_{W^{-}/Z}$   & $\mu$ & $4.49 \pm 0.04 \mathrm{(stat)}\pm 0.10 \mathrm{(syst)}$ & $4.48^{+0.03}_{-0.02}$ \\
+             & $\ell$ & $4.50 \pm 0.03 \mathrm{(stat)}\pm 0.08 \mathrm{(syst)}$ &  \\
+\hline
+% W/Z
+             & $e$   & $10.46 \pm 0.11 \mathrm{(stat)}\pm 0.26 \mathrm{(syst)}$ &
+             \\
+$R_{W/Z}$   & $\mu$ & $10.47 \pm 0.08 \mathrm{(stat)}\pm 0.20 \mathrm{(syst)}$ & $10.55^{+0.07}_{-0.06}$ \\
+             & $\ell$ & $10.46 \pm 0.06 \mathrm{(stat)}\pm 0.16 \mathrm{(syst)}$ &  \\
+\end{tabular}
+\caption{ \label{tab:results13}
+Summary of total inclusive $W^{+}$, $W^{-}$, $W$, and $Z$ production cross sections times
+branching fractions, $W^{+}$,  $W^{-}$, and $W$ to $\Z$ and $W^{+}$ to $W^{-}$ ratios, and their
+theoretical predictions. The values in the electron and muon final states are also shown individually.}
+\end{table*}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/rat_el_mu}
+\caption{Work on the caption.}
+\label{fig:lepton_univ}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/xsecSummary13TeV}
+\caption{Summary of the total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios in proton-proton collisions at $\sqrt{s}=13~\TeV$. The theoretical predictions with FEWZ using the NNPDF3.0 PDF set are also shown. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\label{fig:13tev}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/xsecSummary8TeV}
+\caption{Summary of the total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios in proton-proton collisions at $\sqrt{s}=8~\TeV$. The theoretical predictions with FEWZ using the MSTW2008 PDF set are also shown. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\label{fig:8tev}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.60\columnwidth]{figures_chapter5/wz/xsecFidMuonSummary13TeV}
+\includegraphics[width=0.60\columnwidth]{figures_chapter5/wz/xsecFidElectronSummary13TeV}
+\caption{Summary of the fiducial inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios for the muon (top) and electron (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$. The acceptance used in the theory prediction is taken from the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$ while the inclusive total production cross section prediction is taken from FEWZ. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\label{fig:fid}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wp-tot}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wm-tot}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-w-tot}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-z-tot}
+\caption{Summary of the fiducial inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios for the muon (top) and electron (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$. The acceptance used in the theory prediction is taken from the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$ while the inclusive total production cross section prediction is taken from FEWZ. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\label{fig:pdf_tot}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wpr-tot}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wmr-tot}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wz-tot}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-rpm-tot}
+\caption{Summary of the fiducial inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios for the muon (top) and electron (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$. The acceptance used in the theory prediction is taken from the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$ while the inclusive total production cross section prediction is taken from FEWZ. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\label{fig:pdf_rat}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/colliders}
+\caption{Don't forget the caption.}
+\label{fig:collider}
+\end{figure}
+
 
 \section{Evidence for a Higgs boson in Tau decays}
 
