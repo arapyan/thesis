@@ -24,13 +24,13 @@ The $W$ and $Z$ candidate events in proton-proton collisions at $\sqrt{s}=13~\Te
 
 The candidate events selected by the CMS trigger require the presence of at least one electron or muon candidate with a threshold requirement on the energy and pseudorapidity. The muon candidates are triggered if there is at least one muon candidate present with transverse momentum $p_{T}$ greater than $20~\GeV$ ($15~\GeV$) and with $|\eta|$ less than $2.4$ ($2.1$) during the $2015$ ($2012$) data taking period. There is a loose isolation and identification requirement for the $2015$ data taking period to cope with the limited bandwidth for data processing. The electron candidates are triggered if there is at least one electron candidate present with transverse energy $E_{T}$ greater than $23~\GeV$ (22~\GeV) and with $|\eta|<2.5$, during the $2015$ ($2012$) data taking period with loose isolation and identification requirements.
 
-Several MC event generators are used to simulate the signal $W$ and $Z$ and background processes. The signal samples used for the $\sqrt{s}=13~\TeV$ measurement are generated using MadGraph5\_aMC@NLO~\cite{Alwall:2007st} generator with matrix element calculations having up to two extra partons in the final state with the NNPDF3.~\cite{Ball:2014uwa} NLO PDFs. The matrix element calculation is merged with the parton shower simulation using the FxFx merging scheme~\cite{Frederix:2012ps}. PYTHIA~8~\cite{Sjostrand:2006za,Sjostrand:2014zea}  with tune CUETP8M1~\cite{Skands:2014pea} is used for the simulation of the parton shower, hadronization, and the underlying event.  The signal samples for the $\sqrt{s}=8~\TeV$ measurement are generated using POWHEG~\cite{POWHEG-V, POWHEG1, POWHEG2, POWHEG3} generator interfaced with PYTHIA~6.4~\cite{Sjostrand:2006za}. The PYTHIA parameters for the description of the underlying event are set to the $Z2^{*}$ tune~\cite{CMS-PAS-FSQ-12-020}. The  $\sqrt{s}=13~\TeV$ ($\sqrt{s}=8~\TeV$) diboson background samples are generated with POWHEG and PYTHIA~8 (PYTHIA~6). The $t\bar{t}$ background is generated with MadGraph5\_aMC@NLO. The PYTHIA~6 used for the  $\sqrt{s}=8~\TeV$ samples are interfaced with TAUOLA to simulate the decays of polarized tau leptons. For all the generated processes the additional pileup interactions and the detector response are simulated as described in section 2.6.
+Several MC event generators are used to simulate the signal $W$ and $Z$ and background processes. The signal samples used for the $\sqrt{s}=13~\TeV$ measurement are generated using MadGraph5\_aMC@NLO~\cite{Alwall:2007st} generator with matrix element calculations having up to two extra partons in the final state with the NNPDF3.~\cite{Ball:2014uwa} NLO PDFs. The matrix element calculation is merged with the parton shower simulation using the FxFx merging scheme~\cite{Frederix:2012ps}. PYTHIA~8~\cite{Sjostrand:2006za,Sjostrand:2014zea}  with tune CUETP8M1~\cite{Skands:2014pea} is used for the simulation of the parton shower, hadronization, and the underlying event.  The signal samples for the $\sqrt{s}=8~\TeV$ measurement are generated using POWHEG~\cite{POWHEG-V, POWHEG1, POWHEG2, POWHEG3} generator, with the CT10~\cite{Lai:2010vv} NLO PDFs, interfaced with PYTHIA~6.4~\cite{Sjostrand:2006za}. The PYTHIA parameters for the description of the underlying event are set to the $Z2^{*}$ tune~\cite{CMS-PAS-FSQ-12-020}. The  $\sqrt{s}=13~\TeV$ ($\sqrt{s}=8~\TeV$) diboson background samples are generated with POWHEG and PYTHIA~8 (PYTHIA~6). The $t\bar{t}$ background is generated with MadGraph5\_aMC@NLO. The PYTHIA~6 used for the  $\sqrt{s}=8~\TeV$ samples are interfaced with TAUOLA to simulate the decays of polarized tau leptons. For all the generated processes the additional pileup interactions and the detector response are simulated as described in section 2.6.
 
 \subsection{Event Selection}
 
 The $Z \rightarrow \ell\ell$ decays are characterized by two energetic and isolated leptons. The $Z$ boson candidates are required to have a reconstructed dilepton mass between $60$ to $120~\GeV$. $W \rightarrow \ell \nu$ decays are characterized by an energetic and isolated lepton with a significant missing transverse energy $E_{T}^{miss}$. There is no requirement on the minimum reconstructed $E_{T}^{miss}$. The $E_{T}^{miss}$ distribution is used as a discriminant against backgrounds from multi-jet events where a jet is miss-identified as a lepton.
 
-The muon and electron candidates are reconstructed and identified as described in chapter 4. It is also required that the selected lepton candidate triggered the event in the $W\rightarrow \ell\ell$ candidate selection while at least one of the selected leptons is required to trigger the event for the $Z\rightarrow \ell\ell$ event candidates. The kinematic and geometric fiducial acceptance regions are defined as follows. The muon candidates are required to have a transverse momentum greater than $25~\GeV$ and $|\eta|<2.4$. The electron candidates are required to have a transverse energy $E_{T}$ greater than $25~\GeV$ with $|\eta|<1.444$ and $1.556<|\eta|<2.5$.  The transition region between the ECAL barrel and endcap regions, $1.444<|\eta|<1.556$, is excluded as the reconstruction clusters have lower quality there due to services and cables exiting between the ECAL barrel and endcap. The two muon candidates in the  $Z\rightarrow \mu\mu$ candidate selection are required to be oppositely charged.
+The muon and electron candidates are reconstructed and identified as described in chapter 4. It is also required that the selected lepton candidate triggered the event in the $W\rightarrow \ell\nu$ candidate selection while at least one of the selected leptons is required to trigger the event for the $Z\rightarrow \ell\ell$ event candidates. The kinematic and geometric fiducial acceptance regions are defined as follows. The muon candidates are required to have a transverse momentum greater than $25~\GeV$ and $|\eta|<2.4$. The electron candidates are required to have a transverse energy $E_{T}$ greater than $25~\GeV$ with $|\eta|<1.444$ and $1.556<|\eta|<2.5$.  The transition region between the ECAL barrel and endcap regions, $1.444<|\eta|<1.556$, is excluded as the reconstruction clusters have lower quality there due to services and cables exiting between the ECAL barrel and endcap. The two muon candidates in the  $Z\rightarrow \mu\mu$ candidate selection are required to be oppositely charged.
 
 The following background processes are considered:
 \begin{description}
@@ -71,10 +71,10 @@ where $\varepsilon_{\mu}$ and $\varepsilon_{e}$ are the muon and electron select
 The background contribution is negligible in the selected $Z \rightarrow \ell\ell$ candidate events used to measure the trigger efficiency. For the remaining efficiencies defined in Eq.~(\ref{eq:eff2}) there is a sizable background contribution and a simultaneous fit to the dilepton mass distributions in the "passing" and "failing" event categories, where the probe passes and fails the criteria of interest respectively, is performed. Figure~\ref{fig:tgp} shows a representative example of the simultaneous fit for the $\varepsilon_{\mathrm{track-id}}$ (top) and $\varepsilon_{\mathrm{gsf-id}}$ (right) in the $\sqrt{s}=13~\TeV$ data events.     
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/muon_idiso}
-\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/muon_trigger}
-\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/ele_idiso}
-\includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/ele_trigger}
+\includegraphics[width=0.40\columnwidth]{figures_chapter5/wz/muon_idiso}
+\includegraphics[width=0.40\columnwidth]{figures_chapter5/wz/muon_trigger}
+\includegraphics[width=0.40\columnwidth]{figures_chapter5/wz/ele_idiso}
+\includegraphics[width=0.40\columnwidth]{figures_chapter5/wz/ele_trigger}
 \caption{Single muon (top) and electron (bottom) efficiencies in data (red circle) and simulation (blue square) for the reconstruction, identification, and isolation (left) and trigger (trigger) as a function of the corresponding lepton pseudorapidities. The shown data events are taken during the $2015$ LHC data taking period with muon probes with $25<p_{T}<40~\GeV$ and electron $E_{T}>55~\GeV$. Scale factors are derived to correct the simulated events used in the results.}
 \label{fig:eff_fit}
 \end{figure}
@@ -84,9 +84,64 @@ Systematic uncertainties in the efficiency measurement are determined by conside
 
 \subsection{Acceptance}
 
-The kinematic and fiducial acceptance for the $W$ or $Z$ boson events is the  
+The kinematic and fiducial acceptance for the $W \rightarrow{\ell\nu}$ or $Z\rightarrow\ell\ell$ boson events is the fraction of generated events with the final state leptons satisfying the requirements on $p_{T}$ and $\eta$. The $Z$ boson events are generated are generated with $60<m_{Z}<120~\GeV$ requirement. The muons are required to have a $p_{T}>25~\GeV$ and $|\eta|<2.4$. The electrons are required to have $p_{T}>25~\GeV$ and $|\eta|<1.442$ or $1.566<|\eta|<2.5$. The lepton momenta are evaluated after final state radiation (FSR). For the $Z$ boson acceptance the dilepton invariant mass is required to be in the range $60<m_{\ell\ell}<120~\GeV$.
+
+The acceptance is calculated using the MadGraph5\_aMC@NLO (POWHEG) simulation at NLO in QCD with the NNPDF3.0 (CT10) PDF and showered with PYTHIA~8 (6) in collisions at $\sqrt{s}=13~\TeV$ ($\sqrt{s}=8~\TeV$). Thus the nominal acceptance value is accurate up to NLO in perturbative QCD and up to the leading-logarithmic (LL) for soft and non-perturbative QCD effects. The systematic uncertainties on the acceptance values arising from the uncertainties in the PDFs, and from missing higher order corrections in QCD and EWK are denoted as the theoretical uncertainties in the cross section measurement. 
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+Process  &  NNPDF3.0 [\%]  &  MMHT2014 [\%]  &  CT14 [\%] \\
+\hline
+\hline
+$W^+$        & 0.7          &  0.6           &  0.8 \\
+$W^-$  & 0.6          &  0.7           &  0.9 \\
+$W$            & 0.6          &  0.6           &  0.8 \\
+$Z$            & 0.7          &  0.9           &  1.1 \\
+$W^+/W^-$                        & 0.6          &  0.4           &  0.6 \\
+$W^+/Z$                           & 0.5          &  0.5           &  0.5 \\
+$W^-/Z$                           & 0.4          &  0.4           &  0.5 \\
+$W/Z$                            & 0.4          &  0.4           &  0.4 \\
+\hline
+\hline
+\end{tabular}
+\caption{The summary of the PDF uncertainties ($68\%$ CL) in the acceptance in the muon final state for the NNPDF3.0, MMHT2014 and CT14 PDFs. in collisions at $\sqrt{s}=13\TeV$.}
+\label{tab:pdf_mu}
+\end{center}
+\end{table}
+
+The PDF uncertainties in the acceptance are estimated following the prescriptions by the individual PDF groups. The total PDF uncertainty includes the  uncertainties in the $\alpha_s$, where the $Z$ mass is chosen as the central scale.  Table~\ref{tab:pdf_mu} shows the summary of the PDF uncertainties in the acceptance in the muon final state for the NNPDF3.0, MMHT2014~\cite{Harland-Lang:2014zoa}, and CT14~\cite{Dulat:2015mca} PDF sets in collisions at $\sqrt{s}=13~\TeV$. A good agreement is found in the acceptance values estimated with these $3$ PDFs. The CT14 PDF uncertainties are generally larger compared to the NNPDF3.0 and MMHT2014 PDF uncertainties. Similar results are obtained for the electron final state. The PDF uncertainties in the acceptance for the CT10 PDF set in the collisions at $\sqrt{s}=8~\TeV$ are about a factor of two larger compared to the $\sqrt{s}=13~\TeV$ uncertainties demonstrating the improvements in the PDF uncertainties with the inclusion of the results from the LHC Run $1$ data in the PDF fits. The NNPDF3.0 and CT10 PDF uncertainties are propagated to the measured cross sections in collisions at $\sqrt{s}=13~\TeV$ and $\sqrt{s}=8~\TeV$ respectively.     
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+Process & NNLO+ISR [\%] & $\mu_{R}\mathrm{,}\mu_{F}$ [\%] & FSR [\%] & EWK [\%] & PDF [\%]& Total [\%] \\
+\hline\hline
+$W^+$        & 1.2 &  0.2 & 0.6  & 0.2 & 0.7 & 1.6 \\
+$W^-$  & 1.0 &  0.3 & 0.3  & 0.6 & 0.6 & 1.4 \\
+$W$            & 1.1 &  0.2 & 0.5  & 0.2 & 0.6 & 1.4 \\
+$Z$              & 0.8 &  0.9 & 0.6  & 0.6 & 0.7 & 1.6 \\
+$W^+/W^-$                      & 1.6 &  0.3 & 0.3  & 0.8 & 0.5 & 1.9 \\
+$W^+/Z$                         & 1.2 &  0.9 & 1.1  & 0.7 & 0.5 & 1.9 \\
+$W^-/Z$                         & 0.4 &  1.2 & 0.6  & 1.2 & 0.4 & 1.9 \\
+$W/Z$                          & 0.5 &  1.0 & 0.8  & 0.8 & 0.4 & 1.7 \\
+\hline\hline
+\end{tabular}
+\caption{The summary of the theoretical uncertainties in the acceptance values in the electron final state in collisions at $\sqrt{s}=13~\TeV$. The uncertainties due to higher order QCD contributions, PDFs, FSR modeling, and missing EWK contributions are shown.}
+\label{tab_el}
+\end{center}
+\end{table}
+
+The RESBOS~\cite{resbos} and DYRES~\cite{dyres,dyres2} generators provide a resummed calculation of the $W$ and $Z$ boson transverse momentum distribution accurate up to NNLL in QCD. The calculation is then combined with a fixed order calculation at large values of the transverse momenta accurate to NNLO. The total inclusive cross section with NNLO accuracy is recovered Integrating the resulting boson transverse momentum distribution. The RESBOS and DYRES generators are used to estimate the impact of the soft, non-perturbative QCD effects, and QCD perturbative corrections at NNLO on the acceptance values. The differences in these acceptance values compared to the baseline MadGraph5\_aMC@NLO (POWHEG) acceptance values is taken as a systematic uncertainty.  The second column of the Table~\ref{tab_el} shows the resulting systematic uncertainty in the electron final state in collisions at $\sqrt{s}=13~\TeV$. Similar results are obtained for the muon final state. The corresponding systematic uncertainties at $8~\TeV$ are found to be less than $1\%$. 
+
+The effect of the higher order perturbative QCD corrections (beyond the NNLO accuracy) are estimated from varying the renormalization ($\mu_{R}$) and factorization ($\mu_F$) scales up and down in a fixed order calculation accurate to NNLO in QCD. FEWZ~\cite{Gavin:2010az,Gavin:2012sy,Li:2012wna}. The $\mu_R$ and $\mu_F$ values are set to the corresponding boson mass in the central value calculation and the differences in the acceptances when varying the scales up and down within a factor of two (keeping $\mu_R=\mu_F$) is taken as a systematic uncertainty. The third column of the Table~\ref{tab_el} shows the uncertainties in the electron final state in collisions at $\sqrt{s}=13~\TeV$. Similar results are obtained for the muon final state and the corresponding $\sqrt{s}=8~\TeV$ uncertainties.    
+
+The higher order EWK corrections are estimated using the HORACE generator~\cite{Calame:608890,CarloniCalame:2005vc,CarloniCalame:2006zq,CarloniCalame:2007cd}. The initial and final state QED radiation in the baseline acceptance are modeled with PYTHIA with the parton shower method. The systematic uncertainty in the modeling of the final state QED radiation in PYTHIA is estimated by comparing to the acceptances of the HORACE generator FSR implementation. PHOTOS~\cite{photos} is also used for additional checks. The effect of the virtual EWK corrections are estimated using HORACE. The fourth and fifth columns of Table~\ref{tab_el} shows the systematic uncertainties due to FSR modeling and EWK virtual corrections in the electron final state in collisions at $\sqrt{s}=13~\TeV$. Similar results are obtained for the muon final state and the corresponding $\sqrt{s}=8~\TeV$ uncertainties. 
 
 \subsection{Signal Extraction}
+
+
+
 
 \begin{figure}[h]
 \centering
