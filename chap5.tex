@@ -12,45 +12,81 @@ This chapter summarizes four results using events recorded by the CMS detector a
 
 The inclusive $W$ and $Z$ boson production cross sections and their ratios have been previously measured at the LHC by the ATLAS and CMS collaborations at the LHC proton-proton collisions at $\sqrt{s}=7~\TeV$~\cite{CMS:2011aa,Chatrchyan:2011nv,Aad:2011dm}. The corresponding measurement performed at the LHC proton-proton collisions at $\sqrt{s}=8~\TeV$ by CMS is described in this section~\cite{Chatrchyan:2014mua}. ATLAS and CMS collaborations have also performed this measurement at the LHC proton-proton collisions at $\sqrt{s}=13~\TeV$~\cite{CMS-PAS-SMP-15-004,Aad:2016naf}. The CMS preliminary measurement at the LHC collisions at $\sqrt{s}=13~\TeV$ is also described in this section. A systematic uncertainty of $4.8\%$ in total integrated luminosity was reported in~\cite{CMS-PAS-SMP-15-004}. An update to the integrated luminosity  reducing the systematic uncertainty to $2.7\%$ was reported in~\cite{CMS-PAS-LUM-15-001}. The results shown in this section include the updated integrated luminosity value and systematic uncertainty.
 
-The electron and muon final states are used to observe the $W$ and $Z$ bosons. The $Z$ boson candidates are required to have a dilepton mass in the range of $60$ to $120~\GeV$. The $W$ and $Z$ production cross sections are also measured within the fiducial kinematic and geometric acceptance of the CMS detector.   
-
-Section 5.1.2 describes the data samples and simulations used in the results. Section 5.1.3 describes the selection of the candidate $W$ and $Z$ events. Section 5.1.4 describes the geometrical and kinematic acceptance and associated theory uncertainties. Section 5.1.5 describes the measurements of the lepton reconstruction, selection, and trigger efficiencies. Section 5.1.6 describes the $W$ and $Z$ boson signal extraction methods. Section 5.1.7 describes the measured inclusive total and fiducial cross section measurements and ratios.  
-
-
+The electron and muon final states are used to observe the $W$ and $Z$ bosons. The $Z$ boson candidates are required to have a dilepton mass in the range of $60$ to $120~\GeV$. The inclusive total cross section is given by:  
+\begin{equation} \label{eq:xsec2}
+\sigma = \frac{N}{\varepsilon A \mathcal{L}},
+\end{equation}
+where $A$ is the fiducial kinematic and geometric acceptance, $\varepsilon$ is the efficiency to reconstruct and identify the boson candidate, $N$ is the number of observed $W$ or $Z$ boson candidates, and $\mathcal{L}$ is the total integrated luminosity of the data sample (discussed in section 3.10).  The $W$ and $Z$ production cross sections and ratios are also measured within the fiducial kinematic and geometric acceptance of the CMS detector.  Section 5.1.2 describes the data samples and simulation of the events used in the results. Section 5.1.3 describes the selection of the candidate $W$ and $Z$ events. Section 5.1.4 describes the geometrical and kinematic acceptance and associated theory uncertainties. Section 5.1.5 describes the measurements of the lepton reconstruction, selection, and trigger efficiencies. Section 5.1.6 describes the $W$ and $Z$ boson signal extraction methods. Section 5.1.7 describes the measured inclusive total and fiducial cross section measurements and ratios.  
 
 \subsection{Data and Simulated Samples}
 
+The $W$ and $Z$ candidate events in proton-proton collisions at $\sqrt{s}=13~\TeV$ are selected from data samples collected in July 2015, corresponding to an integrated luminosity of $\mathcal{L}=43.0\pm1.2~\ipb$. Data samples collected in May 2012, corresponding to an integrated luminosity of $\mathcal{L}=18.2\pm0.5~\ipb$, are used to select the $W$ and $Z$ candidate events at $\sqrt{s}=8~\TeV$. The instantaneous luminosity reached at the LHC during the full $2012$ data taking period presents a challenging environment to perform the $W \rightarrow \ell nu$ cross section measurement due to the degradation of the $E_{T}^{miss}$ resolution arising from the additional pileup interactions in the events (Figure~\ref{fig:pu}). The impact of the pileup interactions on the $E_{T}^{miss}$ resolution was discussed in section 3.9. The collisions in May 2012 were low pileup with an average of $4$ additional pileup interactions per bunch crossing compared with the average of $20$ pileup interactions during the full data taking period . This was achieved in a special configuration where the separation of the proton beams was adjusted during the data taking to achieve a stable low instantaneous luminosity. The special low pileup collisions were not performed in $2015$ and the measurement was performed by employing the PUPPI pileup mitigation technique discussed in section 3.9.
 
+The candidate events selected by the CMS trigger require the presence of at least one electron or muon candidate with a threshold requirement on the energy and pseudorapidity. The muon candidates are triggered if there is at least one muon candidate present with transverse momentum $p_{T}$ greater than $20~\GeV$ ($15~\GeV$) and with $|\eta|$ less than $2.4$ ($2.1$) during the $2015$ ($2012$) data taking period. There is a loose isolation and identification requirement for the $2015$ data taking period to cope with the limited bandwidth for data processing. The electron candidates are triggered if there is at least one electron candidate present with transverse energy $E_{T}$ greater than $23~\GeV$ (22~\GeV) and with $|\eta|<2.5$, during the $2015$ ($2012$) data taking period with loose isolation and identification requirements.
+
+Several MC event generators are used to simulate the signal $W$ and $Z$ and background processes. The signal samples used for the $\sqrt{s}=13~\TeV$ measurement are generated using MadGraph5\_aMC@NLO~\cite{Alwall:2007st} generator with matrix element calculations having up to two extra partons in the final state with the NNPDF3.~\cite{Ball:2014uwa} NLO PDFs. The matrix element calculation is merged with the parton shower simulation using the FxFx merging scheme~\cite{Frederix:2012ps}. PYTHIA~8~\cite{Sjostrand:2006za,Sjostrand:2014zea}  with tune CUETP8M1~\cite{Skands:2014pea} is used for the simulation of the parton shower, hadronization, and the underlying event.  The signal samples for the $\sqrt{s}=8~\TeV$ measurement are generated using POWHEG~\cite{POWHEG-V, POWHEG1, POWHEG2, POWHEG3} generator interfaced with PYTHIA~6.4~\cite{Sjostrand:2006za}. The PYTHIA parameters for the description of the underlying event are set to the $Z2^{*}$ tune~\cite{CMS-PAS-FSQ-12-020}. The  $\sqrt{s}=13~\TeV$ ($\sqrt{s}=8~\TeV$) diboson background samples are generated with POWHEG and PYTHIA~8 (PYTHIA~6). The $t\bar{t}$ background is generated with MadGraph5\_aMC@NLO. The PYTHIA~6 used for the  $\sqrt{s}=8~\TeV$ samples are interfaced with TAUOLA to simulate the decays of polarized tau leptons. For all the generated processes the additional pileup interactions and the detector response are simulated as described in section 2.6.
 
 \subsection{Event Selection}
 
-\subsection{Efficiencies}
+The $Z \rightarrow \ell\ell$ decays are characterized by two energetic and isolated leptons. The $Z$ boson candidates are required to have a reconstructed dilepton mass between $60$ to $120~\GeV$. $W \rightarrow \ell \nu$ decays are characterized by an energetic and isolated lepton with a significant missing transverse energy $E_{T}^{miss}$. There is no requirement on the minimum reconstructed $E_{T}^{miss}$. The $E_{T}^{miss}$ distribution is used as a discriminant against backgrounds from multi-jet events where a jet is miss-identified as a lepton.
 
-\subsection{Acceptance}
+The muon and electron candidates are reconstructed and identified as described in chapter 4. It is also required that the selected lepton candidate triggered the event in the $W\rightarrow \ell\ell$ candidate selection while at least one of the selected leptons is required to trigger the event for the $Z\rightarrow \ell\ell$ event candidates. The kinematic and geometric fiducial acceptance regions are defined as follows. The muon candidates are required to have a transverse momentum greater than $25~\GeV$ and $|\eta|<2.4$. The electron candidates are required to have a transverse energy $E_{T}$ greater than $25~\GeV$ with $|\eta|<1.444$ and $1.556<|\eta|<2.5$.  The transition region between the ECAL barrel and endcap regions, $1.444<|\eta|<1.556$, is excluded as the reconstruction clusters have lower quality there due to services and cables exiting between the ECAL barrel and endcap. The two muon candidates in the  $Z\rightarrow \mu\mu$ candidate selection are required to be oppositely charged.
 
-\subsection{Signal Extraction}
+The following background processes are considered:
+\begin{description}
+\item[$\bullet$ QCD multi-jet:] The lepton isolation requirements reduce this background where a jet is miss-identified as a lepton as discussed in section 3.8.  
+\item[$\bullet$ Drell-Yan:] Events with a second lepton with $p_{T}>10~\GeV$ and satisfying loose identification requirements in the $W \rightarrow \ell\nu$ candidate event selection are vetoed to reduce this background.The Drell-Yan lepton pair where one of the leptons is not within the fiducial region or is not reconstructed is a background source for the $W \rightarrow \ell\nu$ candidate events. 
+\item[$\bullet$ $W\rightarrow \tau\nu$ and $Z\rightarrow \tau\tau$:] The leptonic decays of the $\tau$ lepton(s) from the $W$ and $Z$ boson decays constitutes a background. 
+\item[$\bullet$ Boson and top-quark pair:] The production of the $WW$, $WZ$, and $ZZ$ processes constitutes a background as the $W$ and $Z$ bosons originating from these processes are not considered in the signal definition. There is also non-negligible contribution from the $t\bar{t}$ events with at least one lepton in the final state.
+\end{description}    
 
+The QCD multi-jet process is the dominant background for the $W \rightarrow \ell\nu$ candidate events and is simply denoted as "QCD" background.  The other background processes, except the $t\bar{t}$ process, are denoted as "EWK" background. The EWK and $t\bar{t}$ background contributions are estimated from the simulation. For the simulated background samples the calculated cross sections are taken at NNLO in QCD if available (calculations at NLO is used otherwise). The  Drell-Yan and $W\rightarrow \tau\tau$ background processes have sizable contribution in the $W \rightarrow \ell\nu$ candidate events, while the $t\bar{t}$ and diboson contribution is small. The QCD multi-jet background contribution is negligible in the $Z \rightarrow \ell\ell$ events with a dilepton mass between $60$ to $120~\GeV$.    
+
+\subsection{Efficiency}
+
+The efficiency of lepton selection is a key component of the cross section measurement as can be seen from Eq.~(\ref{eq:xsec2}). The single lepton efficiencies are measured from the $Z \rightarrow \ell\ell$ data events referred to as the tag-and-probe method. The idea is to identify a "tag" lepton candidate satisfying the identification, isolation, and triggering requirements and a "probe" lepton candidate in the dilepton mass window requirement. The mass window requirement gives a relatively pure selection of  $Z \rightarrow \ell\ell$ data events. The probe is required to pass a specific requirement depending on the efficiency under study. The efficiency $\varepsilon$ is then given by:
+\begin{equation} \label{eq:eff}
+\sigma = \frac{N_{\mathrm{pass}}}{N_{\mathrm{pass}}+N_{\mathrm{fail}}},
+\end{equation}
+where $N_{\mathrm{pass}}$ and $N_{\mathrm{fail}}$ denote the number of passing and failing probes respectively. The efficiencies are measured in data and in simulation. This allows to correct for the imperfect simulation through data-to-simulation scale factors.   
+
+The lepton efficiencies are measured as a function of the lepton transverse energy and $\eta$. This allows to propagate the efficiencies measured in the $Z$ candidate events to the $W$ cross section measurement. The muon and electron selection efficiencies are determined as follows: 
+\begin{eqnarray} \label{eq:eff2}
+\begin{aligned}
+\varepsilon_{\mu} &=  \varepsilon_{\mathrm{trig}}\varepsilon_{\mathrm{sta}}\varepsilon_{\mathrm{track-id}}, \\
+\varepsilon_{e} &=  \varepsilon_{\mathrm{trig}}\varepsilon_{\mathrm{gsf-id}},
+\end{aligned}
+\end{eqnarray}
+where $\varepsilon_{\mu}$ and $\varepsilon_{e}$ are the muon and electron selection efficiencies respectively. The $\varepsilon_{\mathrm{trig}}$ denotes the trigger efficiency with the probe lepton candidate satisfying the identification and isolation requirement. The  $\varepsilon_{\mathrm{sta}}$ denotes the standalone muon reconstruction efficiency with where the probe lepton candidate is a track in the inner tracker. Similarly, the $\varepsilon_{\mathrm{track-id}}$ denotes the muon track reconstruction (inner tracker),  identification, and isolation efficiency where the probe lepton candidate is a standalone muon track (section 3.3). The $\varepsilon_{\mathrm{gsf-id}}$ denotes the electron reconstruction, identification, and isolation efficiency where the probe lepton candidate is an ECAL supercluster. The ECAL supercluster reconstruction efficiency is taken from the simulation as the $\frac{\varepsilon_{\mathrm{data}}}{\varepsilon_{\mathrm{sim}}}$ ratio is found to be consistent with $1$. 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/passetapt_mu}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/failetapt_mu}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/passetapt_ele}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/failetapt_ele}
-\caption{Examples of the fits to the dilepton mass distributions ito determine the lepton reconstruction and identification efficiencies . The "passing" (left) and "failing" (right) probe categories of the simultaneous fits are shown for the $Z\rightarrow \mu\mu$ (top) and $Z\rightarrow ee$ (bottom) data events taken during the $2015$ LHC data taking period. The fits for the electron probes with $p_{T}$ in the range of $25$ to $40~\GeV$ and $-0.5<\eta<0.0$, and muon probes with $p_{T}$ greater than $40~\GeV$ and $-0.9<\eta<0.0$ are shown. The dashed red curves denote the fitted background contributions while the solid blue lines denote the sum of the fitted signal and background contributions.}
+\caption{Examples of the fits to the dilepton mass distributions ito determine the lepton reconstruction and identification efficiencies . The "passing" (left) and "failing" (right) probe categories of the simultaneous fits are shown for the $Z\rightarrow \mu\mu$ (top) and $Z\rightarrow ee$ (bottom) data events taken during the $2015$ LHC data taking period. The fits for the electron probes with $E_{T}$ in the range of $25$ to $40~\GeV$ and $-0.5<\eta<0.0$, and muon probes with $p_{T}$ greater than $40~\GeV$ and $-0.9<\eta<0.0$ are shown. The dashed red curves denote the fitted background contributions while the solid blue lines denote the sum of the fitted signal and background contributions.}
 \label{fig:tgp}
 \end{figure}
 
+The background contribution is negligible in the selected $Z \rightarrow \ell\ell$ candidate events used to measure the trigger efficiency. For the remaining efficiencies defined in Eq.~(\ref{eq:eff2}) there is a sizable background contribution and a simultaneous fit to the dilepton mass distributions in the "passing" and "failing" event categories, where the probe passes and fails the criteria of interest respectively, is performed. Figure~\ref{fig:tgp} shows a representative example of the simultaneous fit for the $\varepsilon_{\mathrm{track-id}}$ (top) and $\varepsilon_{\mathrm{gsf-id}}$ (right) in the $\sqrt{s}=13~\TeV$ data events.     
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/muon_idiso}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/muon_trigger}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/ele_idiso}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/ele_trigger}
-\caption{Single muon (top) and electron (bottom) efficiencies in data (red circle) and simulation (blue square) for the reconstruction, identification, and isolation (left) and trigger (trigger) as a function of the corresponding lepton pseudorapidities. The shown data events are taken during the $2015$ LHC data taking period. Scale factors are derived to correct the simulated samples used in the results.}
-\label{fig:scale}
+\caption{Single muon (top) and electron (bottom) efficiencies in data (red circle) and simulation (blue square) for the reconstruction, identification, and isolation (left) and trigger (trigger) as a function of the corresponding lepton pseudorapidities. The shown data events are taken during the $2015$ LHC data taking period with muon probes with $25<p_{T}<40~\GeV$ and electron $E_{T}>55~\GeV$. Scale factors are derived to correct the simulated events used in the results.}
+\label{fig:eff_fit}
 \end{figure}
+The signal model is derived by convolving the dilepton mass shape obtained from the simulation with a Gaussian distribution. Taking the mass shape from the simulation takes into account the detector and the lepton final state radiation effects on the distribution. The convoluted Gaussian accounts for the imperfect simulation of the lepton scale and resolution. An exponential function is used to model the background contribution. Figure~\ref{fig:eff_fit} shows a representative example of the measured reconstruction, identification, and isolation (left) and trigger (right) efficiencies as a function of the probe pseudorapidity for the muons (top) and electrons (bottom) in $2015$ data and simulation.
 
+Systematic uncertainties in the efficiency measurement are determined by considering alternative signal and background shape models. Breit-Wigner with nominal $Z$ mass and width convolved with an asymmetric resolution function is used as an alternative signal model and a power law model is used as an alternative background model. The statistical uncertainties in the efficiencies are propagated as systematic uncertainty in the cross section measurement. The biases in the efficiency measurement due to the tag lepton candidate selection and dilepton mass requirement are negligible. The systematic uncertainties are summarized in section 4.1.6.    
 
+\subsection{Acceptance}
+
+The kinematic and fiducial acceptance for the $W$ or $Z$ boson events is the  
+
+\subsection{Signal Extraction}
 
 \begin{figure}[h]
 \centering
@@ -72,7 +108,6 @@ Section 5.1.2 describes the data samples and simulations used in the results. Se
 \end{figure}
 
 
-
 \begin{figure}[h]
 \centering
         \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetp_enu}
@@ -92,6 +127,7 @@ Section 5.1.2 describes the data samples and simulations used in the results. Se
 \centering
 \small
 \begin {tabular}  {lcccccccc}
+\hline
 Source & $W^+$ & $W^-$ & $W$ & $W^+/W^-$ & $Z$ & $W^+/Z$ & $W^-/Z$ & $W/Z$ \\
 \hline
 Lepton charge, reco. \& id. [\%] & $2.1$ & $2.0$ & $2.1$ & $0.6$ & $2.5$ & $1.2$ & $1.0$ & $1.0$ \\
@@ -106,6 +142,7 @@ Theoretical uncertainty [\%] & $1.6$ & $1.4$ & $1.4$ & $1.9$ & $1.6$ & $1.9$ & $
 Lumi [\%] & $4.8$ & $4.8$ & $4.8$ & NA & $4.8$ & NA & NA & NA \\
 \hline
 Total [\%] & $5.6$ & $5.6$ & $5.6$ & $2.1$ & $5.7$ & $2.7$ & $2.6$ & $2.5$ \\
+\hline
 \end {tabular} 
 \caption[.]{ \label{tab:syst_el}
 Systematic uncertainties in percent for the electron channel. ``NA'' means that the source either does not apply or is negligible.}
@@ -116,6 +153,7 @@ Systematic uncertainties in percent for the electron channel. ``NA'' means that 
 \centering
 \small
 \begin {tabular}  {lcccccccc}
+\hline
 Source & $W^+$ & $W^-$ & $W$ & $W^+/W^-$ & $Z$ & $W^+/Z$ & $W^-/Z$ & $W/Z$ \\
 \hline
 Lepton charge, reco. \& id. [\%] & $1.9$ & $1.7$ & $1.8$ & $0.3$ & $2.2$ & $0.6$ & $0.6$ & $0.6$ \\
@@ -130,6 +168,7 @@ Theoretical Uncertainty [\%] & $2.0$ & $1.7$ & $1.3$ & $2.3$ & $1.5$ & $2.0$ & $
 Lumi [\%] & $4.8$ & $4.8$ & $4.8$ & NA & $4.8$ & NA & NA & NA \\
 \hline
 Total [\%] & $5.6$ & $5.4$ & $5.3$ & $2.3$ & $5.5$ & $2.3$ & $2.2$ & $1.9$ \\
+\hline
 \end {tabular}
 \caption[.]{ \label{tab:syst_mu}
 Systematic uncertainties in percent for the muon channel. ``NA'' means that the source either does not apply or is negligible.}
@@ -140,6 +179,7 @@ Systematic uncertainties in percent for the muon channel. ``NA'' means that the 
 \begin{table*}[tbhp]
 \centering
 \begin {tabular} {lllr}
+\hline
 \multicolumn{2}{c}{Channel} & \multicolumn{1}{c}{$\sigma \times \mathcal{B}$
 [pb] (total)} & \multicolumn{1}{c}{NNLO [pb]} \\
 \hline
@@ -193,11 +233,33 @@ $R_{W^{-}/Z}$   & $\mu$ & $4.49 \pm 0.04 \mathrm{(stat)}\pm 0.10 \mathrm{(syst)}
              \\
 $R_{W/Z}$   & $\mu$ & $10.47 \pm 0.08 \mathrm{(stat)}\pm 0.20 \mathrm{(syst)}$ & $10.55^{+0.07}_{-0.06}$ \\
              & $\ell$ & $10.46 \pm 0.06 \mathrm{(stat)}\pm 0.16 \mathrm{(syst)}$ &  \\
+\hline
 \end{tabular}
 \caption{ \label{tab:results13}
 Summary of total inclusive $W^{+}$, $W^{-}$, $W$, and $Z$ production cross sections times
 branching fractions, $W^{+}$,  $W^{-}$, and $W$ to $\Z$ and $W^{+}$ to $W^{-}$ ratios, and their
 theoretical predictions. The values in the electron and muon final states are also shown individually.}
+\end{table*}
+
+\begin{table*}[tbhp]
+\centering
+\begin {tabular} {lccccc}
+\hline
+ & \multicolumn{1}{c}{NNPDF3.0} & \multicolumn{1}{c}{CT14} & \multicolumn{1}{c}{MMHT2014} & \multicolumn{1}{c}{ABM12LHC} & \multicolumn{1}{c}{HERAPDF15} \\  \hline
+$\sigma^{tot}_{W^+}$~[pb] & $11330^{+320}_{-270}$ & $11500^{+330}_{-310}$ & $11580^{+260}_{-210}$ & $11730^{+150}_{-130}$ & $11780^{+570}_{-250}$\\ 
+$\sigma^{tot}_{W^-}$~[pb]  & $8370^{+240}_{-210}$ & $8520^{+230}_{-240}$ & $8590^{+190}_{-170}$ & $8550^{+110}_{-90}$ & $8700^{+400}_{-170}$\\ 
+$\sigma^{tot}_{W}$~[pb]  & $19700^{+560}_{-470}$ & $20020^{+560}_{-550}$ & $20170^{+430}_{-390}$ & $20280^{+260}_{-220}$ & $20480^{+960}_{-410}$ \\ 
+$\sigma^{tot}_{Z}$~[pb]  & $1870^{+50}_{-40}$ & $1900^{+50}_{-50}$ & $1920^{+40}_{-40}$ & $1920^{+20}_{-20}$ & $1930^{+90}_{-40}$ \\ 
+$\sigma^{tot}_{W^+}/\sigma^{tot}_{W^-}$ & $1.354^{+0.011}_{-0.012}$ &
+$1.350^{+0.014}_{-0.014}$ & $1.348^{+0.011}_{-0.008}$ &
+$1.371^{+0.003}_{-0.004}$ & $1.353^{+0.014}_{-0.013}$\\
+$\sigma^{tot}_{W^+}/\sigma^{tot}_{Z}$ & $6.06^{+0.04}_{-0.05}$ & $6.06^{+0.06}_{-0.06}$ & $6.04^{+0.05}_{-0.05}$ & $6.11^{+0.02}_{-0.01}$ & $6.10^{+0.06}_{-0.06}$ \\ 
+$\sigma^{tot}_{W^-}/\sigma^{tot}_{Z}$ & $4.48^{+0.03}_{-0.02}$ & $4.49^{+0.03}_{-0.03}$ & $4.48^{+0.03}_{-0.04}$ & $4.46^{+0.02}_{-0.01}$ & $4.51^{+0.04}_{-0.03}$ \\ 
+$\sigma^{tot}_{W}/\sigma^{tot}_{Z}$ & $10.55^{+0.07}_{-0.06}$ & $10.55^{+0.09}_{-0.09}$ & $10.53^{+0.08}_{-0.09}$ & $10.56^{+0.04}_{-0.02}$ & $10.61^{+0.11}_{-0.09}$ \\ 
+\hline
+\end{tabular}
+\caption{ \label{tab:pdfXsec}
+Summary of predicted total inclusive cross sections and their ratios in proton-proton collisions at $\sqrt{s}=13~\TeV$. The predictions were calculated with FEWZ at NNLO. The PDF uncertainty and scale uncertainty are given for each prediction.}
 \end{table*}
 
 
