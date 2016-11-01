@@ -140,44 +140,113 @@ The higher order EWK corrections are estimated using the HORACE generator~\cite{
 
 \subsection{Signal Extraction}
 
-
-
-
+The $Z\rightarrow \ell\ell$ yields are obtained by counting the number of selected event candidates. The background contribution is estimated from simulation to be about $0.6\%$ ($0.4\%$) in $\sqrt{s}=13\TeV$ ($\sqrt{s}=8\TeV$) collisions and it is subtracted from the $Z\rightarrow \ell\ell$ yields. A conservative systematic uncertainty of the same magnitude as the background contribution is propagated as a systematic uncertainty in the cross section measurement. The $Z\rightarrow \ell\ell$ yields contain a contribution of about $3\%$ from the $\gamma^{*}$ mediated process (including the interference effects) as estimated with MCFM~\cite{Campbell:2010ff}. 
 \begin{figure}[h]
 \centering
 \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/zmmlog}
 \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/zeelog}
-\caption{The dilepton mass distributions for $Z$ boson candidate events in the muon (left) and electron (right) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$ data taking period. The points with error bars represent the observed data events.
+\caption{The dilepton mass distributions for the selected $Z$ boson candidate events in the muon (left) and electron (right) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$ data taking period. The points with error bars represent the observed data events. The expected background contributions from the EWK and $t\bar{r}$ processes are shown superimposed with the expected $Z$ boson signal distributions. 
 \label{fig:z13}}
 \end{figure}
-
+Figure~\ref{fig:z13} shows the dilepton mass distribution for the selected $Z$ boson candidate events in the muon (left) and electron (right) final states in collisions at $\sqrt{s}=13~\TeV$. The energies of the leptons used in calculation of the dilepton mass are corrected for the energy scale effects by studying the dilepton mass peak and width. An additional resolution corrections (smearing), derived from $Z \rightarrow \ell\ell$ candidate events, are applied to the simulated samples. The  $Z \rightarrow ee$ candidate events with a tighter requirement on the dilepton mass range are used to study the charge miss-identification rate in data and simulation. The uncertainty in the measurement is propagated to the cross section measurements and is not negligible for the $W^+/W^-$ ratio measurement.      
+ 
+ The $W \rightarrow \ell \nu$ yields are obtained by performing a maximum-likelihood fit to the $E_{T}^{miss}$ distribution. The resolution of the $E_{T}^{miss}$ measurement (section 3.9) is essential to distinguish the $W$ candidate events from the QCD multi-jet background. The PF $E_{T}^{miss}$ is used to extract the $W \rightarrow \ell \nu$ yields in collisions at $\sqrt{s}=8~\TeV$ as the number of additional pileup interactions is low in the special low pileup LHC run. 
+ 
+The $E_{T}^{miss}$ spectra of the $W^{+}$ and $W^{-}$ candidates are fitted independently. The $W \rightarrow \ell \nu$ signal is modeled using simulation calibrating the recoil using $Z \rightarrow \mu\mu$ candidate data events as described in section 3.9.1. The $W \rightarrow \tau \nu$, $Z \rightarrow \ell\ell$, and $t\bar{t}$ background processes contribute significantly, about $10\%$ of the signal yield, for large $E_{T}^{miss}$ values. The EWK and $t\bar{t}$ backgrounds are modeled using simulation.  The recoil is similarly calibrated to data for the main EWK backgrounds ($Z \rightarrow \ell\ell$ and $W \rightarrow \tau \nu$). The uncertainties in the recoil calibration are propagated to the $E_{T}^{miss}$ distribution in the fit. The lepton energy scale/resolution corrections are propagated to the  $E_{T}^{miss}$ calculation. The QCD background is modeled by an analytic function. The functional shape is motivated from the well known fact that the length of a random (Gaussian distributed) two dimensional vector is described by the Rayleigh distribution. A modified Rayleigh distribution is used given by:
+\begin{equation} \label{eq:rayleigh}
+f = E_{T}^{miss} \mathrm{exp} \left(-\frac{E_{T}^{miss,2}}{2(\sigma_0+\sigma_1E_{T}^{miss})^2} \right).
+\end{equation}  
+The shape parameters $\sigma_0$ and $\sigma_1$ are studied by a fit to control samples defined by inverting the  truck-cluster matching,  $\Delta \eta$, and $\Delta \phi$, requirements on the electron candidates and by inverting the isolation requirement on the muon candidates. A systematic uncertainty in the choice of the QCD shape is estimated by introducing an additional shape parameter $\sigma_2$: $\sigma_0+\sigma_1E_{T}^{miss}+\sigma_2E_{T}^{miss,2}$. Figure~\ref{fig:W8} shows the $E_{T}^{miss}$ distributions for the  $W$ boson candidate events in the electron (left) and muon (right) final states in collisions at $\sqrt{s}=8~\TeV$ with the superimposed results of the fit.     
 \begin{figure}[h]
 \centering
-        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wenu}
-        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wmunu}
-       \caption{The missing transverse energy distributions for
-         $W^+$  (left) and $W^-$  (right) boson candidate events in the electron (top)
-       and muon (bottom) final states in proton-proton collisions at $\sqrt{s}=8~\TeV$ data taking period. The dotted orange lines shows the distribution of the $W$ boson signal. The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
-       %The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
-       \label{fig:W8}}
+\includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wenu}
+\includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wmunu}
+\caption{The missing transverse energy distributions for the $W$  boson candidate events in the electron (left) and muon (right) final states in proton-proton collisions at $\sqrt{s}=8~\TeV$ data taking period.  The points with error bars represent the observed data events. The dotted orange lines shows the distribution of the $W$ boson signal. The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
+\label{fig:W8}}
 \end{figure}
-
-
+The EWK and $t\bar{t}$ background contributions are normalized to the $W$ boson signal yield in the fit with ratios taken from the theoretical cross section predictions. The fit parameters are the QCD background yield, the W signal yield, and the shape parameters $\sigma_0$ and $\sigma_1$. A simultaneous fit including the muon control region, obtained by inverting the isolation requirement on the muon candidate, is also performed in the muon final state to improve the modeling of the QCD shape. The $\sigma_1$ shape parameter is constrained to be the same between the signal and control region in the fit. The differences in the $W$ boson signal yields are propagated as a systematic uncertainty in the background modeling.    
+ 
+PUPPI $E_{T}^{miss}$ is used to fit for the $W^{+}$ and $W^{-}$ candidates in collisions at $\sqrt{s}=13~\TeV$ data taking period as the PF $E_{T}^{miss}$ resolution is degraded significantly due to the additional pileup interactions. The PUPPI $E_{T}^{miss}$ is measured using the PF candidates with $|\eta|$ less than $3.0$. The PF candidates with $|\eta|>3.0$ are measured by the HF calorimeter which was not fully commissioned for the analyzed data sample. The  Figure~\ref{fig:W13} shows the corresponding $E_{T}^{miss}$ distributions for the $W^{+}$ and $W^{-}$ candidates with the fit results superimposed.
 \begin{figure}[h]
 \centering
-        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetp_enu}
-        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetm_enu}\\
-        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetp_munu}
-        \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/fitmetm_munu}
-       \caption{The missing transverse energy distributions for
-         $W^+$  (left) and $W^-$  (right) boson candidate events in the electron (top)
-       and muon (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$ data taking period. The dotted orange lines shows the distribution of the $W$ boson signal. 
-       %The variable $\chi$ shown in the lower plot is defined as $(N_{\text{obs}}-N_{\text{exp}})/\sqrt{N_{\text{obs}}}$, where $N_{\text{obs}}$ is the number of observed events and $N_{\text{exp}}$ is the total of the fitted signal and background yields.
-       \label{fig:W13}}
+\includegraphics[width=.45\columnwidth]{figures_chapter5/wz/fitmetp_enu}
+\includegraphics[width=.45\columnwidth]{figures_chapter5/wz/fitmetm_enu}\\
+\includegraphics[width=.45\columnwidth]{figures_chapter5/wz/fitmetp_munu}
+\includegraphics[width=.45\columnwidth]{figures_chapter5/wz/fitmetm_munu}
+\caption{The missing transverse energy distributions for $W^+$  (left) and $W^-$  (right) boson candidate events in the electron (top) and muon (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$ data taking period. The points with error bars represent the observed data events. The dotted orange lines shows the distribution of the $W$ boson signal. 
+\label{fig:W13}}
 \end{figure}
+Similarly to the $\sqrt{s}=8~\TeV$ fits, the QCD shape is constrained from the control regions with the corresponding systematic uncertainties on the model propagated to the cross section results. 
 
-\subsection{Results and Summary}
+The summary of the signal yields, acceptances, and efficiencies are given in Table~\ref{tab:yields8} and Table~\ref{tab:yields13} for the $\sqrt{s}=8~\TeV$ and $\sqrt{s}=13~\TeV$ collisions respectively. The uncertainties in the acceptances and efficiencies are the systematic uncertainties described in the previous two sections. The uncertainties in the signal yields are determined from the $E_{T}^{miss}$ fit for the $W$ boson candidates and  from the Poisson statistics for the $Z$ boson yields.   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\WEMYIELD{98200 \pm 950}
+\def\WEPYIELD{122320 \pm 980}
+\def\WMMYIELD{131250 \pm 910}
+\def\WMPYIELD{167710 \pm 830}
+\def\ZEEYIELD{15290 \pm 120}
+\def\ZMMYIELD{23670 \pm 150}
+\def\WMPACC{0.44 \pm 0.01 }
+\def\WMMACC{0.46 \pm 0.01 }
+\def\WMACC{0.45 \pm 0.01 }
+\def\ZMMACC{0.36 \pm 0.01 }
+\def\WMPEFF{0.78 \pm 0.01 }
+\def\WMMEFF{0.79 \pm 0.01 }
+\def\WMEFF{0.78 \pm 0.01 }
+\def\ZMMEFF{0.80 \pm 0.02 }
+\def\WEPACC{0.43 \pm 0.01 }
+\def\WEMACC{0.44 \pm 0.01 }
+\def\WEACC{0.44 \pm 0.01 }
+\def\ZEEACC{0.33 \pm 0.01 }
+\def\WEPEFF{0.58 \pm 0.02 }
+\def\WEMEFF{0.60 \pm 0.02 }
+\def\WEEFF{0.59 \pm 0.02 }
+\def\ZEEEFF{0.56 \pm 0.01 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[thbp]
+\centering
+\begin {tabular} {lccc}
+\hline
+Source     &  $Z\rightarrow e^+e^-$  & $W^{+}\rightarrow e^+\nu$           & $W^{-}\rightarrow e^-\bar{\nu}$            \\
+\hline
+Yields     & $4790\pm70$ & $44190\pm220$ & $30860\pm190$\\
+Acceptance&$0.41\pm0.01$&$0.48\pm0.01$&$0.47\pm0.01$\\
+Efficiency&$0.59\pm0.02$&$0.69\pm0.02$&$0.71\pm0.02$\\
+  \hline
+ Source     &  $Z\rightarrow \mu^+\mu^-$  & $W^{+}\rightarrow \mu^+\nu$           & $W^{-}\rightarrow \mu^-\bar{\nu}$            \\
+\hline
+Yields    &  $5920\pm80$&$47640\pm220$&$33840\pm180$\\
+Acceptance &$0.35\pm0.01$&$0.44\pm0.01$&$0.71\pm0.02$\\
+Efficiency &$0.81\pm0.01$&$0.84\pm0.01$&$0.83\pm0.01$\\
+\hline
+\end{tabular}
+\caption{ \label{tab:yields13}
+The background subtracted signal yields, acceptances, and efficiencies for the $Z$, $W^+$, and $W^-$ boson candidates in collisions at $\sqrt{s}=8~\TeV$. The $Z$ boson yield uncertainties are given by Poisson statistics, while the $W$ boson yield uncertainties are determined from the fit. Uncertainties in the acceptances and efficiencies are discussed in sections 4.1.3 and 4.1.4.}
+\end{table*}
+\begin{table*}[thbp]
+\centering
+\begin {tabular} {lccc}
+\hline
+Source     &  $Z\rightarrow e^+e^-$  & $W^{+}\rightarrow e^+\nu$           & $W^{-}\rightarrow e^-\bar{\nu}$            \\
+\hline
+Yields     & $\ZEEYIELD$&$\WEPYIELD$&$\WEMYIELD$\\
+Acceptance&$\ZEEACC$&$\WEPACC$&$\WEMACC$\\
+Efficiency&$\ZEEEFF$&$\WEPEFF$&$\WEMEFF$\\
+  \hline
+ Source     &  $Z\rightarrow \mu^+\mu^-$  & $W^{+}\rightarrow \mu^+\nu$           & $W^{-}\rightarrow \mu^-\bar{\nu}$            \\
+\hline
+Yields    &  $\ZMMYIELD$&$\WMPYIELD$&$\WMMYIELD$\\
+Acceptance &$\ZMMACC$&$\WMPACC$&$\WMMACC$\\
+Efficiency &$\ZMMEFF$&$\WMPEFF$&$\WMMEFF$\\
+\hline
+\end{tabular}
+\caption{ \label{tab:yields8}
+The background subtracted signal yields, acceptances, and efficiencies for the $Z$, $W^+$, and $W^-$ boson candidates in collisions at $\sqrt{s}=13~\TeV$. The $Z$ boson yield uncertainties are given by Poisson statistics, while the $W$ boson yield uncertainties are determined from the fit. Uncertainties in the acceptances and efficiencies are discussed in sections 4.1.3 and 4.1.4.}
+\end{table*} 
 
+\subsection{Systematic Uncertainties}
+
+The systematic uncertainties are summarized in Table~\ref{tab:syst_el} and Table~\ref{tab:syst_mu},for the electron and muon final states respectively in collisions at $\sqrt{s}=13~\TeV$.  The leading experimental uncertainty in the inclusiive total cross section measurement is due to the uncertainty in the integrated luminosity of the data sample ($2.7\%$). This uncertainty cancels in the measurement of the production cross section ratios. The lepton reconstruction and identification uncertainties are the second leading uncertainties in the total inclusive cross section measurement. This uncertainty is larger in the electron final state dominated by the uncertainty in modeling of the signal and background shapes in the efficiency fits. The correlations of the lepton efficiencies are taken into account in for the cross section ratio measurements. The systematic uncertainties due to the recoil calibrations and lepton scale/resolution affect the shape of the $E_{T}^{miss}$ distribution. These uncertainties are included in the maximum-likelihood fit via smooth morphing of the shape as a function of the corresponding uncertainty parameter. The correlation of the theoretical uncertainties is taken into account in the production cross section ratio measurement.  
 \begin{table}[htbp]
 \centering
 \small
@@ -194,16 +263,14 @@ Total experimental [\%] & $2.5$ & $2.5$ & $2.5$ & $1.1$ & $2.6$ & $1.9$ & $1.8$ 
 \hline
 Theoretical uncertainty [\%] & $1.6$ & $1.4$ & $1.4$ & $1.9$ & $1.6$ & $1.9$ & $1.9$ & $1.7$ \\
 \hline
-Lumi [\%] & $4.8$ & $4.8$ & $4.8$ & NA & $4.8$ & NA & NA & NA \\
+Lumi [\%] & $2.7$ & $2.7$ & $2.7$ & NA & $2.7$ & NA & NA & NA \\
 \hline
-Total [\%] & $5.6$ & $5.6$ & $5.6$ & $2.1$ & $5.7$ & $2.7$ & $2.6$ & $2.5$ \\
+Total [\%] & $4.0$ & $3.9$ & $3.9$ & $2.1$ & $4.1$ & $2.7$ & $2.6$ & $2.5$ \\
 \hline
 \end {tabular} 
 \caption[.]{ \label{tab:syst_el}
-Systematic uncertainties in percent for the electron channel. ``NA'' means that the source either does not apply or is negligible.}
+Systematic uncertainties in percent for the electron final state in collisions at $\sqrt{s}=13~\TeV$. ``NA'' means that the source either does not apply or is negligible.}
 \end{table}
-
-
 \begin{table}[htbp]
 \centering
 \small
@@ -220,17 +287,75 @@ Total experimental [\%] & $2.0$ & $1.8$ & $1.9$ & $0.5$ & $2.3$ & $1.1$ & $1.1$ 
 \hline 
 Theoretical Uncertainty [\%] & $2.0$ & $1.7$ & $1.3$ & $2.3$ & $1.5$ & $2.0$ & $1.9$ & $1.6$ \\
 \hline
-Lumi [\%] & $4.8$ & $4.8$ & $4.8$ & NA & $4.8$ & NA & NA & NA \\
+Lumi [\%] & $2.7$ & $2.7$ & $2.7$ & NA & $2.7$ & NA & NA & NA \\
 \hline
-Total [\%] & $5.6$ & $5.4$ & $5.3$ & $2.3$ & $5.5$ & $2.3$ & $2.2$ & $1.9$ \\
+Total [\%] & $3.9$ & $3.6$ & $3.6$ & $2.3$ & $3.9$ & $2.3$ & $2.2$ & $1.9$ \\
 \hline
 \end {tabular}
-\caption[.]{ \label{tab:syst_mu}
-Systematic uncertainties in percent for the muon channel. ``NA'' means that the source either does not apply or is negligible.}
+\caption{ \label{tab:syst_mu}
+Systematic uncertainties in percent for the muon final state in collisions at $\sqrt{s}=13~\TeV$. ``NA'' means that the source either does not apply or is negligible.}
 \end{table} 
+The systematic uncertainties in the measurement at $\sqrt{s}=8~\TeV$ are summarized in Table~\ref{tab:systele8}. The leading systematic uncertainty in the electron channel is due to the lepton reconstruction and identification efficiency measurements. The size of the $Z$ boson candidate data sample is larger at $\sqrt{s}=13~\TeV$ providing a better understanding of these uncertainties at $\sqrt{s}=13~\TeV$. The leading systematic uncertainty in the muon final state is due to the uncertainty in the integrated luminosity of the data sample ($2.6\%$).  
+\begin{table}[tbhp]
+\centering
+\resizebox{\textwidth}{!}{
+\begin {tabular} {lcccccccccccc}
+ &
+\multicolumn{2}{c}{$W^{+}$} &
+\multicolumn{2}{c}{$W^{-}$} &
+\multicolumn{2}{c}{$W$} &
+\multicolumn{2}{c}{$W^+$/$W^-$} &
+\multicolumn{2}{c}{$Z$} &
+\multicolumn{2}{c}{$W$/$Z$} \\
+Sources & $e$ & $\mu$ & $e$ & $\mu$ & $e$ & $\mu$ & $e$ & $\mu$ & $e$ & $\mu$ & $e$ & $\mu$ \\ \hline
+Lepton charge, reco. \& id. [\%]  & 2.8 & 1.0 & 2.5 & 0.9 & 2.5 & 1.0 & 3.8 & 1.2 &  2.8 & 1.1 & 3.8 & 1.5 \\
+Bkg. subtraction / modeling [\%]  & 0.2 & 0.2 & 0.3 & 0.1 & 0.3 & 0.1 & 0.1 & 0.2 &  0.4 & 0.4 & 0.5 & 0.4 \\
+$E_{T}^{miss}$ scale \& resolution  & 0.8 & 0.5 & 0.7 & 0.5 & 0.8 & 0.5 & 0.3 & 0.1 &  NA & NA & 0.8 & 0.5 \\
+Momentum scale \& resolution        & 0.4 & 0.3 & 0.7 & 0.3 & 0.5 & 0.3 & 0.3 & 0.1 &  NA & NA & 0.5 & 0.3 \\
+\hline
+Total experimental                       & 3.0 & 1.2 & 2.7 & 1.1 & 2.7 & 1.2 & 3.8 & 1.2 &  2.8 & 1.2 & 3.9 & 1.7 \\
+\hline
+Theoretical uncertainty                  & 2.1 & 2.0 & 2.6 & 2.5 & 2.7 & 2.2 & 1.5 & 1.4 &  2.6 & 1.9 & 2.0 & 2.5 \\
+\hline
+Luminosity                               & 2.6 & 2.6 & 2.6 & 2.6 & 2.6 & 2.6 & NA & NA &  2.6 & 2.6 & NA & NA \\
+\hline
+Total                                    & 4.5 & 3.5 & 4.6 & 3.8 & 4.6 & 3.6 & 4.1 & 1.8 &  4.6 & 3.4 & 4.4 & 3.0 \\
+\end{tabular}
+}
+\caption{ \label{tab:systele8}
+Systematic uncertainties in percent for the electron and muon final states in collisions at $\sqrt{s}=8~\TeV$. "NA'' means that the source either does not apply or is negligible.}
+\end{table}
 
+\subsection{Results}
 
+The inclusive total and fiducial production cross sections and ratios are shown separately for the muon and electron final states. The fiducial cross section measurement uncertainties are reduced as the theoretical uncertainties do not enter the measurement since no extrapolation from the fiducial region to the full phase space is performed (the acceptance). The fiducial cross section measurements in the muon and electron final states are not combined as the fiducial region definition is different. The total cross section measurements  in the muon and electron final states are combined assuming lepton universality of the $W$ and $Z$ boson couplings to leptons. The two decay modes are combined by taking the average value weighted by their statistical and systematic uncertainties. The luminosity uncertainty is taken as fully correlated in the combination while the other uncertainties are treated as uncorrelated.   
+\begin{table*}[tbhp]
+\centering
+\begin {tabular} {lccccc}
+\hline
+ & \multicolumn{1}{c}{NNPDF3.0} & \multicolumn{1}{c}{CT14} & \multicolumn{1}{c}{MMHT2014} & \multicolumn{1}{c}{ABM12LHC} & \multicolumn{1}{c}{HERAPDF15} \\  \hline
+$\sigma^{tot}_{W^+}$~[pb] & $11330^{+320}_{-270}$ & $11500^{+330}_{-310}$ & $11580^{+260}_{-210}$ & $11730^{+150}_{-130}$ & $11780^{+570}_{-250}$\\ 
+$\sigma^{tot}_{W^-}$~[pb]  & $8370^{+240}_{-210}$ & $8520^{+230}_{-240}$ & $8590^{+190}_{-170}$ & $8550^{+110}_{-90}$ & $8700^{+400}_{-170}$\\ 
+$\sigma^{tot}_{W}$~[pb]  & $19700^{+560}_{-470}$ & $20020^{+560}_{-550}$ & $20170^{+430}_{-390}$ & $20280^{+260}_{-220}$ & $20480^{+960}_{-410}$ \\ 
+$\sigma^{tot}_{Z}$~[pb]  & $1870^{+50}_{-40}$ & $1900^{+50}_{-50}$ & $1920^{+40}_{-40}$ & $1920^{+20}_{-20}$ & $1930^{+90}_{-40}$ \\ 
+$\sigma^{tot}_{W^+}/\sigma^{tot}_{W^-}$ & $1.354^{+0.011}_{-0.012}$ &
+$1.350^{+0.014}_{-0.014}$ & $1.348^{+0.011}_{-0.008}$ &
+$1.371^{+0.003}_{-0.004}$ & $1.353^{+0.014}_{-0.013}$\\
+$\sigma^{tot}_{W^+}/\sigma^{tot}_{Z}$ & $6.06^{+0.04}_{-0.05}$ & $6.06^{+0.06}_{-0.06}$ & $6.04^{+0.05}_{-0.05}$ & $6.11^{+0.02}_{-0.01}$ & $6.10^{+0.06}_{-0.06}$ \\ 
+$\sigma^{tot}_{W^-}/\sigma^{tot}_{Z}$ & $4.48^{+0.03}_{-0.02}$ & $4.49^{+0.03}_{-0.03}$ & $4.48^{+0.03}_{-0.04}$ & $4.46^{+0.02}_{-0.01}$ & $4.51^{+0.04}_{-0.03}$ \\ 
+$\sigma^{tot}_{W}/\sigma^{tot}_{Z}$ & $10.55^{+0.07}_{-0.06}$ & $10.55^{+0.09}_{-0.09}$ & $10.53^{+0.08}_{-0.09}$ & $10.56^{+0.04}_{-0.02}$ & $10.61^{+0.11}_{-0.09}$ \\ 
+\hline
+\end{tabular}
+\caption{ \label{tab:pdfXsec}
+Summary of predicted total inclusive cross sections and their ratios in proton-proton collisions at $\sqrt{s}=13~\TeV$. The predictions were calculated with FEWZ at NNLO accuracy in QCD, and NLO accuracy in EWK for the $Z$ bosons only. The PDF uncertainty and scale uncertainty are given for each prediction.}
+\end{table*}
+The prediction of the total cross sections and their ratios is estimated using FEWZ~\cite{Gavin:2010az,Gavin:2012sy,Li:2012wna} providing a fixed order calculation with NNLO accuracy in QCD. The calculation is also accurate to NLO in EWK for the $Z$ boson production. The factorization and renormalization scales and the scale of the $\alpha_s(Q^2)$ are set to the corresponding boson mass. For the $W$ boson production cross section calculation the $\Gamma_{W \rightarrow \ell \nu}$ is set to the experimental PDG value~\cite{Agashe:2014kda} instead of the SM prediction to reduce the EWK effects on the calculation. The predictions are estimated with MSTW2008~\cite{MSTW} NNLO PDF set for the $\sqrt{s}=8~\TeV$ collisions and NNPDF3.0 PDF set for the $\sqrt{s}=13~\TeV$ collisions. The uncertainties in the PDFs and $\alpha_s$, as well as the effects of the higher order corrections estimated by varying the factorization and renormalization scales within a factor of two (keeping $\mu_R$=$\mu_F$). In addition, the production cross sections and their ratios are calculated with CT14, MMHT2014, ABM12LHC~\cite{Alekhin:2013nda}, and HERAPDF15~\cite{Abramowicz:2015mha} PDF sets. The predictions of the inclusive total production cross sections and their ratios using these PDF sets for the proton-proton collisions at $\sqrt{s}=13~\TeV$ are summarized in Table~\ref{tab:pdfXsec}. 
 
+The ratio of the $W$ and $Z$ measured cross sections is given:
+\begin{equation} \label{eq:xsec2}
+\frac{\sigma_W}{\sigma_Z} = \frac{N_W}{N_Z}\frac{\varepsilon_Z}{\varepsilon_W}\frac{A_Z}{A_W}.
+\end{equation}
+Similar expressions are obtained for the other ratios. Table~\ref{tab:results13} summarizes the measured total inclusive $W^+$, $W^-$, $W$, and $Z$ boson production cross section times branching fractions, $W^+$, $W^-$, and $W$ to Z and $W^+$ to $W^-$ ratios and the theoretical prediction with the NNPDF3.0 PDF set in proton-proton collisions at $\sqrt{s}=13~\TeV$. The values measured in the electron and muon final states separately are also shown. Figure~\ref{fig:13tev} shows the ratio of the measured total cross section (and their ratios) and the theoretical predictions 
 \begin{table*}[tbhp]
 \centering
 \begin {tabular} {lllr}
@@ -292,54 +417,16 @@ $R_{W/Z}$   & $\mu$ & $10.47 \pm 0.08 \mathrm{(stat)}\pm 0.20 \mathrm{(syst)}$ &
 \end{tabular}
 \caption{ \label{tab:results13}
 Summary of total inclusive $W^{+}$, $W^{-}$, $W$, and $Z$ production cross sections times
-branching fractions, $W^{+}$,  $W^{-}$, and $W$ to $\Z$ and $W^{+}$ to $W^{-}$ ratios, and their
-theoretical predictions. The values in the electron and muon final states are also shown individually.}
+branching fractions, $W^{+}$,  $W^{-}$, and $W$ to $Z$ and $W^{+}$ to $W^{-}$ ratios, and their
+theoretical predictions in proton-proton collisions at $\sqrt{s}=13~\TeV$. The values in the electron and muon final states are also shown individually.}
 \end{table*}
-
-\begin{table*}[tbhp]
-\centering
-\begin {tabular} {lccccc}
-\hline
- & \multicolumn{1}{c}{NNPDF3.0} & \multicolumn{1}{c}{CT14} & \multicolumn{1}{c}{MMHT2014} & \multicolumn{1}{c}{ABM12LHC} & \multicolumn{1}{c}{HERAPDF15} \\  \hline
-$\sigma^{tot}_{W^+}$~[pb] & $11330^{+320}_{-270}$ & $11500^{+330}_{-310}$ & $11580^{+260}_{-210}$ & $11730^{+150}_{-130}$ & $11780^{+570}_{-250}$\\ 
-$\sigma^{tot}_{W^-}$~[pb]  & $8370^{+240}_{-210}$ & $8520^{+230}_{-240}$ & $8590^{+190}_{-170}$ & $8550^{+110}_{-90}$ & $8700^{+400}_{-170}$\\ 
-$\sigma^{tot}_{W}$~[pb]  & $19700^{+560}_{-470}$ & $20020^{+560}_{-550}$ & $20170^{+430}_{-390}$ & $20280^{+260}_{-220}$ & $20480^{+960}_{-410}$ \\ 
-$\sigma^{tot}_{Z}$~[pb]  & $1870^{+50}_{-40}$ & $1900^{+50}_{-50}$ & $1920^{+40}_{-40}$ & $1920^{+20}_{-20}$ & $1930^{+90}_{-40}$ \\ 
-$\sigma^{tot}_{W^+}/\sigma^{tot}_{W^-}$ & $1.354^{+0.011}_{-0.012}$ &
-$1.350^{+0.014}_{-0.014}$ & $1.348^{+0.011}_{-0.008}$ &
-$1.371^{+0.003}_{-0.004}$ & $1.353^{+0.014}_{-0.013}$\\
-$\sigma^{tot}_{W^+}/\sigma^{tot}_{Z}$ & $6.06^{+0.04}_{-0.05}$ & $6.06^{+0.06}_{-0.06}$ & $6.04^{+0.05}_{-0.05}$ & $6.11^{+0.02}_{-0.01}$ & $6.10^{+0.06}_{-0.06}$ \\ 
-$\sigma^{tot}_{W^-}/\sigma^{tot}_{Z}$ & $4.48^{+0.03}_{-0.02}$ & $4.49^{+0.03}_{-0.03}$ & $4.48^{+0.03}_{-0.04}$ & $4.46^{+0.02}_{-0.01}$ & $4.51^{+0.04}_{-0.03}$ \\ 
-$\sigma^{tot}_{W}/\sigma^{tot}_{Z}$ & $10.55^{+0.07}_{-0.06}$ & $10.55^{+0.09}_{-0.09}$ & $10.53^{+0.08}_{-0.09}$ & $10.56^{+0.04}_{-0.02}$ & $10.61^{+0.11}_{-0.09}$ \\ 
-\hline
-\end{tabular}
-\caption{ \label{tab:pdfXsec}
-Summary of predicted total inclusive cross sections and their ratios in proton-proton collisions at $\sqrt{s}=13~\TeV$. The predictions were calculated with FEWZ at NNLO. The PDF uncertainty and scale uncertainty are given for each prediction.}
-\end{table*}
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/rat_el_mu}
-\caption{Work on the caption.}
-\label{fig:lepton_univ}
-\end{figure}
-
-
+The fiducial cross section results in collisions at $\sqrt{s}=13~\TeV$ are summarized in Figure~\ref{fig:fid}. As pointed out above the theoretical uncertainties are not relevant for the fiducial measurement. The fiducial predictions are computed by multiplying the NNLO FEWZ predictions and the acceptance estimated with the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$. The theoretical uncertainties in the acceptance and the NNLO cross section predictions are assumed to be uncorrelated. The measured total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions, $W$ to $Z$, and $W^+$ to $W^-$ ratios and the theoretical predictions in collisions at $\sqrt{s}=8~\TeV$ are summarized in Table~\ref{tab:8tevtable} and Figure~\ref{fig:8tev}.All the measured values in collisions at $\sqrt{s}=8~\TeV$ and $\sqrt{s}=13~\TeV$ are consistent with the SM predictions accurate to NNLO in QCD. The individual measurements in the muon and electron final states separately are also compatible with each other.  
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/xsecSummary13TeV}
 \caption{Summary of the total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios in proton-proton collisions at $\sqrt{s}=13~\TeV$. The theoretical predictions with FEWZ using the NNPDF3.0 PDF set are also shown. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
 \label{fig:13tev}
 \end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/xsecSummary8TeV}
-\caption{Summary of the total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios in proton-proton collisions at $\sqrt{s}=8~\TeV$. The theoretical predictions with FEWZ using the MSTW2008 PDF set are also shown. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
-\label{fig:8tev}
-\end{figure}
-
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.60\columnwidth]{figures_chapter5/wz/xsecFidMuonSummary13TeV}
@@ -347,57 +434,116 @@ Summary of predicted total inclusive cross sections and their ratios in proton-p
 \caption{Summary of the fiducial inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios for the muon (top) and electron (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$. The acceptance used in the theory prediction is taken from the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$ while the inclusive total production cross section prediction is taken from FEWZ. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
 \label{fig:fid}
 \end{figure}
-
-
-\begin{figure}[h]
+\begin{table}[tbhp]
+\centering
+\begin {tabular} {lllr}
+\multicolumn{2}{c}{Channel} & \multicolumn{1}{c}{$\sigma \times \mathcal{B}$
+[pb] (total)} & \multicolumn{1}{c}{NNLO [pb]} \\
+\hline
+% $\PW$ plus
+      & $e^+\nu$ & $7310 \pm 40\mathrm{(stat)}\pm 260\mathrm{(syst)} \pm 190\mathrm{(lumi)}$ & \\
+$W^+$ & $\mu^+\nu$ & $7040 \pm 30\mathrm{(stat)}\pm 160\mathrm{(syst)} \pm 180\mathrm{(lumi)}$ & $7120 \pm 200$\\
+      & $\ell^+\nu$ & $7110 \pm 30\mathrm{(stat)}\pm 140\mathrm{(syst)} \pm 180\mathrm{(lumi)}$ & \\\hline
+% $\PW$ minus
+      & $e^-\nu$ & $5080 \pm 30\mathrm{(stat)}\pm 190\mathrm{(syst)} \pm 130\mathrm{(lumi)}$ & \\
+$W^-$ & $\mu^-\nu$ & $5090 \pm 30\mathrm{(stat)}\pm 140\mathrm{(syst)} \pm 130\mathrm{(lumi)}$ & $5060 \pm 130$\\
+      & $\ell^-\nu$ & $5090 \pm 20\mathrm{(stat)}\pm 110\mathrm{(syst)} \pm 130\mathrm{(lumi)}$ & \\\hline
+% $\PW$
+      & $e\nu$ & $12390 \pm 50\mathrm{(stat)}\pm 440\mathrm{(syst)} \pm 320\mathrm{(lumi)}$ & \\
+$W$  & $\mu\nu$ & $12130 \pm 40\mathrm{(stat)}\pm 290\mathrm{(syst)} \pm 320\mathrm{(lumi)}$ &  $12180 \pm 320$ \\
+      & $\ell\nu$ & $12210 \pm 30\mathrm{(stat)}\pm 240\mathrm{(syst)} \pm 320\mathrm{(lumi)}$ & \\\hline
+% Z
+    & $e^+e^-$ & $1130 \pm 0.02\mathrm{(stat)}\pm 0.05\mathrm{(syst)} \pm 0.03\mathrm{(lumi)}$ & \\
+$Z$& $\mu^+\mu^-$ & $1160 \pm 20\mathrm{(stat)}\pm 30\mathrm{(syst)} \pm 30\mathrm{(lumi)}$ & $1130 \pm 40$\\
+    & $\ell^+\ell^-$& $1150 \pm 10\mathrm{(stat)}\pm 20\mathrm{(syst)} \pm 30\mathrm{(lumi)}$ & \\\hline
+\multicolumn{2}{c}{Quantity} & \multicolumn{1}{c}{Ratio (total)} & \multicolumn{1}{c}{NNLO} \\ \hline
+% W+/W-
+& $e$ & $1.44 \pm 0.01\mathrm{(stat)}\pm 0.05\mathrm{(syst)}$ & \\
+$R_{W^+/W^-}$ & $\mu$ & $1.38 \pm 0.01\mathrm{(stat)}\pm 0.03\mathrm{(syst)}$ & $1.41 \pm 0.01$ \\
+  & $\ell$ & $1.39 \pm 0.01\mathrm{(stat)}\pm 0.02\mathrm{(syst)}$ & \\
+\hline
+% W/Z
+             & $e$   & $10.99 \pm 0.16\mathrm{(stat)}\pm 0.43\mathrm{(syst)}$ &                  \\
+$R_{W/Z}$   & $\mu$ & $10.44 \pm 0.14\mathrm{(stat)}\pm 0.30\mathrm{(syst)}$ & $10.74 \pm 0.04$ \\
+             & $\ell$ & $10.63 \pm 0.11\mathrm{(stat)}\pm 0.25\mathrm{(syst)}$ &  \\
+\end{tabular}
+\caption{ \label{tab:8tevtable}
+Summary of total inclusive $W^{+}$, $W^{-}$, $W$, and $Z$ production cross sections times
+branching fractions, $W$ to $Z$ and $W^{+}$ to $W^{-}$ ratios, and their theoretical predictions in proton-proton collisions at $\sqrt{s}=8~\TeV$. The values in the electron and muon final states are also shown individually.}
+\end{table}
+\begin{figure}[tbh]
+\centering
+\includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/xsecSummary8TeV}
+\caption{Summary of the total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios in proton-proton collisions at $\sqrt{s}=8~\TeV$. The theoretical predictions with FEWZ using the MSTW2008 PDF set are also shown. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\label{fig:8tev}
+\end{figure}
+\begin{figure}[tbh]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wp-tot}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wm-tot}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-w-tot}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-z-tot}
-\caption{Summary of the fiducial inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios for the muon (top) and electron (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$. The acceptance used in the theory prediction is taken from the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$ while the inclusive total production cross section prediction is taken from FEWZ. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\caption{Comparison of the measured inclusive total cross sections with the predictions using five PDF sets: NNPDF30, C14, MMHT2014, ABM12LHC, and HERAPDF15. The comparison is shown for the $W^+$ (top left), $W^-$ (top right), $W$ (bottom left), and $Z$ (bottom right) production cross sections in collisions at $\sqrt{s}=13~\TeV$.}
 \label{fig:pdf_tot}
 \end{figure}
-
-
-\begin{figure}[h]
+\begin{figure}[tbh]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wpr-tot}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wmr-tot}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-wz-tot}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/pdf-rpm-tot}
-\caption{Summary of the fiducial inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios for the muon (top) and electron (bottom) final states in proton-proton collisions at $\sqrt{s}=13~\TeV$. The acceptance used in the theory prediction is taken from the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$ while the inclusive total production cross section prediction is taken from FEWZ. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
+\caption{Comparison of the measured inclusive total cross section ratios with the predictions using five PDF sets: NNPDF30, C14, MMHT2014, ABM12LHC, and HERAPDF15. The comparison is shown for the $W^+$ (top left), $W^-$ (top right), and $W$ (bottom left) to $Z$, and $W^+$ to $W^-$ (bottom right) cross section ratios in collisions at $\sqrt{s}=13~\TeV$.}
 \label{fig:pdf_rat}
 \end{figure}
 
-\begin{figure}[h]
+It is also interesting to compare the measured production cross sections and their ratios to the predictions with different PDFs given in Table~\ref{tab:pdfXsec}. Figure~\ref{fig:pdf_tot} shows the comparison of the measured inclusive total cross sections with the predictions in collisions at $\sqrt{s}=13~\TeV$. The corresponding comparison of the cross section ratios is shown in Figure~\ref{fig:pdf_rat}. The measurements are consistent with the predictions with different PDF sets. The ABM12LHC and HERAPDF15 PDF sets are distinct from the NNPDF3.0, MMHT2014, and CT14 PDF sets in a sense that only selective data samples are used for the PDF fits. Figure~\ref{fig:collider} shows the measurements of the total $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions as a function of the centre of mass energy for the measurements performed by CMS and experiments at lower-energy colliders are shown~\cite{UA1-wz, UA2-wz, CDF-wz-e, CDF-z-m, CDF-wz, D0-w}. The cross section is predicted to increase with $\sqrt{s}$. The increase is confirmed by these measurements.
+\begin{figure}[tbh]
 \centering
 \includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/colliders}
-\caption{Don't forget the caption.}
+\caption{Measurements of the total $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions as a function of the centre of mass energy. The measurements performed by CMS and experiments at lower-energy colliders are shown. The blue lines show the predictions by FEWZ with NNPDF3.0.}
 \label{fig:collider}
 \end{figure}
 
+\subsection{$\mathcal{B}(W \rightarrow \ell \nu)$ and $\Gamma_W$}
 
-\section{Evidence for a Higgs boson in Tau decays}
+An indirect measurement of the $\mathcal{B}(W \rightarrow \ell \nu)$  and $\Gamma_W$ SM parameters can be performed using the $W$ to $Z$ cross section ratio measurement. The argument given here follows closely to~\cite{CMS:2011aa}. The measured cross section ratio at $\sqrt{s}=13~\TeV$ is $R_{W/Z}=10.46 \pm 0.06 (\mathrm{stat}) \pm 0.16(\mathrm{syst})$. The $R_{W/Z}$ can be written as:
+\begin{equation} \label{eq:xsec3}
+R_{W/Z} = \frac{\sigma_W}{\sigma_Z} \frac{\mathcal{B}(W\rightarrow \ell\nu)}{\mathcal{B}(Z\rightarrow \ell\ell)},
+\end{equation}
+where $\frac{\sigma_W}{\sigma_Z}$ is the predicted ratio of the $W$ to $Z$ boson cross sections. The measured value of the  $\mathcal{B}(Z\rightarrow \ell\ell)$ is taken from the PDG: $0.033658 \pm 0.000023$~\cite{Agashe:2014kda}. The predicted ratio of the inclusive total $W$ to $Z$ boson cross sections is calculated with NNLO accuracy in QCD (NLO accuracy in EWK for the $Z$ cross section) with NNPDF3.0. The predicted value is $3.27\pm0.02$ where the uncertainty is due to the PDF and unknown higher order corrections. However, the uncertainties in the $W$ boson CKM elements are not negligible~\cite{Renton:2008ub}. From Eq.~(\ref{eq:xsec3}) and the values discussed above an indirect determination of  $\mathcal{B}(W \rightarrow \ell \nu) = 0.1076 \pm 0.0013$ is made in agreement with the current PDG value, $\mathcal{B}(W \rightarrow \ell \nu) = 0.1086 \pm 0.0009$~\cite{Agashe:2014kda}. 
 
-\subsection{Event selection and categorization}
+The total width of the $W$ boson can be extracted using the SM value of the leptonic partial decay width given by $\Gamma(W \rightarrow \ell \nu)=226.6 \pm 0.2~\MeV$~\cite{Rosner:1993rj,Renton:2008ub}, where the uncertainty is dominated by the uncertainty on the mass of the $W$ boson. The total width is given by
+\begin{equation} \label{eq:xsec4}
+\Gamma_W = \frac{\Gamma(W \rightarrow \ell \nu)}{\mathcal{B}(W \rightarrow \ell \nu) }.
+\end{equation}
+Thus, $\Gamma_W = 2105 \pm 37~\MeV$ is obtained from the above values in agreement with the PDG value of $2085 \pm 42~\MeV$ and the SM prediction of $2093 \pm 2~\MeV$~\cite{Renton:2008ub}. To summarize, the measurement of the $W/Z$ production cross section ratio leads to an indirect determination of the $\mathcal{B}(W\rightarrow \ell\nu)$  and $\Gamma_W$:
+\begin{eqnarray} \label{eq:xsec2}
+\begin{aligned}
+\mathcal{B}(W\rightarrow \ell\nu) &= 0.1076 \pm 0.0013, \\
+\Gamma(W) &= 2105 \pm 37~\MeV.
+\end{aligned}
+\end{eqnarray}
+The quoted uncertainties include only the uncertainties in the PDF and higher order corrections for the $\sigma_W$ prediction. 
+ 
 
-\subsection{$\tau$-pair mass reconstruction}
+%\section{Evidence for a Higgs boson in Tau decays}
 
-\subsection{Signal Extraction}
+%\subsection{Event selection and categorization}
 
-\subsection{Background Estimation}
+%\subsection{$\tau$-pair mass reconstruction}
 
-\subsection{Systematic uncertainties}
+%\subsection{Background Estimation}
 
-\subsection{Results}
+%\subsection{Systematic uncertainties}
 
-\section{MSSM Higgs boson search in Tau decays}
+%\subsection{Results}
 
-\subsection{Event selection and categorization}
+%\section{MSSM Higgs boson search in Tau decays}
 
-\subsection{Systematic uncertainties}
+%\subsection{Event selection and categorization}
 
-\subsection{Results and Interpretations}
+%\subsection{Systematic uncertainties}
+
+%\subsection{Results and Interpretations}
 
 
