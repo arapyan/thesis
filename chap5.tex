@@ -587,7 +587,7 @@ where the $p_{T}^{\ell}$ is the transverse momentum of the muon or electron cand
 \caption{The transverse mass $m_T$ distribution  for the selected $\tau_{\mu}\tau_{h}$ final state candidates before the $m_{T}<30~\GeV$ requirement in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area shows the statistical uncertainty in the background predictions. The region with $m_{T}>70~\GeV$ defines a control region used to estimate the $W+$jet background contribution.}
 \label{fig:mt}
 \end{figure}
-The "QCD" in Figure~\ref{fig:mt} denotes the contribution of the QCD mutli-jet background. The contributions of the $W+jet$, boson-pair, and single top processes are denotes as the "Electroweak" background. The selected events in the $\tau_{\ell}\tau_{h}$ final states are required to have $m_{T}<30~\GeV$.  The $E_{T}^{miss}$ used in the results is the MVA  $\vec{E}_{T}^{miss}$ to reduce the impact of the pileup interactions on the $E_{T}^{miss}$ resolution as discussed in section 3.9. The $\vec{E}_{T}^{miss}$ resolution is essential to separate the SM Higgs boson signal from the $Z\rightarrow\tau\tau$ irreducible background (discussed in the next section). 
+The "QCD" in Figure~\ref{fig:mt} denotes the contribution of the QCD mutli-jet background. The contributions of the $W+jet$, boson-pair, and single top processes are denotes as the "Electroweak" background. The selected events in the $\tau_{\ell}\tau_{h}$ final states are required to have $m_{T}<30~\GeV$.  The $E_{T}^{miss}$ used in the results is the MVA  $\vec{E}_{T}^{miss}$ to reduce the impact of the pileup interactions on the $E_{T}^{miss}$ resolution as discussed in section 3.9. The $\vec{E}_{T}^{miss}$ resolution is essential to separate the SM Higgs boson signal from the $Z\rightarrow\tau\tau$ irreducible background (discussed in the next section). The recoil in the simulation is also calibrated to data as discussed in section 3.9.1.
 
 The candidate $\tau\tau$  events are split into mutually exclusive categories to improve the sensitivity of the events to the presence to the SM Higgs boson signal with a mass in the range of $110$ to $145~\GeV$. An important aspect of this categorization is to exploit the signatures of different SM Higgs boson production modes (Figure~\ref{fig:sm_higgs}). The first step is to classify the events according to the number of reconstructed jets with $p_{T}>30~\GeV$ and $|\eta|<4.7$. The jets are clustered from the PF candidates as discussed in chapter 3. The jets originating from the pileup interactions are rejected utilizing the pileup jet identification technique described in section 3.5.2. The selected jets are  required to be separated from the selected tau candidates by a distance $\Delta R$ larger than $0.5$. The $t\bar{t}$ and single top backgrounds are reduced by rejecting the $\tau\tau$ candidate events containing at least one b-tagged jets with $p_{T}>20~\GeV$ and $|\eta|<2.4$. The CSV algorithm described in section 3.5.3 is used to identify the b-tagged jets. The efficiency of the b-jet identification and misidentification of the light-flavor jets are measured in data and simulation~\cite{Chatrchyan:2012jua}. The simulation is corrected from the differences between the data and simulation for the efficiencies and misidentification probabilities.
 
@@ -621,9 +621,42 @@ The $Z\rightarrow e^{-}e^{+}$ background in the $\tau_{e}\tau_h$ final state is 
 
 \subsection{$\tau$-pair invariant mass reconstruction}
 
+The di-tau invariant mass is used to separate the $H \rightarrow \tau\tau$ signal events from the irreducible $Z\rightarrow\tau\tau$ background events. As a first approximation one can use the visible tau decay products to reconstruct the di-tau invariant mass. However, the separation power of the visible di-tau mass, denoted as $m_{\mathrm{vis}}$, is limited as the  neutrinos from the tau decays can make a large fraction of the tau energy invisible to the detector. However, the $\vec{E}_{T}^{miss}$ vector in the transverse plane with respect to the beam direction provides an additional information on the neutrino kinematics. 
 
+Let's count the number of known and unknown parameters in the tau decays. The hadronic tau lepton decay can be specified by $6$ parameters as the tau and neutrino masses provide two constrains ($m_{\tau}=1.777~\GeV$ and $m_{\nu}=0~\GeV$). These $6$ parameters can be chosen as the polar and azimuthal angles of the $\tau_h$ in the tau lepton rest frame, the three parameters needed to define the boost from the tau lepton rest frame to the laboratory frame, and finally the  mass of the $\tau_h$. There are two neutrinos in the leptonic tau decays and the neutrino mass constrain is no longer valid. Thus, there are $7$ parameters needed for the leptonic tau decays and the mass of the two neutrino system, $m_{\nu\nu}$ can be chosen as the additional parameter.  Thus, there are $2$ and $3$ unknown parameters for the hadronic and leptonic tau decays respectively given the observed $4$-momentum of the visible decay products. The unknown parameters are chosen to be:
 
+\begin{description}
+\item[$\bullet$ $x$:] the fraction of the tau lepton "visible" energy in the laboratory frame.
+\item[$\bullet$ $\phi$:] the azimuthal angle of the tau lepton in the laboratory frame.
+\item[$\bullet$ $m_{\nu\nu}$:] the invariant mass of the two-neutrino system for the leptonic decays of the tau lepton. 
+\end{description}
 
+The measurement of the $\vec{E}_{T}^{miss}$ provides two additional constraints. Thus, the kinematics of the tau pair system is undetermined with $2$ and $4$ unknown parameters in the $\tau_h\tau_h$ and $\tau_{\ell}\tau_h$ final states respectively.  The system can be solved for the $m_{\tau\tau}$ by introducing an assumption that the neutrinos from the tau decays are collinear with the corresponding visible decay products. This simple approximation, known as the collinear approximation and first proposed here~\cite{Ellis:1987xu}, yields an unphysical solution for events where the two tau leptons are traveling back-to-back (i.e. the di-tau system is not boosted). 
+
+A maximum likelihood based method is used to solve for the $m_{\tau\tau}$ in these results. The likelihood function is defined by $f(\vec{E}_T^{miss},\vec{y},\vec{a}_1,\vec{a}_2)$, where the $\vec{y}=(p_1^{\mathrm{vis}},p_2^{\mathrm{vis}})$ denotes the four-momenta of the visible tau decay products, and the $\vec{a}_i=(x_i,\phi_i,m_{\nu\nu,i})$ denotes the unknown decay parameters. The probability is defined as:
+\begin{equation} \label{eq:prob}
+P(m_{\tau\tau}) = \int \delta(m_{\tau\tau}-m_{\tau\tau}(\vec{y},\vec{a}_1,\vec{a}_2)) f(\vec{E}_T^{miss}, \vec{y},\vec{a}_1,\vec{a}_2)d\vec{a}_1\vec{a}_2.
+\end{equation}
+The best estimate of the $m_{\tau\tau}$ is taken to be the value that maximizes the $P(m_{\tau\tau})$. The likelihood function $f(\vec{E}_T^{miss},\vec{y},\vec{a}_1,\vec{a}_2)$ is a product of three likelihood functions: one for each of the tau lepton decays and one for the compatibility of the di-tau pair decay with the observed $\vec{E}_T^{miss}$. The likelihood function of the leptonic tau decay is modeled by the matrix element of the leptonic decay of an unpolarized tau lepton~\cite{TauPol}. The likelihood $\mathcal{L}_{\tau,\ell}$ is given by:     
+\begin{equation} 
+\mathcal{L}_{\tau,\ell} = \frac{{\rm d}\Gamma}{{\rm d}x\,{\rm d}m_{\nu\nu}\,{\rm d}\phi} \propto \frac{m_{\nu\nu}}{4m_{\tau}^2} [(m_{\tau}^2 +2m_{\nu\nu}^2 )(m_{\tau}^2 - m_{\nu\nu}^2)],
+\label{eq:likelihoodLepTauDecay}
+\end{equation}
+where the allowed regions are given by $0<x<1$ and $0<m_{\nu\nu}<m_{\tau}\sqrt{1-x}$. The two body phase-space is used to model the likelihood function of the hadronic tau decays~\cite{Agashe:2014kda}. The likelihood  $\mathcal{L}_{\tau_{h}}$ is given by:
+\begin{equation}
+\mathcal{L}_{\tau_{h}} = \frac{{\rm d}\Gamma}{{\rm d}x\,{\rm d}\phi} \propto \frac{1}{1- m^2_{\rm vis}/m^2_{\tau}}.,
+\label{eq:likelihoodHadTauDecay}
+\end{equation}
+where the allowed region is given by $\frac{m_{\mathrm{vis}}}{m_{\tau}^2}\leq x \leq 1$. The TAUOLA simulation is used to verify that the two body phase-space model is an adequate parameterization of the hadronic tau decay. The $\mathcal{L}_{\tau,\ell}$  and $\mathcal{L}_{\tau_{h}}$  do not explicitly depend on the $x_i$ or $\phi_i$ parameters. The $x_i$ parameter defines the integration limits in Eq.~(\ref{eq:prob}). The $\phi_i$ parameters enter the likelihood function for the measured $\vec{E}_{T}^{miss}$ given by:
+\begin{equation}
+\mathcal{L}_{\nu} (E_{x}^{\rm miss}, E_{y}^{\rm miss}) = \frac{1}{2 \pi \sqrt{\vert V \vert}} 
+ \exp \left[ -\frac{1}{2}
+ \left( \begin{array}{c} E_{x}^{\rm miss} - \sum p_{x}^{\nu} \\ E_{y}^{\rm miss} - \sum p_{y}^{\nu} \end{array} \right)^{T}
+ V^{-1} 
+ \left( \begin{array}{c} E_{x}^{\rm miss} - \sum p_{x}^{\nu} \\ E_{y}^{\rm miss} - \sum p_{y}^{\nu} \end{array} \right)
+\right],
+\end{equation}
+where the expected $\vec{E}_{T}^{miss}$ resolution is represented by the covariance matrix defined in Eq.~(\ref{eq:cov}). The relative $m_{\tau\tau}$ resolution is about $10\%$ and $15\%$ for the $\tau_h\tau_h$ and $\tau_{\ell}\tau_h$ final states respectively. The resolution varies between the event categories defined in the previous section with the boosted categories having better $m_{\tau\tau}$ relative resolution due to the more accurate $\vec{E}_{T}^{miss}$ measurement. Thus, the categorization of the events in $p_{T}^{\tau_h}$ and  $p_{T}^{\tau\tau}$ additionally provides a better separation of the SM Higgs boson and $Z\rightarrow \tau\tau$ candidate events in the boosted categories due to the improved $m_\tau\tau$ reconstruction.   
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-004_Figure_003-a}
@@ -631,16 +664,23 @@ The $Z\rightarrow e^{-}e^{+}$ background in the $\tau_{e}\tau_h$ final state is 
 \caption{Distributions of the invariant mass of the tau pair visible decay products (left) and the likelihood based reconstruction (right) in $Z \rightarrow \tau\tau$ and $H \rightarrow \tau\tau$ selected candidate events in simulation. The distributions are normalized to unit area for the $\tau_{h}\tau_{\mu}$ final state~\cite{Chatrchyan:2014nva}.}
 \label{fig:svfit}
 \end{figure}
+Figure~\ref{fig:svfit} shows the distributions of the visible di-tau invariant mass (left) and the likelihood based di-tau invariant mass (right) in $\tau_{\mu}\tau_h$ final state for simulated $Z \rightarrow \tau\tau$ and SM Higgs boson, with a mass of $125~\GeV$, events. The likelihood based $m_{\tau\tau}$ provides a better separation between the signal and background. The overall improvement in the expected sensitivity of the results to the SM Higgs boson with a mass of $125~\GeV$ is about $40\%$ with respect to the results obtained with the visible mass.  
 
 \subsection{Background Estimation}
 
+The expected major background contributions are estimated from data. The largest source of the background events is the Drell-Yan tau pair production. This background is modeled by the so called "embedding" technique using $Z \rightarrow \mu\mu$ candidate events selected with loose identification and isolation requirements on the muon candidates.  The candidate muons are replaced with simulated $\tau$ leptons with identical four-momenta to the corresponding observed muons.  The simulated taus are decayed with TAUOLA and passed through the full CMS detector simulation and reconstruction. The muons in the $Z \rightarrow \mu\mu$ data events are replaced with the reconstructed visible decay products of the simulated tau leptons. The $E_{T}^{miss}$, the jets, the $\tau_h$ candidates, and the isolation sums are then computed. The embedded samples are normalized to the inclusive $Z\rightarrow \mu\mu$ observed events.  Thus, the systematic uncertainties in the $E_{T}^{miss}$, jet energy scale, and the luminosity measurement are negligible as the events are taken from "real" collision data. Systematic uncertainties due to extrapolation to the different event categories are considered. The uncertainties due to the reconstruction and acceptance of the embedded events are estimated by performing the embedding procedure on the $Z\rightarrow\tau\tau$ simulated events. Statistical uncertainties due to the limited number of events in the categories are also included.  The $Z\rightarrow \ell\ell$ is a smaller but non-negligible background in the $\tau_{\ell}\tau_h$ final states. This background contribution is estimated from the simulation with the normalization taken from $Z\rightarrow\mu\mu$ data. There is a small contribution from $Z\rightarrow \ell\ell$ events where one of the leptons is not within the fiducial region and a jet is misidentified as a $\tau_h$ candidate. This contribution is taken from the simulation.  
 
+The $W+$jet background shape is modeled using simulation. The normalization is determined from data using the high-$m_T$ control region defined with $m_{T}>70~\GeV$ requirement (Figure~\ref{fig:mt}) in the $\tau_{\ell}\tau_h$ final states. This is done in each category by normalizing the $W+$jet predicted yield to the observed data. The small contribution from other background sources in the high-$m_T$ control region are subtracted from the observed number of events. In the VBF categories, with limited number of simulated $W+$jet events, the requirements on the $M_{jj}$ and $|\Delta \eta|$ are relaxed to obtain smooth templates for the $m_{\tau\tau}$ distribution. The bias introduced in the $m_{\tau\tau}$ shape is found to be negligible. A $\tau_{\mu}\tau_h$ control region with the same categories as in the $\tau_h\tau_h$ final state is used to obtain a simulation-to-data scale factor for the $W+jet$ contribution in the high-$m_T$ control region. The scale factor is then used to scale the $W+$jet background contribution obtained from the simulation in the $\tau_h\tau_h$ final state. The extrapolation factor from the high-$m_{T}$ control region to the signal region is obtained from simulation. An uncertainty of $10$ to $25\%$ is estimated in the extrapolation factor by studying the differences in the $Z\rightarrow \mu\mu$ data and simulated events where one of the muons is removed from the event to obtain $W+$jet like events. The extrapolation uncertainty is $30\%$ in the $\tau_h\tau_h$ final state.
 
+The $t\bar{t}$ background contribution $m_{\tau\tau}$ shape is taken from the simulation. The expected yield in the simulation is corrected to the observed data using a $t\bar{t}$ enriched control region by requiring b-tagged jets in the final state. The small contributions from the diboson and single top background processes  are taken from the simulation. 
 
+The QCD multi-jet events are estimated by exploiting the same charged events in the $\tau_{\ell}\tau_h$ final state. In the $0-$jet and $1-$jet low $p_{T}^{\tau_h}$ categories the normalization and the shape  of the QCD background contribution is obtained from the same charge control region. The Drell-Yan, $t\bar{t}$, and $W+$jets background process contributions are subtracted from the observed event yields in this control region. The expected QCD background contribution in the opposite charge signal region is then derived by rescaling the yield in the same-charge control region by a factor of $1.06$. This factor is measured in an anti-isolated control region where the isolation requirements on the $\ell$ and $\tau_h$ are inverted. An uncertainty of $10\%$ is assigned in the extrapolation factor accounting for the $p_{T}^{\tau_h}$ dependance and the statistical uncertainties. In the VBF-tagged and $1-$jet high $p_{T}^{\tau_h}$ boosted categories the number of selected events in the same-charge control region is too small to determine the QCD background contribution with the above method. Instead, the QCD yield is determined by multiplying the QCD yield in the inclusive $\tau_{\ell}\tau_h$ selection (determined by the method described above) and the efficiency of the corresponding category selection. The efficiency of the category selection is determined in the anti-isolated same charge control region while  the shape of the QCD background is taken from the anti-isolated selection. An additional shape uncertainty is included to account for the shape differences between the control and signal regions. The QCD background in the $\tau_h\tau_h$ final state is estimated from a control region with relaxed $\tau_h$ isolation requirements. The QCD multi-jet background shape is taken from this control region after subtracting the contributions from the Drell-Yan, $t\bar{t}$, and $W+$jet processes. The yield in the signal region is estimated by multiplying the yield in the control region by an extrapolation factor obtained in the same charge $\tau_h\tau_h$ candidate events. The assumption that the QCD shapes in the control and signal regions are the same is verified in the same-charge selection.  An uncertainty of $35\%$ is assigned to the QCD prediction coming from the limited number of events and the uncertainties in the expected contributions of the subtracted backgrounds in the control regions.   
 
 \subsection{Systematic uncertainties}
 
+The systematic uncertainties can be classified into three sources. The theoretical uncertainties affect the expected signal yields and the diboson background processes with the predictions taken from the simulation. The experimental uncertainties come from the uncertainties in the electron, muon or $\tau_h$ candidate reconstruction and identification, and from the uncertainties in the background estimation as discussed in the last section. The systematic uncertainties can affect the rates and the shapes of the $m_{\tau\tau}$ distributions. 
 
+The leading experimental uncertainty in the $\tau_{\ell}\tau_h$ and $\tau_h\tau_h$ final states comes from the uncertainty in the $\tau_h$ candidate reconstruction and identification. The systematic uncertainty in the $\tau_h$ energy scale is obtained from the template fit to the mass of the $\tau_h$ candidate as described in section 4.2.1 An uncertainty of $3\%$ in the energy scale of each $\tau_h$ candidate is propagated to the result. This uncertainty affects the rate and the shape of the relevant signal and background processes. The uncertainty due to the identification and trigger efficiencies per $\tau_h$ candidate is about $10\%$ estimated from the tag-and-probe measurement. An additional $3\%$ uncertainty is assigned for the high $p_{T}^{\tau_h}$ candidates to take into account the small tag-and-probe selected sample size. The efficiency of the electron, muon, or jet candidate to be misidentified as a $\tau_h$ candidate in the $Z\rightarrow\ell\ell$ events has an uncertainty of up to $80\%$ dominated by the statistical uncertainties due to limited number of simulated events. The identification, isolation, and trigger efficiency simulation to data scale factors have uncertainties up to $2\%$ for the $\tau_{\ell}\tau_h$ final states. The effect of the electron and muon energy scale is negligible compared to the effect of the $\tau_h$ energy scale on the $m_{\tau\tau}$ distribution. 
 \begin{table}[!ht]
 \begin{center}
 \begin{tabular}{lcc}
@@ -684,10 +724,15 @@ The $Z\rightarrow e^{-}e^{+}$ background in the $\tau_{e}\tau_h$ final state is 
 }
 \label{tab:uncertainties}
 \end{center}
-\end{table}
+\end{table} 
 
+The uncertainty in the  $E_{T}^{miss}$ scale of $5\%$ affects the $\tau_{\ell}\tau_h$ final states due to the $m_{T}<30~\GeV$ selection requirement. The uncertainty also affects the $1-$jet categories in the $\tau_e\tau_h$ final state due to the $E_{T}^{miss}>30~\GeV$ requirement.  The $5\%$ uncertainty comes from the recoil calibration and translates to yield uncertainties between $1$ to $12\%$ depending on the final state and category. The uncertainty in the jet energy scale results in the signal rate uncertainty of up to $20\%$ in the VBF categories. The uncertainty in the b-tagged jet veto results in the $t\bar{t}$ rate uncertainties of up to $10\%$. The uncertainties in the background estimations were discussed in the last section. The theoretical uncertainties in the SM Higgs boson production due to PDFs, renormalization and factorization scale uncertainties, as well as the uncertainties in the underlying event and parton shower are considered. The uncertainties in the Higgs $p_T$ spectrum due to the scale of the resummation and missing higher order corrections in perturbative QCD are propagated as a shape uncertainty.    
+
+The systematic uncertainties and the effect in the acceptance are summarized in Table~\ref{tab:uncertainties}. The uncertainties due to limited number of simulated events or due to limited number of data events in the control regions are included in the maximum likelihood fits following the method proposed in~\cite{Barlow:1993dm}.   
 
 \subsection{Results}
+
+
 
 \begin{table}[h!]
 \small
@@ -815,6 +860,10 @@ VBF tag 8\,\TeV                & $  0.5$ & $  2.4$ & $  -$ & $     3.0 \pm     0
 \label{fig:money}
 \end{figure}
 
+\section{MSSM Higgs boson search in Tau decays}
+
+\subsection{Results and Interpretations}
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/tauTau_nobtag_postfit_8TeV_LOG}
@@ -846,12 +895,5 @@ VBF tag 8\,\TeV                & $  0.5$ & $  2.4$ & $  -$ & $     3.0 \pm     0
 \caption{The expected and observed exclusion $95\%$ CL limits in the $m_{A}-\tan\beta$ parameter space in the $m_h^{max}$ (left) and $m_{h}^{mod+}$ (right) benchmark scenarios. The red lines represent the regions where both neutral scalars, $h$ and $H$, have a mass not compatible with the discovered $125~\GeV$ boson.~\cite{Khachatryan:2014wca}.}
 \label{fig:mssmlimit}
 \end{figure}
-
-
-\section{MSSM Higgs boson search in Tau decays}
-
-\subsection{Event selection and categorization}
-
-\subsection{Results and Interpretations}
 
 
