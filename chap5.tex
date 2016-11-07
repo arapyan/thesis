@@ -16,7 +16,7 @@ The electron and muon final states are used to observe the $W$ and $Z$ bosons. T
 \begin{equation} \label{eq:xsec2}
 \sigma = \frac{N}{\varepsilon A \mathcal{L}},
 \end{equation}
-where $A$ is the fiducial kinematic and geometric acceptance, $\varepsilon$ is the efficiency to reconstruct and identify the boson candidate, $N$ is the number of observed $W$ or $Z$ boson candidates, and $\mathcal{L}$ is the total integrated luminosity of the data sample (discussed in section 3.10).  The $W$ and $Z$ production cross sections and their ratios are also measured within the fiducial kinematic and geometric acceptance of the CMS detector.  Section 4.1.2 describes the data samples and simulation of the events used in the results. Section 4.1.3 describes the selection of the candidate $W$ and $Z$ events. Section 4.1.4 describes the geometrical and kinematic acceptance and associated theory uncertainties. Section 4.1.5 describes the measurements of the lepton reconstruction, selection, and trigger efficiencies. Section 4.1.6 describes the $W$ and $Z$ boson signal extraction methods. Section 4.1.7 summarizes the systematic uncertainties. Section 4.1.8 describes the measured inclusive total and fiducial cross section measurements and ratios.  
+where $A$ is the fiducial kinematic and geometric acceptance, $\varepsilon$ is the efficiency to reconstruct and identify the boson candidate, $N$ is the number of observed $W$ or $Z$ boson candidates, and $\mathcal{L}$ is the total integrated luminosity of the data sample (discussed in section 3.10).  The $W$ and $Z$ production cross sections and their ratios are also measured within the fiducial kinematic and geometric acceptance of the CMS detector.  Section 4.1.1 describes the data samples and simulation of the events used in the results. Section 4.1.2 describes the selection of the candidate $W$ and $Z$ events. Section 4.1.3 describes the geometrical and kinematic acceptance and associated theory uncertainties. Section 4.1.4 describes the measurements of the lepton reconstruction, selection, and trigger efficiencies. Section 4.1.5 describes the $W$ and $Z$ boson signal extraction methods. Section 4.1.6 summarizes the systematic uncertainties. Sections 4.1.7 describes the measured inclusive total and fiducial cross section measurements and ratios.  
 
 \subsection{Data and Simulated Samples}
 
@@ -58,7 +58,7 @@ The lepton efficiencies are measured as a function of the lepton transverse ener
 \end{aligned}
 \end{eqnarray}
 where $\varepsilon_{\mu}$ and $\varepsilon_{e}$ are the muon and electron selection efficiencies respectively. The $\varepsilon_{\mathrm{trig}}$ denotes the trigger efficiency with the probe lepton candidate satisfying the identification and isolation requirement. The  $\varepsilon_{\mathrm{sta}}$ denotes the standalone muon reconstruction efficiency where the probe lepton candidate is a track in the inner tracker. Similarly, the $\varepsilon_{\mathrm{track-id}}$ denotes the muon track reconstruction (inner tracker),  identification, and isolation efficiency where the probe lepton candidate is a standalone muon track (section 3.3). The $\varepsilon_{\mathrm{gsf-id}}$ denotes the electron reconstruction, identification, and isolation efficiency where the probe lepton candidate is an ECAL supercluster. The ECAL supercluster reconstruction efficiency is taken from the simulation as the $\frac{\varepsilon_{\mathrm{data}}}{\varepsilon_{\mathrm{sim}}}$ ratio is found to be consistent with $1$. 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/passetapt_mu}
 \includegraphics[width=0.49\columnwidth]{figures_chapter5/wz/failetapt_mu}
@@ -69,7 +69,7 @@ where $\varepsilon_{\mu}$ and $\varepsilon_{e}$ are the muon and electron select
 \end{figure}
 
 The background contribution is negligible in the selected $Z \rightarrow \ell\ell$ candidate events used to measure the trigger efficiency. For the remaining efficiencies defined in Eq.~(\ref{eq:eff2}) there is a sizable background contribution and a simultaneous fit to the dilepton mass distributions in the "passing" and "failing" event categories, where the probe passes and fails the criteria of interest respectively, is performed. Figure~\ref{fig:tgp} shows a representative example of the simultaneous fit for the $\varepsilon_{\mathrm{track-id}}$ (top) and $\varepsilon_{\mathrm{gsf-id}}$ (right) efficiencies in the $\sqrt{s}=13~\TeV$ data events.     
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.40\columnwidth]{figures_chapter5/wz/muon_idiso}
 \includegraphics[width=0.40\columnwidth]{figures_chapter5/wz/muon_trigger}
@@ -141,7 +141,7 @@ The higher order EWK corrections are estimated using the HORACE generator~\cite{
 \subsection{Signal Extraction}
 
 The $Z\rightarrow \ell\ell$ yields are obtained by counting the number of selected event candidates. The background contribution is estimated from the simulation to be about $0.6\%$ ($0.4\%$) in $\sqrt{s}=13~\TeV$ ($\sqrt{s}=8~\TeV$) collisions and it is subtracted from the $Z\rightarrow \ell\ell$ yields. A conservative systematic uncertainty of the same magnitude as the background contribution is propagated to the cross section measurement. The $Z\rightarrow \ell\ell$ yields contain a contribution of about $3\%$ from the $\gamma^{*}$ mediated process (including the interference effects) as estimated with MCFM~\cite{Campbell:2010ff}. 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/zmmlog}
 \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/zeelog}
@@ -157,7 +157,7 @@ The $E_{T}^{miss}$ spectra of the $W^{+}$ and $W^{-}$ candidates are fitted inde
 f = E_{T}^{miss} \mathrm{exp} \left(-\frac{E_{T}^{miss,2}}{2(\sigma_0+\sigma_1E_{T}^{miss})^2} \right).
 \end{equation}  
 The shape parameters $\sigma_0$ and $\sigma_1$ are studied by a fit to control samples defined by inverting the  truck-cluster matching,  $\Delta \eta$, and $\Delta \phi$, requirements on the electron candidates and by inverting the isolation requirement on the muon candidates. A systematic uncertainty in the choice of the QCD shape is estimated by introducing an additional shape parameter $\sigma_2$: $\sigma_0+\sigma_1E_{T}^{miss}+\sigma_2E_{T}^{miss,2}$. Figure~\ref{fig:W8} shows the $E_{T}^{miss}$ distributions for the  $W$ boson candidate events in the electron (left) and muon (right) final states in collisions at $\sqrt{s}=8~\TeV$ with the superimposed results of the fit.     
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wenu}
 \includegraphics[width=.49\columnwidth]{figures_chapter5/wz/wmunu}
@@ -167,7 +167,7 @@ The shape parameters $\sigma_0$ and $\sigma_1$ are studied by a fit to control s
 The EWK and $t\bar{t}$ background contributions are normalized to the $W$ boson signal yield in the fit with ratios taken from the theoretical cross section predictions. The fit parameters are the QCD background yield, the W signal yield, and the shape parameters $\sigma_0$ and $\sigma_1$. A simultaneous fit including the muon control region, obtained by inverting the isolation requirement on the muon candidate, is also performed in the muon final state to improve the modeling of the QCD shape. The $\sigma_1$ shape parameter is constrained to be the same between the signal and control region in the fit. The differences in the $W$ boson signal yields are propagated as a systematic uncertainty in the background modeling.    
  
 PUPPI $E_{T}^{miss}$ is used to fit for the $W^{+}$ and $W^{-}$ candidates in collisions at $\sqrt{s}=13~\TeV$ data taking period as the PF $E_{T}^{miss}$ resolution is degraded significantly due to the additional pileup interactions. The PUPPI $E_{T}^{miss}$ is measured using the PF candidates with $|\eta|$ less than $3.0$. The PF candidates with $|\eta|>3.0$ are measured by the HF calorimeter which was not fully commissioned for the analyzed data sample. The  Figure~\ref{fig:W13} shows the corresponding $E_{T}^{miss}$ distributions for the $W^{+}$ and $W^{-}$ candidates with the fit results superimposed.
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=.45\columnwidth]{figures_chapter5/wz/fitmetp_enu}
 \includegraphics[width=.45\columnwidth]{figures_chapter5/wz/fitmetm_enu}\\
@@ -421,13 +421,13 @@ branching fractions, $W^{+}$,  $W^{-}$, and $W$ to $Z$ and $W^{+}$ to $W^{-}$ ra
 theoretical predictions in proton-proton collisions at $\sqrt{s}=13~\TeV$. The values in the electron and muon final states are also shown individually.}
 \end{table*}
 The fiducial cross section results in collisions at $\sqrt{s}=13~\TeV$ are summarized in Figure~\ref{fig:fid}. As pointed out above the theoretical uncertainties are not relevant for the fiducial measurement. The fiducial predictions are computed by multiplying the NNLO FEWZ predictions to the acceptance estimated with the $\mathrm{MadGraph5}\_\mathrm{aMC@NLO}$. The theoretical uncertainties in the acceptance and the NNLO cross section predictions are assumed to be uncorrelated. The measured total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions, $W$ to $Z$, and $W^+$ to $W^-$ ratios and the theoretical predictions in collisions at $\sqrt{s}=8~\TeV$ are summarized in Table~\ref{tab:8tevtable} and Figure~\ref{fig:8tev}. All the measured values in collisions at $\sqrt{s}=8~\TeV$ and $\sqrt{s}=13~\TeV$ are consistent with the SM predictions accurate to NNLO in QCD. The individual measurements in the muon and electron final states separately are compatible. 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.80\columnwidth]{figures_chapter5/wz/xsecSummary13TeV}
 \caption{Summary of the total inclusive $W^+$, $W^-$, $W$, and $Z$ production cross sections times branching fractions and $W^+$ to $W^-$, and $W$ to $Z$ ratios in proton-proton collisions at $\sqrt{s}=13~\TeV$. The theoretical predictions with FEWZ using the NNPDF3.0 PDF set are also shown. The inner error bars (blue) represent the measurement uncertainties while the outer error bars (green) also include the uncertainties on the theoretical predictions. The shaded box denotes the uncertainty in the total integrated luminosity measurement.}
 \label{fig:13tev}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.60\columnwidth]{figures_chapter5/wz/xsecFidMuonSummary13TeV}
 \includegraphics[width=0.60\columnwidth]{figures_chapter5/wz/xsecFidElectronSummary13TeV}
@@ -525,25 +525,333 @@ Thus, $\Gamma_W = 2105 \pm 37~\MeV$ is obtained from the above values in agreeme
 \end{eqnarray}
 The quoted uncertainties include only the uncertainties in the PDF and higher order corrections for the $\sigma_W$ prediction. 
  
+\newpage 
 
-%\section{Evidence for a Higgs boson in Tau decays}
+\section{Evidence for a Higgs boson in Tau decays}
 
-%\subsection{Event selection and categorization}
+Searches for the SM Higgs boson decaying to a tau pair final state have previously been performed at the LEP and Tevatron colliders. The main SM Higgs boson production mode at the LEP $e^{+}e^{-}$ colliders was the associated production with a $Z$ boson via the Higgsstrahlung. No significant excess of events with respect to the predicted background processes was observed~\cite{Barate:2000ts,Abbiendi:2000ac,Achard:2001pj,Abdallah:2003ip}. The CDF and D$0$ collaborations also saw no significant excess of events with respect to the expected SM background background predictions in the SM $H \rightarrow \tau\tau$ searches at $p\bar{p}$ collisions with $\sqrt{s}=1.96~\TeV$. Upper limits at $95\%$ CL on the production cross section times branching fraction of $16$ and $14$ times the SM expected $\sigma \times \mathcal{B}$ were set by the CDF~\cite{Aaltonen:2012jh} and D$0$~\cite{Abazov:2012zj} collaborations respectively. 
 
-%\subsection{$\tau$-pair mass reconstruction}
+The ATLAS and CMS collaborations have reported an evidence of $H\rightarrow\tau\tau$ events near a Higgs boson mass of $125~\GeV$ with each collaboration reporting significances larger than three standard deviations~\cite{Aad:2015vsa,Chatrchyan:2014nva}. All the $\tau\tau$ final states are used targeting the main Higgs boson production modes (Figure~\ref{fig:sm_higgs}) including dedicated final states targeting the $WH$ or $ZH$ production modes where the $W$ and $Z$ bosons decay into final states with electrons or muons. The CMS results are described in this section focusing on the $\tau_{\mu}\tau_{h}$, $\tau_{h}\tau_{h}$, and $\tau_{e}\tau_{h}$ final states. These are the leading final states in the expected sensitivity to the $H \rightarrow \tau\tau$ signal with a Higgs boson mass hypothesis of $125~\GeV$. 
 
-%\subsection{Background Estimation}
+Section 4.2.2 describes the data samples and simulation of the events used in the results. Section 4.2.2 describes the selection of the $H\rightarrow\tau\tau$ candidate events. Section 4.2.3 describes the $\tau$ pair mass reconstruction. Section 4.2.4 describes the background estimation. Section 4.2.5 summarizes the systematic uncertainties. Sections 4.2.6 summarizes the results.
 
-%\subsection{Systematic uncertainties}
+\subsection{Data Samples and Simulation}
 
-%\subsection{Results}
+The $H \rightarrow \tau\tau$ candidate events in proton-proton collisions at $\sqrt{s}=8~\TeV$ and $\sqrt{s}=7~\TeV$ are selected from the full data samples collected in $2012$ and $2011$ respectively. This corresponds to a total integrated luminosity of $\mathcal{L}=19.7\pm0.5~\ifb$ and  $\mathcal{L}=4.9\pm0.1~\ifb$ in collisions at $\sqrt{s}=8~\TeV$ and $\sqrt{s}=7~\TeV$ respectively. The candidate events selected by the CMS trigger require the presence of an electron/muon and $\tau_h$ candidate in the $\tau_{\mu}\tau_{h}$ and $\tau_{e}\tau_{h}$ final states, and the presence of two $\tau_h$ candidates in the  $\tau_{h}\tau_{h}$ final state.
 
-%\section{MSSM Higgs boson search in Tau decays}
+The L1 trigger requires a presence of at least one muon or electron candidate in the $\tau_{\mu}\tau_{h}$ and $\tau_{e}\tau_{h}$ final states respectively. A selection of an additional $\tau_h$ candidate, not overlapping with the electron or muon candidate in $\Delta R$ distance, is required in the HLT.  A simplified version of the PF algorithm is utilized to reconstruct the $\tau_h$ and the isolation sum. The  electron, muon, and $\tau_h$ candidates are required to be loosely identified and isolated. The transverse momentum $p_{T}$ thresholds of the trigger selection was increased continuously during the data taking to cope with the higher rate of triggering of events due to the additional pileup interactions coming from the increased instantaneous luminosity. The muon candidate $p_{T}$ threshold ranged from $12$ to $20~\GeV$ and the $\tau_h$ candidate $p_{T}$  threshold ranged from $10$ to $20~\GeV$ in the $tau_{\mu}\tau_{h}$ final state. The electron candidate $p_{T}$ threshold ranged from $15$ to $22~\GeV$ and the $\tau_h$ candidate  $p_{T}$  threshold ranged from $15$ to $20~\GeV$. The efficiency of triggering the candidate events were measured with the tag-and-probe technique (described in detail in section 4.1.3) in $Z \rightarrow \mu\mu$,  $Z \rightarrow ee$, and $Z \rightarrow \tau_{\mu}\tau_h$ candidate data events for the muon, electron, and $\tau_h$ single lepton efficiencies respectively. The efficiencies are also measured in the simulated events. 
 
-%\subsection{Event selection and categorization}
+The rate of a single $\tau_h$ trigger is prohibitively high for the transverse momenta of interest in the $\tau_h\tau_h$ final state. Instead, the trigger selection in the $\tau_h\tau_h$ final state starts with a L1 trigger selection of either two calorimeter jets (clustered using the energy deposits in the calorimeters) with $p_{T}>64~\GeV$ and $|\eta|<3.0 $ or two narrow calorimeter jets ($\tau_h$ candidate signature) with $p_{T}>44~\GeV$ and $|\eta|<2.17$. It has to be noted that the L1 trigger uses only coarsely segmented data from the calorimeters as discussed in chapter 2. This trigger was only available during the $2012$ data taking period. The HLT selects two loosely isolated  PF taus with $p_{T}>30~\GeV$ and $|\eta|<2.1$. There is also  a requirement of an additional central jet with $p_{T}$ greater than $30~\GeV$ and $|\eta|<3.0$ to reduce the trigger rate. Thus, the triggering of the $\tau_h\tau_h$ final state consists of selecting two $\tau_h$ candidates with an additional central jet.  In addition, the measurement of the trigger selection efficiency with the tag-and-probe technique is more complicated as the requirement of the two $\tau_h$ candidates at the L1 trigger means there is no suitable independent data sample to perform the efficiency measurement. The $\tau_{h}\tau_{h}$ final state benefited from the special parked data stream (discussed in section 2.5) reconstructed only at the end of the $2012$ run. In this data sample the HLT selects two loosely isolated  PF taus with $p_{T}>35~\GeV$ and $|\eta|<2.1$ and without the additional central jet requirement. There is also a $\tau_{\mu}\tau_{h}$ trigger selection in the parked dataset requiring a muon with $p_{T}>18~\GeV$ and a $\tau_h$ with $p_T>25~\GeV$, where the reconstructed $\tau_h$ candidate in the HLT is identical to the $\tau_h$ candidate in the above $\tau_h\tau_h$ trigger selection. This allows to perform the single $\tau_h$ triggering efficiency measurement with the tag-and-probe technique using $Z\rightarrow\tau_{\mu}\tau_{h}$ candidate data events. The efficiency in data reaches a plateau of about $80\%$ above the fully reconstructed $\tau_h$ $p_T$ of $60~\GeV$. The total luminosity of the inclusive $\tau_h\tau_h$ trigger in the parked data sample is only $18.3~\ifb$ as the trigger was not included for the full data taking period. Therefore, the $\tau_h\tau_h+$jet trigger is also used for the events not selected by the inclusive trigger.
 
-%\subsection{Systematic uncertainties}
+The MC event generators discussed in section 4.1.1 are used to simulate the SM Higgs boson and background processes. The SM Higgs boson events produced via the gluon fusion and VBF processes are generated using POWHEG~\cite{POWHEG-V, POWHEG1, POWHEG2, POWHEG3} generator, with the CT10~\cite{Lai:2010vv} NLO PDF set, interfaced with PYTHIA~6.4~\cite{Sjostrand:2006za}. The PYTHIA~6.4 is used to generate the SM Higgs boson events produced in association with a $W$ or $Z$ boson, or with a $t\bar{t}$ pair. The MadGraph5\_aMC@NLO~\cite{Alwall:2007st} generator at LO perturbative QCD accuracy with matrix element calculations having up to four extra partons in the final state is used to generate the $Z+$jets and $W+jets$ background processes. The $t\bar{t}$,and di-boson background processes are also generated with MadGraph5\_aMC@NLO at LO accuracy in perturbative QCD. The single top process is produced with POWHEG. The PYTHIA parameters for the description of the underlying event are set to the $Z2$ tune for the $7~\TeV$ samples and $Z2^{*}$ tune for the $8~\TeV$ samples~\cite{CMS-PAS-FSQ-12-020}. The PYTHIA~6.4 is interfaced with TAUOLA to simulate the decays of polarized tau leptons. For all the generated processes the additional pileup interactions and the detector response are simulated as described in section 2.6. 
 
-%\subsection{Results and Interpretations}
+The SM Higgs boson gluon-gluon fusion $p_{T}$ spectrum is corrected to the resummed calculation up to NNLL in QCD using HRES~\cite{deFlorian:2012mx}. The calculation is then combined with a fixed order calculation at large values of the transverse momenta accurate to NNLO. An additional correction is applied to account for the effects of the finite top quark mass with accuracy up to NLO in perturbative QCD~\cite{Grazzini:2013mca}. The SM Higgs boson production cross sections and the branching fractions are taken from~\cite{Dittmaier:2011ti,Dittmaier:2012vm,Heinemeyer:2013tqa} as shown in Figure~\ref{fig:higgs_cross} and Figure~\ref{fig:higgs_decay}.
+
+\subsection{Event Selection and Categorization}
+
+The $H \rightarrow \tau\tau$ decays are characterized by two energetic, isolated and opposite-charge tau leptons. The muon, electron and $\tau_h$ candidates in the  $\tau_{\mu}\tau_{h}$, $\tau_{e}\tau_{h}$, and $\tau_{h}\tau_{h}$  final states are reconstructed and identified as described in detail in chapter 4.  The selected candidate events are required to contain at least one well reconstructed primary vertex. Figure~\ref{fig:npv} shows the number of reconstructed vertices in the selected $\tau_{\mu}\tau_{h}$ final state candidate events in collisions at $\sqrt{s}=8~\TeV$. The simulated events are weighted to the pileup distribution in data in each data-taking period (Figure~\ref{fig:pu}). 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/npvA}
+\caption{Distribution of the number of reconstructed vertices for the selected $\tau_{\mu}\tau_{h}$ final state candidate events in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the expected SM background distributions. The shaded area shows the statistical uncertainty in the background predictions. The simulated events are weighted to the pileup distribution.}
+\label{fig:npv}
+\end{figure}
+The tau lepton candidates are selected as follows:
+\begin{description}
+\item[$\bullet$ $\tau_{\mu}\tau_h$:] The muon candidate is required to have a transverse momentum greater than  $20~\GeV$ ($17~\GeV$) with $|\eta|<2.1$ in collisions at $\sqrt{s}=8~\TeV$ ($\sqrt{s}=8~\TeV$). The $\tau_h$ candidate is required to have a transverse momentum greater than $30~\GeV$ with $|\eta|<2.4$. Selected events containing loosely identified and isolated muon pair with the muon transverse momenta greater than $15~\GeV$ are rejected. 
+\item[$\bullet$ $\tau_{e}\tau_h$:] The electron candidate is required to have a transverse momentum greater than  $24~\GeV$ ($20~\GeV$) with $|\eta|<2.1$ in collisions at $\sqrt{s}=8~\TeV$ ($\sqrt{s}=8~\TeV$). The $\tau_h$ candidate is required to have a transverse momentum greater than $30~\GeV$ with $|\eta|<2.4$. Selected events contianing loosely identified and isolated electron pair with the electron transverse momenta greater than $15~\GeV$ are rejected. 
+\item[$\bullet$ $\tau_{h}\tau_h$:] The $\tau_h$ candidates are required to have transverse momenta greater than $45~\GeV$ with $|\eta|<2.1$. Selected events containing a loosely identified and isolated muon or electron with transverse momentum greater than $10~\GeV$ are rejected. 
+\end{description}    
+The selected events with an additional electrons or muons are rejected to reduce the $Z \rightarrow e^+e^-$ and $Z \rightarrow \mu^+\mu^-$ background contributions where a jet is miss-identified as a $\tau_h$ candidate. In addition, these requirements ensure that there is no overlap of the selected candidate events between these final states and the final states targeting the $WH$ or $ZH$ production mode where the $W$ or $Z$ boson decays to an electron or muon.   
+
+The efficiencies of the electron, muon, and $\tau_h$ candidate selection are measured with the tag-and-probe technique in $Z\rightarrow \ell\ell$ events as discussed in section 4.1.3. The simulated events are corrected for the differences in the simulation and data. The differences in the energy scale of the $\tau_h$ candidates in the simulation and data are measured from a fit to the $\tau_h$ mass distribution shown in Figure~\ref{fig:tau_mass}. The tau energy scale is a fit parameter affecting the shape of the distribution. A tau energy scale correction of $1.2\%$ is applied on the simulated events for the $h^{\pm}\pi^{0}$,  $h^{\pm}\pi^{0}\pi^{0}$, and $h^{\pm}h^{\mp}h^{\pm}$ $\tau_{h}$ decay modes. 
+
+The following background processes are considered:
+\begin{description}
+\item[$\bullet$ $Z\rightarrow\tau\tau$:] The Drell-Yan tau pair production. Constitutes a dominant irreducible background. Tau pair invariant mass is used to separate the signal candidate events from the  $Z\rightarrow\tau\tau$ events.
+\item[$\bullet$ $Z\rightarrow\ell\ell$:] The Drell-Yan $e^+e^-$ and $\mu^+\mu^-$ pair production where an electron (muon) is misidentified as a $\tau_h$ candidate in the $\tau_{e}\tau_h$ ($\tau_{\mu}\tau_h$) final state. This is an important background for the $\tau_{e}\tau_h$ final state but is small for the $\tau_{\mu}\tau_h$ and $\tau_{f}\tau_h$ final states.  
+\item[$\bullet$ $W+$jets:] The $W\rightarrow e\nu$ ($W\rightarrow \mu\nu$) where a jet is misidentified as a $\tau_h$ candidate constitutes a background in the $\tau_{e}\tau_h$ ($\tau_{\mu}\tau_h$) final state. It also constitutes a non-negligible background in the $\tau_{h}\tau_h$ final state dominated with events where jets are misidentified as  $\tau_h$ candidates. 
+\item[$\bullet$ QCD multi-jet:] Constitutes a background where the jets are misidentified as a $\tau_h$ candidate or an electron/muon. An important background process for the $\tau_h\tau_h$ final state. 
+\item[$\bullet$ $t\bar{t}$ and single top:] Rejecting events with one or more  b-tagged jets reduces the contributions of these background processes.
+\item[$\bullet$ Boson pair:] The production of the $WW$, $WZ$, and $ZZ$ processes constitutes a small background.
+\end{description}    
+
+The neutrinos produced in the $\tau$ lepton decays coming from the $Z\rightarrow\tau\tau$ or $H\rightarrow\tau\tau$ decays are collinear with the visible decay products as the corresponding $\tau$ energy is much larger than the mass of the tau lepton. On the other hand, the neutrino in the $W\rightarrow\ell\nu$ decays is mostly in the opposite direction to the lepton in the transverse plane due to the high mass of the $W$ boson. Thus, the large $W+$jets background in the $\tau_{\ell}\tau_{h}$ final states is reduced by considering the transverse mass $m_{T}$ defined as:
+ \begin{equation} \label{eq:mt}
+m_{T} = \sqrt{2p_{T}^{\ell}E_{T}^{miss}(1-\cos(\Delta \phi))},
+\end{equation}
+where the $p_{T}^{\ell}$ is the transverse momentum of the muon or electron candidate, and the $\Delta \phi$ is the difference in azimuthal angle between the $\vec{p}_{T}^{\,\ell}$ and $\vec{E}_{T}^{miss}$. Figure~\ref{fig:mt} shows the $m_{T}$ distribution for the selected  $\tau_{\mu}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.80\columnwidth]{figures_chapter5/smtautau/mtMVA_1A_insclusive}
+\caption{The transverse mass $m_T$ distribution  for the selected $\tau_{\mu}\tau_{h}$ final state candidates before the $m_{T}<30~\GeV$ requirement in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area shows the statistical uncertainty in the background predictions. The region with $m_{T}>70~\GeV$ defines a control region used to estimate the $W+$jet background contribution.}
+\label{fig:mt}
+\end{figure}
+The "QCD" in Figure~\ref{fig:mt} denotes the contribution of the QCD mutli-jet background. The contributions of the $W+jet$, boson-pair, and single top processes are denotes as the "Electroweak" background. The selected events in the $\tau_{\ell}\tau_{h}$ final states are required to have $m_{T}<30~\GeV$.  The $E_{T}^{miss}$ used in the results is the MVA  $\vec{E}_{T}^{miss}$ to reduce the impact of the pileup interactions on the $E_{T}^{miss}$ resolution as discussed in section 3.9. The $\vec{E}_{T}^{miss}$ resolution is essential to separate the SM Higgs boson signal from the $Z\rightarrow\tau\tau$ irreducible background (discussed in the next section). 
+
+The candidate $\tau\tau$  events are split into mutually exclusive categories to improve the sensitivity of the events to the presence to the SM Higgs boson signal with a mass in the range of $110$ to $145~\GeV$. An important aspect of this categorization is to exploit the signatures of different SM Higgs boson production modes (Figure~\ref{fig:sm_higgs}). The first step is to classify the events according to the number of reconstructed jets with $p_{T}>30~\GeV$ and $|\eta|<4.7$. The jets are clustered from the PF candidates as discussed in chapter 3. The jets originating from the pileup interactions are rejected utilizing the pileup jet identification technique described in section 3.5.2. The selected jets are  required to be separated from the selected tau candidates by a distance $\Delta R$ larger than $0.5$. The $t\bar{t}$ and single top backgrounds are reduced by rejecting the $\tau\tau$ candidate events containing at least one b-tagged jets with $p_{T}>20~\GeV$ and $|\eta|<2.4$. The CSV algorithm described in section 3.5.3 is used to identify the b-tagged jets. The efficiency of the b-jet identification and misidentification of the light-flavor jets are measured in data and simulation~\cite{Chatrchyan:2012jua}. The simulation is corrected from the differences between the data and simulation for the efficiencies and misidentification probabilities.
+
+The events with at least two selected jets can be used to exploit the SM Higgs boson VBF production signature. Figure~\ref{fig:vbfjet} shows the distributions of the dijet mass $M_{jj}$ (left) and the distance between the two jets in $|\Delta \eta_{jj}|$ for the selected $\tau_{\mu}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/mjjA_insclusive}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/jdetaA_insclusive}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/vbf_mjj}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/vbf_eta}
+\caption{Distributions of the dijet mass $M_{jj}$ (top left) and the distance between the two jets in pseudorapidity $|\Delta \eta_{jj}|$ (top right) for the selected $\tau_{\mu}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the expected SM background distributions. The shaded area shows the statistical uncertainty in the background predictions. The corresponding normalized distributions for the SM Higgs boson with mass $125~\GeV$ are shown (bottom) for the gluon fusion (red) and VBF (blue) production.}
+\label{fig:vbfjet}
+\end{figure}
+The corresponding distributions are also shown for the SM Higgs boson signal, with mass $125~\GeV$, produced in gluon fusion (red) and VBF (blue) production modes. The VBF produced SM Higgs bosons events are produced in association with two high energy forward jets in the opposite regions of the detector as can be seen from the large separation of the two jets in $|\Delta \eta_{jj}|$. The two jets also have large invariant mass $M_{jj}$.  The VBF category is defined by requiring $M_{jj}>500~\GeV$ and  $|\Delta \eta_{jj}|>3.5$. There is typically very little hadronic activity in the central region of the detector as there is no "color flow" between the quarks in the VBF produced Higgs boson events. Events with a central jet between the pseudorapidity gap of the two highest $p_{T}$ jets are not selected in the VBF category. The VBF category is split into "tight" and "loose" categories for the $\tau_{\ell}\tau_{h}$ final states in collisions at $\sqrt{s}=8~\TeV$ by defining a tight category satisfying the $M_{jj}>700~\GeV$ and $|\Delta \eta_{jj}|>4.0$ requirements. The $Z\rightarrow\tau\tau$ background is suppressed in the VBF categories as the initial state gluon radiated jets with $p_{T}>30~\GeV$ tend to be in the central region. The $M_{jj}$ of the two radiated jets also tends to be smaller compared to the VBF jets originating mostly from the valence quarks in the colliding protons. On the other hand the contribution of the $Z+2$jet production from purely electroweak processes is very small~\cite{Khachatryan:2014dea}. The events with two jets but failing the VBF category requirements are placed in the $1-$jet category. 
+
+The $1$-jet and VBF categories are further divided according to the transverse momentum of the Higgs boson candidate $p_{T}^{\tau\tau}$, defined as: 
+\begin{equation} \label{eq:hpt}
+p_{T}^{\tau\tau} = |\vec{p}_{T}^{\,\tau_1} + \vec{p}_{T}^{\,\tau_2} + \vec{E}_{T}^{miss}|,
+\end{equation}
+where the $\vec{p}_{T}^{\tau_i}$ denote the transverse momenta of the two tau candidates. The candidate events in the VBF tight category are required to have $p_{T}^{\tau\tau}>100~\GeV$. The $1-$jet $\tau_{\ell}\tau_h$ category is divided into two categories by requiring $p_{T}^{\tau\tau}>100~\GeV$. The category satisfying the $p_{T}^{\tau\tau}>100~\GeV$ requirement is denoted as "boosted". The selection on the $p_{T}^{\tau\tau}$ reduces the QCD and $W$+jet backgrounds since the jets misidentified as $\tau_h$ candidates typically have softer specra. The $1-$jet category in the $\tau_h\tau_h$ final state is split into two categories with $p_{T}^{\tau\tau}>170~\GeV$ and $100<p_{T}^{\tau\tau}<170~\GeV$ denoted as "1-jet highly boosted" and "1-jet boosted" respectively.  No additional categories are defined for the  $\tau_h\tau_h$ final state as the "$0-$jet" and "$1-$jet not-boosted" categories are completely dominated by the QCD background. The   
+
+The $0-$jet and $1-jet$ categories in the $\tau_{\ell}\tau_{h}$ final states are further divided by introducing the $p_{T}^{\tau_h}>45~\GeV$ requirement. The $\tau$ leptons coming from a HIggs boson with mass larger than the $Z$ mass tend to have larger transverse momentum compared to the tau leptons coming from the $Z$ boson. The resulting categories are denoted as the "$0-$jet low $p_{T}^{\tau_h}$" and "$0-$jet high $p_{T}^{\tau_h}$" in the $0-$jet category and  "$1-$jet low $p_{T}^{\tau_h}$", "$1-$jet high "$p_{T}^{\tau_h}$", and "$1-$jet high $p_{T}^{\tau_h}$ boosted" in the $1-$ jet category. Figure~\ref{fig:higgspt} shows the distributions of the $\tau_{h}$ candidate (left) and $p_{T}^{\tau\tau} $ (right) for the selected $\tau_{\mu}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/pt_2A_insclusive}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/pthmvaA_insclusive}
+\caption{Distributions of the transverse momentum of the $\tau_{h}$ candidate (left)  and the transverse momentum of the Higgs boson candidate (right) for the selected $\tau_{\mu}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the expected SM background distributions. The shaded area shows the statistical uncertainty in the background predictions.}
+\label{fig:higgspt}
+\end{figure}
+The $Z\rightarrow e^{-}e^{+}$ background in the $\tau_{e}\tau_h$ final state is further suppressed by requiring the $E_{T}^{miss}$ to be larger than $30~\GeV$ in the $1-$jet categories. It is important to suppress this background with large contribution peaking in the signal search region. The extra requirement on the $E_{T}^{miss}$ reduces the sensitivity of the "$1-$jet high "$p_{T}^{\tau_h}$" category defined with a $p_{T}^{\tau\tau}<100~\GeV$ requirement. Therefore, this category is not considered in the $\tau_e\tau_h$ final state. The $E_{T}^{miss}$ requirement is not applied in the $0-$jet categories as the sensitivity to the signal is very low. In fact a large contribution of the $Z\rightarrow e^{-}e^{+}$ events in the $0-$jet categories allows to better understand the systematic uncertainties in the prediction of this background. This consideration is generally valid for the other backgrounds in the $0-$jet categories.
+
+\subsection{$\tau$-pair invariant mass reconstruction}
+
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-004_Figure_003-a}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-004_Figure_003-b}
+\caption{Distributions of the invariant mass of the tau pair visible decay products (left) and the likelihood based reconstruction (right) in $Z \rightarrow \tau\tau$ and $H \rightarrow \tau\tau$ selected candidate events in simulation. The distributions are normalized to unit area for the $\tau_{h}\tau_{\mu}$ final state~\cite{Chatrchyan:2014nva}.}
+\label{fig:svfit}
+\end{figure}
+
+\subsection{Background Estimation}
+
+
+
+
+
+\subsection{Systematic uncertainties}
+
+
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{lcc}
+ Uncertainty                    & Affected processes            & Change in acceptance  \\
+\hline
+ Tau energy scale               & signal \& sim.\ backgrounds & 1--29\% \\
+ Tau ID (\& trigger)               & signal \& sim.\ backgrounds & 6--19\% \\
+ $e$ misidentified as $\tau_{h}$         & $Z \rightarrow ee$            & 20--74\% \\
+ $\mu$ misidentified as $\tau_{h}$         & $Z \rightarrow \mu \mu$            & 30\% \\
+ Jet misidentified as $\tau_{h}$           & $Z+ {\mathrm jets}$       & 20--80\% \\
+ Electron ID \& trigger         & signal \& sim.\ backgrounds & 2--6\%\\
+ Muon ID \& trigger             & signal \& sim.\ backgrounds & 2--4\%\\
+ Electron energy scale          & signal \& sim.\ backgrounds & up to 13\% \\
+ Jet energy scale               & signal \& sim.\ backgrounds & up to 20\% \\
+ $E_{T}^{miss}$ scale                     & signal \& sim.\ backgrounds & 1--12\% \\
+ $\varepsilon_\text{b-tag}$ b jets        & signal \& sim.\ backgrounds & up to 8\%\\
+ $\varepsilon_\text{b-tag}$ light-flavoured jets    & signal \& sim.\ backgrounds & 1--3\%\\
+\hline
+ Norm. $Z$ production                  & $Z$ & 3\%\\
+ $Z \rightarrow \tau\tau$ category               & $Z \rightarrow \tau\tau$ & 2--14\%\\
+ Norm.\ $W + {\mathrm jets}$                        & $W + {\mathrm jets}$ & 10--100\% \\
+ Norm.\ $t\bar{t}r$                        & $t\bar{t}$ & 8--35\% \\
+ Norm.\ diboson                           & diboson & 6--45\% \\ 
+ Norm.\ QCD multijet                      & QCD multijet & 6--70\%\\
+ Shape QCD multijet                      & QCD multijet & shape only \\
+ Norm.\ reducible background         & Reducible bkg. & 15--30\% \\
+ Shape reducible background         & Reducible bkg. & shape only \\
+ Luminosity 7~\TeV(8~\TeV)                 & signal \& sim.\ backgrounds & 2.2\% (2.6\%) \\
+ 
+\hline
+ PDF ($qq$)                          & signal \& sim.\ backgrounds  & 4--5\% \\
+ PDF ($gg$)                          & signal \& sim.\ backgrounds  & 10\% \\
+ Norm.\ $ZZ/WZ$            & $ZZ/WZ$ & 4--8\% \\
+ Norm.\ $t\bar{t} + Z$            & $t\bar{t} + Z$ & 50\% \\
+ Scale variation                         & signal                       & 3--41\% \\
+ Underlying event \& parton shower      & signal                       & 2--10\% \\
+\hline
+ Limited number of events                & all                 & shape only \\
+\end{tabular}
+\caption{The systematic uncertainties, the corresponding processes, and the impact in the acceptances. Several systematic uncertainties are treated as (partially) correlated for the different final states and/or categories. Adapted from~\cite{Chatrchyan:2014nva}.
+}
+\label{tab:uncertainties}
+\end{center}
+\end{table}
+
+
+\subsection{Results}
+
+\begin{table}[h!]
+\small
+\centering
+\vspace{-0.5 cm}
+\begin{tabular}{l|rrrr|r|r|lc}
+\hline
+ & \multicolumn{4}{c|}{ SM Higgs ($m_\mathrm{H} = 125$\,\GeV) } & & & & \multicolumn{1}{c}{$\sigma_\text{eff}$} \\
+Event category & ggH & VBF & VH & $\Sigma$ signal & \multicolumn{1}{c|}{Background} & \multicolumn{1}{c|}{Data} & $\frac{S}{S+B}$ & (\GeV)  \\
+\hline
+$\mu\tau_{h}$ & & & & & & & & \\
+
+0-jet low-$p_{T}^{\tau_{h}}$ 8\,\TeV & $ 83.0$ & $  0.8$ & $  0.4$ & $    85.0 \pm    11.0 \phantom{}$  & $   40800 \pm    1900 \phantom{} $ & $  40353$ & $0.003$ &  16.3  \\
+
+0-jet high-$p_{T}^{\tau_{h}}$ 8\,\TeV & $ 66.2$ & $  0.7$ & $  0.6$ & $    67.5 \pm     9.3 \phantom{0}$  & $    5990 \pm     250 \phantom{0} $ & $   5789$ & $0.020$ &  15.2  \\
+
+1-jet low-$p_{T}^{\tau_{h}}$ 8\,\TeV & $ 36.0$ & $  6.0$ & $  3.0$ & $    45.0 \pm     6.0 \phantom{0}$  & $    9030 \pm     360 \phantom{0} $ & $   9010$ & $0.010$ &  18.6  \\
+
+1-jet high-$p_{T}^{\tau_{h}}$ 8\,\TeV & $ 29.6$ & $  4.3$ & $  2.4$ & $    36.3 \pm     4.6 \phantom{0}$  & $    3180 \pm     130 \phantom{0} $ & $   3160$ & $0.029$ &  19.7  \\
+
+1-jet high-$p_{T}^{\tau_{h}}$ boosted 8\,\TeV & $ 11.5$ & $  2.9$ & $  2.0$ & $    16.5 \pm     2.6 \phantom{0}$  & $    1265 \pm      62 \phantom{00} $ & $   1253$ & $0.072$ &  17.2  \\
+
+Loose VBF tag 8\,\TeV          & $  1.1$ & $  3.4$ & $  -$ & $     4.5 \pm     0.4 \phantom{0}$  & $      81 \pm       7 \phantom{000} $ & $     76$ & $0.17$ &  17.0  \\
+
+Tight VBF tag 8\,\TeV          & $  0.3$ & $  2.0$ & $  -$ & $     2.4 \pm     0.2 \phantom{0}$  & $      15 \pm       2 \phantom{000} $ & $     20$ & $0.49$ &  18.1  \\
+\hline
+
+$e\tau_{h}$ & & & & & & & & \\
+
+0-jet low-$p_{T}^{\tau_{h}}$ 8\,\TeV & $ 33.4$ & $  0.3$ & $  0.2$ & $    34.0 \pm     4.6 \phantom{0}$  & $   16750 \pm     750 \phantom{0} $ & $  17109$ & $0.002$ &  15.8  \\
+
+0-jet high-$p_{T}^{\tau_{h}}$ 8\,\TeV & $ 31.4$ & $  0.3$ & $  0.3$ & $    32.1 \pm     4.4 \phantom{0}$  & $    4380 \pm     170 \phantom{0} $ & $   4536$ & $0.010$ &  15.4  \\
+
+1-jet low-$p_{T}^{\tau_{h}}$ 8\,\TeV & $  9.1$ & $  1.8$ & $  1.0$ & $    11.9 \pm     1.6 \phantom{0}$  & $    1200 \pm      56 \phantom{00} $ & $   1214$ & $0.025$ &  16.5  \\
+
+1-jet high-$p_{T}^{\tau_{h}}$ boosted 8\,\TeV & $  5.1$ & $  1.4$ & $  0.9$ & $     7.5 \pm     1.1 \phantom{0}$  & $     497 \pm      27 \phantom{00} $ & $    476$ & $0.11$ &  15.5  \\
+
+Loose VBF tag 8\,\TeV          & $  0.6$ & $  1.8$ & $  -$ & $     2.4 \pm     0.2 \phantom{0}$  & $      45 \pm       4 \phantom{000} $ & $     40$ & $0.14$ &  16.7  \\
+
+Tight VBF tag 8\,\TeV          & $  0.3$ & $  1.3$ & $  -$ & $     1.6 \pm     0.1 \phantom{0}$  & $       9 \pm       2 \phantom{000} $ & $      7$ & $0.51$ &  16.2  \\
+\hline
+
+$\tau_{h}\tau_{h}$ & & & & & & & & \\
+
+1-jet boosted 8\,\TeV          & $  7.2$ & $  2.1$ & $  1.0$ & $    10.3 \pm     1.7 \phantom{0}$  & $    1133 \pm      49 \phantom{00} $ & $   1120$ & $0.054$ &  15.2  \\
+
+1-jet highly-boosted 8\,\TeV   & $  5.6$ & $  1.6$ & $  1.2$ & $     8.4 \pm     1.2 \phantom{0}$  & $     380 \pm      23 \phantom{00} $ & $    366$ & $0.14$ &  13.1  \\
+
+VBF tag 8\,\TeV                & $  0.5$ & $  2.4$ & $  -$ & $     3.0 \pm     0.3 \phantom{0}$  & $      29 \pm       4 \phantom{000} $ & $     34$ & $0.32$ &  14.3  \\
+\hline
+
+\hline
+\end{tabular} 
+\caption{ \small Observed and predicted event yields in all event categories of the $\mu\tau_{h}$, $e\tau_{h}$, and $\tau_{h}\tau_{h}$ final states in the full $m_{\tau\tau}$ mass range. The event yields of the predicted background distributions correspond to the result of the global fit. The signal yields, on the other hand, are normalized to the standard model prediction.The $\frac{S}{S+B}$ variable denotes the ratio of the signal and the signal-plus-background yields in the central $m_{\tau\tau}$ range containing $68\%$ of the signal events for $m_\mathrm{H} = 125$\,\GeV. The $\sigma_\text{eff}$ variable denotes the standard deviation of the $m_{\tau\tau}$ distribution for corresponding signal events. Adapted from~\cite{Chatrchyan:2014nva}.
+\label{tab:event_yields}
+}
+\end{table}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_0jet_medium_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_0jet_high_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_1jet_medium_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_1jet_high_lowhiggs_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_1jet_high_mediumhiggs_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_vbf_loose_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/muTau_vbf_tight_postfit_8TeV_LIN}
+\caption{The $m_{\tau\tau}$ distributions for the selected $\tau_{\mu}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area is the uncertainty in the background predictions. The SM Higgs boson contribution added to the background is shown in blue.}
+\label{fig:mtau}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/eleTau_0jet_medium_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/eleTau_0jet_high_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/eleTau_1jet_medium_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/eleTau_1jet_high_mediumhiggs_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/eleTau_vbf_loose_postfit_8TeV_LIN}
+\includegraphics[width=0.35\columnwidth]{figures_chapter5/smtautau/eleTau_vbf_tight_postfit_8TeV_LIN}
+\caption{The $m_{\tau\tau}$ distributions for the selected $\tau_{e}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area is the uncertainty in the background predictions. The SM Higgs boson contribution added to the background is shown in blue.}
+\label{fig:etau}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures_chapter5/smtautau/tauTau_1jet_high_mediumhiggs_postfit_8TeV_LIN}
+\includegraphics[width=0.45\columnwidth]{figures_chapter5/smtautau/tauTau_1jet_high_highhiggs_postfit_8TeV_LIN}
+\includegraphics[width=0.45\columnwidth]{figures_chapter5/smtautau/tauTau_vbf_postfit_8TeV_LIN}
+\caption{The $m_{\tau\tau}$ distributions for the selected $\tau_{h}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area is the uncertainty in the background predictions. The SM Higgs boson contribution added to the background is shown in blue.}
+\label{fig:tautau}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/singleLimits_expected_sm}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/cmb_limit}
+\caption{Expected $95\%$ CL upper limits on the $\frac{\sigma}{\sigma_{SM}}$ parameter for the $\tau_{h}\tau_{h}$, $\tau_{e}\tau_{h}$, $\tau_{\mu}\tau_{h}$ final states shown separately and compared to the combined limit (left) in collisions at $\sqrt{s}=8~\TeV$. The plot on the right shows the expected and observed $95\%$ CL upper limits on the $\frac{\sigma}{\sigma_{SM}}$ parameter for the combination of the $\tau_{h}\tau_{h}$, $\tau_{e}\tau_{h}$, $\tau_{\mu}\tau_{h}$ final states in collisions at $\sqrt{s}=8~\TeV$. The bands show the expected one (two) standard deviation intervals around the expected limit.}
+\label{fig:cmblim}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/tt_limit}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/et8_limit}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/mt_limit}
+\caption{The expected and observed $95\%$ CL upper limits on the $\frac{\sigma}{\sigma_{SM}}$ parameter for the $\tau_{h}\tau_{h}$ (top left), $\tau_{e}\tau_{h}$ (top right), and $\tau_{\mu}\tau_{h}$ (bottom) final states in collisions at $\sqrt{s}=8~\TeV$. The bands show the expected one (two) standard deviation intervals around the expected limit.}
+\label{fig:ind}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.60\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-004_Figure_011}
+\caption{The $m_{\tau\tau}$ weighted distribution for the $\tau_{\mu}\tau_{h}$, $\tau_{e}\tau_{h}$, $\tau_{h}\tau_{h}$, and  $\tau_{e}\tau_{\mu}$ tau pair final states for the observed data and predicted SM backgrounds obtained from the fit. The weights for the distributions in each channel and in each category are obtained from the ratio between the expected signal contribution and signal-plus-background yields in the $m_{\tau\tau}$ interval containing $68\%$ of the SM Higgs boson candidate events. The insert shows the difference between the observed data and the background prediction. The expected SM Higgs boson contribution, with mass of $125~\GeV$, is shown in red~\cite{Chatrchyan:2014nva}.}
+\label{fig:mass_plot}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.70\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-004_Figure_015}
+\caption{The observed p-value as a function of the SM Higgs boson mass hypothesis in combination of all the $\tau\tau$ final states. The dashed line shows the expected p-value for a SM Higgs boson with a mass $m_{H}$~\cite{Chatrchyan:2014nva}. The shown significance is not corrected for the so called look-elsewhere effect~\cite{loook}.}
+\label{fig:money}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/tauTau_nobtag_postfit_8TeV_LOG}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/tauTau_btag_postfit_8TeV_LOG}
+\caption{The $m_{\tau\tau}$ distributions for the selected $\tau_{h}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$ showing the "no b-tag" (left) and "b-tag" (right) event categories. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area is the uncertainty in the background predictions. The MSSM signal prediction is shown in blue for the $m_{A}=160~\GeV$ and $\tan \beta=8$ in $m_{h}^{mod+}$ benchmark scenario.}
+\label{fig:mssmtauhtauh}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/muTau_nobtag_postfit_8TeV_LOG}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/muTau_btag_postfit_8TeV_LOG}
+\caption{The $m_{\mu\tau}$ distributions for the selected $\mu_{h}\tau_{h}$ final state candidates in collisions at $\sqrt{s}=8~\TeV$ showing the "no b-tag" (left) and "b-tag" (right) event categories. The points with error bars represent the data. Superimposed are the SM background distributions obtained from the fit. The shaded area is the uncertainty in the background predictions. The MSSM signal prediction is shown in blue for the $m_{A}=160~\GeV$ and $\tan \beta=8$ in $m_{h}^{mod+}$ benchmark scenario.}
+\label{fig:mssmmutauh}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-021_Figure_007-a}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-021_Figure_007-b}
+\caption{The expected and observed $95\%$ CL upper limits on the $\sigma(gg\phi) \times \mathcal{B}(\phi \rightarrow\tau\tau)$ (left) and $\sigma(bb\phi) \times \mathcal{B}(\phi \rightarrow \tau\tau)$ (right) as a function of the $\phi$ mass hypothesis in collisions at $\sqrt{s}=8~\TeV$. The bands show the expected one (two) standard deviation intervals around the expected limit. The SM Higgs boson, with a mass of $125~\GeV$, expected contribution is included as a background.~\cite{Khachatryan:2014wca}.}
+\label{fig:mssmtautau}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-021_Figure_005-a}
+\includegraphics[width=0.49\columnwidth]{figures_chapter5/smtautau/CMS-HIG-13-021_Figure_005-b}
+\caption{The expected and observed exclusion $95\%$ CL limits in the $m_{A}-\tan\beta$ parameter space in the $m_h^{max}$ (left) and $m_{h}^{mod+}$ (right) benchmark scenarios. The red lines represent the regions where both neutral scalars, $h$ and $H$, have a mass not compatible with the discovered $125~\GeV$ boson.~\cite{Khachatryan:2014wca}.}
+\label{fig:mssmlimit}
+\end{figure}
+
+
+\section{MSSM Higgs boson search in Tau decays}
+
+\subsection{Event selection and categorization}
+
+\subsection{Results and Interpretations}
 
 
