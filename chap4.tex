@@ -8,7 +8,7 @@
 
 The $W^{\pm}$ and $Z$ boson cross section measurements and $H \rightarrow \tau\tau$ searches rely on the precise reconstruction of the decay products. The presence of neutrinos in the leptonic $W$ decays and also in  $\tau$ decays requires an accurate reconstruction of all the detector deposits to infer the presence of the neutrinos from the momentum imbalance in the transverse plane. In addition, reconstruction of jets is important to capture the different production modes of the Higgs boson. The additional pileup interactions in the events present a challenging environment for a precise reconstruction of the events. This chapter summarizes the event reconstruction emphasizing the components relevant for the results that follow.
 
-\section{Track reconstruction}
+\section{Track Reconstruction}
 
 The goal of the track reconstruction is to estimate the position and momentum parameters of charged particles from the reconstructed hits in the inner tracking detector. Reconstructing tracks at the LHC nominal instantaneous luminosities is a computationally challenging task due to a high occupancy environment. About $1000$ charged particles transverse the inner tracking detectors at each bunch crossing. Charged particles from prior or later bunch crossings can also be present due to finite detector time resolution.  The track reconstruction starts by clustering of zero-suppressed signals in the pixel and strip detectors into hits. Each hit provides an estimate of the cluster position and the corresponding uncertainty. The CMS track reconstruction algorithm is referred to as combinational track finder (CTF)~\cite{Adam:934067,Chatrchyan:2014fea}. The CTF is an adaptation of the combinatorial Kalman filter~\cite{BILLOIR1989390,BILLOIR1990219,MANKEL1997169}, which is an extension of the Kalman filter~\cite{FRUHWIRTH1987444}, combining pattern recognition and track fitting in the same framework. 
 
@@ -23,7 +23,7 @@ The CTF is performed iteratively six times to determine the collection of the tr
 
 The track reconstruction is effectively fully efficient for isolated muons with $2.5\%$ resolution in $p_{T}$ for $p_{T}$ of about $100~\GeV$~\cite{Chatrchyan:2014fea}. The longitudinal (with respect to the $z$ axis) and transverse impact parameter resolutions are $30$ $\mu$m and $10$ $\mu$m respectively. The efficiency for charged particles of $p_{T}$ greater than $0.9~\GeV$ in simulated $t\bar{t}$ events is $94\%$ ($85\%$) in the pseudorapidity region of $|\eta|<0.9$ ($0.9<|\eta|<2.4$). The main cause of the inefficiency is due to the hadrons undergoing nuclear interactions in the tracker material.   
 
-\section{Primary vertex reconstruction}
+\section{Primary Vertex Reconstruction}
 
 The goal of the primary vertex reconstruction is to measure the position of each proton-proton interaction vertex in each event. The vertex reconstruction starts from the collection of the reconstructed tracks consistent with being produced near the beam spot. Additional quality requirements on the number of inner tracker layers associated to the track and the quality of the CTF fit are applied. There is no requirement on the $p_{T}$ of the tracks ensuring high vertex reconstruction efficiency.
 

@@ -40,13 +40,13 @@ It is crucial that the \phasetwo detector can cope with the challenging environm
 
 The signal samples are generated using the MadGraph5\_aMC@NLO generator with LO accuracy in QCD, using the results from~\cite{Frederix2014142}. PYTHIA 6 is used to model the parton showering and hadronization. The generator is also interfaced with TAUOLA for the simulation of the tau lepton decays. The pileup events are simulated in the Delphes samples by randomly placing minimum-bias interactions along the beam axis according to the longitudinal spread derived from the fully simulated samples.
 
-\section{$bb\gamma\gamma$ final state}
+\section{$bb\gamma\gamma$ Final State}
 
 The signal events of interest contain two high transverse momentum ($p_{T}$) photon candidates and two high $p_{T}$ jets originating from b quarks. The photons are rejected if an electron is reconstructed within a distance $\Delta R$ of $0.1$ to the photon.  A $p_{T}$ and $\eta$ dependent efficiency is applied to the photons to model the identification and isolation efficiency. The efficiency is about $80\%$ in the barrel, and about $55\%$ in the endcap. The lower efficiency in the endcap is primarily due to the electron veto requirement.  The jets are reconstructed using the anti-kt algorithm with a resolution parameter of $0.5$. The processes involving jets faking photons are among the dominant backgrounds. The rate to misidentify photons, typically referred to as the fake rate, is about $1 \times 10^{-4}$ for gluon jets and about $5\times 10^{-4}$ for quark jets. The rate to misidentify electrons as photons is taken to be as $1\%$ ($3\%$) in the barrel (endcap). Di-photon mass width of $1.2$~GeV is achieved with the upgraded detector, for the events where both photons are in the barrel, using sophisticated multivariate techniques to calibrate the photon energy.  Jets are tagged as originating from a b quark on the basis of the presence of secondary vertices and large impact parameter tracks, which are exploited for b-tagging in the CSV discriminator as discussed in section 3.5.3. The chosen working point of the CSV discriminator gives, on average, b-tagging efficiencies of about $75\%$ and $65\%$ in the central and forward regions, respectively; with mistagging rates for light and charm jets of about $1\%$ and $20\%$, respectively. Di-jet mass resolution of about $20$~GeV is achieved with the upgraded detector. 
 
 Electrons and muon candidates with $p_{T}>10$~GeV are selected for the purpose of vetoing events with signatures consistent with a Higgs boson produced in association with a top and anti top quark pair ($t\bar{t}H$). This process contributes significantly to the total background after signal event selection requirements. A non-negligible fraction of such background events contain leptons and can be rejected on this basis. Very loose selection requirements with efficiency in the range between $90\%$ and $95\%$ are placed on the electron and muon candidates in order to suppress this background as much as possible.
 
-\subsection{Signal and background estimation}
+\subsection{Signal and Background Estimation}
 \label{sec:bkgestimation}
 The signal process of interest is the production of two Higgs bosons, one of which decays to a pair of b quarks, and the other decaying to a pair of photons. The main resonant backgrounds are $ZH$, where a Higgs boson is produced in association with a Z boson which subsequently decays to two b-jets, $t\bar{t}H$, where a Higgs boson is produced in association with a top and anti-top quark pair, and $b\bar{b}H$, where a Higgs boson is produced in association with a b and anti-b quark pair. The non-resonant backgrounds include QCD production  of $b \bar{b} \gamma\gamma$, QCD production of $jj \gamma\gamma$ with light jets mistagged  as b-jets, QCD production of $b \bar{b} j \gamma$ and $b \bar{b} jj$ with one and two jets mis-identified as photons respectively, and QCD production of four jets with two jets mis-identified  as photons and two jets mistagged as b-jets, dominated by mistagged charm jets. 
 These background processes have cross sections that are several orders of magnitude larger than the resonant backgrounds, but are suppressed
@@ -74,7 +74,7 @@ of $14$~TeV.}
 \end{center}
 \end{table}
 
-\subsection{Event selection}
+\subsection{Event Selection}
 \label{sec:eventselection}
  
 Events containing two photons with $p_{T}$ greater than $25$~GeV
@@ -129,7 +129,7 @@ is used for the likelihood fit analysis described in Section~\ref{sec:signalextr
 \end{table}
 
 
-\subsection{Signal extraction}
+\subsection{Signal Extraction}
 \label{sec:signalextraction}
 
 To extract the signal cross section, the kinematic selection requirements from Section~\ref{sec:eventselection} are applied, and a two dimensional maximum
@@ -154,7 +154,7 @@ The average fit uncertainty of the cross section measurement using the two dimen
 The statistical uncertainties dominate over the systematic uncertainties with $3000$~$\mathrm{fb}^{-1}$ of integrated luminosity. The systematic uncertainty in the non-resonant background modeling is evaluated by  performing toy MC experiments where the assumed non-resonant background model used is the product of an exponential and a fourth-degree polynomial fitted to the expected non-resonant background distribution, while an exponential function is used to perform the fit. This results in an
 average bias of about $12\%$. The theoretical uncertainties in the Higgs boson pair production cross section coming from the missing higher order perturbative corrections, uncertainties in the $\alpha_{s}$ and the PDFs~\cite{Baglio:2012np} is about $11\%$. The systematic uncertainties in the jet and photon energy resolutions are negligible compared to the statistical uncertainty.
 
-\subsection{Upgrade scenarios}
+\subsection{Upgrade Scenarios}
 \label{sec:scenarios}
 
 It is critical to achieve a robust reconstruction of the detector objects at the HL-LHC pileup condition as discussed in section 5.q. As the measurement is primarily limited by the number of selected signal candidate events, improving the object selection efficiency is very important to improve the results. To explore the effect of the object selection efficiencies and to provide a general goal for the detector upgrade, Figure~\ref{fig:PhotonEffImprovementScan} shows the sensitivity as a function of the relative improvement on the photon selection efficiency and the b-tagging efficiency, respectively, over the current performance estimate at the HL-LHC pileup conditions. It is seen that the measurement can be significantly improved with even a modest improvement in the photon candidate selection efficiency or b-tagging efficiency. 
@@ -179,11 +179,11 @@ Finally, the analysis sensitivity as a function of the total integrated luminosi
 \end{figure}
 
 
-\section{$bb\tau\tau$ final state}
+\section{$bb\tau\tau$ Final State}
 
 The signal events of interest contain two high $p_{T}$ taus and two high $p_{T}$ jets originating from b quarks. Di-tau final states $\tau_{\mu}\tau_{h}$, and $\tau_{h}\tau_{h}$, where $h$ denotes hadronic tau decays, and $\mu$ denotes tau decays to muons, are considered. The jets are reconstructed using the anti-kt algorithm with a resolution parameter of $0.4$. A simple jet pileup identification is developed in Delphes using the track related and jet shape variables described in section 3.5.2. The efficiency of the jet pileup identification is $0.95$ with a pileup jet rate of $0.20$. The $\vec{E}_{T}^{miss}$ resolution is critical for the di-tau mass reconstruction. Without pileup mitigation the PF $\vec{E}_{T}^{miss}$ resolution is on average $50$~GeV with $140$ pileup interactions. With the PUPPI pileup mitigation the $\vec{E}_{T}^{miss}$ resolution in Delphes is reduced to about $25$~GeV.  The efficiency of selecting jets originating from b quarks and tau hadronic decays are parameterized in Delphes. To further reduce the background events with light jets mimicking the hadronic tau decays it is required that jets originating from hadronic tau decays contain an isolated track. With the upgraded \phasetwo detector and this selection, a tau identification efficiency of about $55\%$ is possible while keeping the miss-tag rates to be less than $0.5\%$. The working point used for the b-tagging has an average efficiency of $0.68$ with $0.1$ and $0.01$ mistag rates from the c-quarks and light quarks respectively.  The muon efficiencies and resolutions are parameterized in Delphes and efficiencies of about $95\%$ are assumed.
 
-\subsection{Event selection and background estimation}
+\subsection{Event Selection and Background Estimation}
 Events are selected containing two b-tagged jets with $p_{T}>30$~GeV
 and $|\eta|<2.4$, and two taus with $p_{T}>60$~GeV, or $p_{T}>90$~GeV
 for the leading tau and $p_{T}>45$~GeV for sub-leading tau, and
@@ -196,7 +196,7 @@ production of a $Z$ boson decaying into a pair of tau leptons
 produced in association with jets, where the light jets are mis-tagged as b-jets. The important single Higgs boson backgrounds are the $ZH$ and  $t\bar{t}H$ processes. The remaining backgrounds considered are the single top and $t\bar{t}$ produced in association with a vector boson, and di-boson processes.
 The QCD multi-jet background is negligible in the signal region, as verified by studying the LHC data available at $\sqrt{s} = 8$~TeV. A likelihood based mass reconstruction technique (described in section 4.2) to reconstruct the di-tau mass is used. It is a powerful tool to discriminate against background processes containing a $Z$ boson that subsequently decays to tau leptons. 
 
-\subsection {Signal extraction}
+\subsection {Signal Extraction}
  Selections are applied on the di-tau mass, $M_{\tau\tau}$, and the di-b-jet mass, $M_{bb}$, distributions to identify
 the Higgs boson decays to tau and b pairs, respectively. The requirement for the $m_{bb}$ is $90$~GeV$<m_{bb}<130$~GeV, and
 $110$~GeV$<m_{\tau\tau}<140$~GeV for the $m_{\tau\tau}$. The event selection is summarized in Table~\ref{tab:event_selection} 
@@ -293,7 +293,7 @@ Signal   & $63.5\pm7.3$ & $29.2\pm4.8$ & $3.9\pm1.3$  & $2.7\pm0.7$ \\ \hline
 \end{center}
 \end{table}
 
-\subsection{Trigger performance}
+\subsection{Trigger Performance}
 The performance of the trigger system is crucial to achieve the result
 described above, in particular the capability to trigger on charged
 particles at Level-1. For the $\tau_{h}\tau_{h}$ final state, the
